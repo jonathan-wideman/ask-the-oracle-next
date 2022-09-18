@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Layout from '../../components/Layout'
@@ -8,6 +9,8 @@ export default function Oracle({ oracles }) {
   const router = useRouter()
   const { slug } = router.query
   const oracle = oracles.find(oracle => oracle.slug === slug)
+
+  const [tableVisible, setTableVisible] = useState(false)
 
   const [result, setResult] = useState('consulting the oracle...')
   const { roll } = useDiceContext()
@@ -20,19 +23,25 @@ export default function Oracle({ oracles }) {
     rollOracle()
   }, [])
 
+  const toggleTable = () => setTableVisible(visible => !visible)
+
   return (
-    <Layout pageTitle={slug}>
+    <Layout pageTitle={oracle.title}>
       <main>
         <p>Very well; {oracle.title}...</p>
         <p>{result}</p>
 
         <button onClick={() => rollOracle()}>ask again</button>
 
-        <ul>
+        <Link href="/oracles" >seek a different fate</Link>
+
+        <button onClick={() => toggleTable()}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
+
+        {tableVisible ? <ul>
           {oracle.table.map((row, index) => <li key={index}>
             {row.roll} -- {row.result}
           </li>)}
-        </ul>
+        </ul> : null}
       </main>
     </Layout>
   )
@@ -44,6 +53,5 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps() {
-  // return { props: { oracle: getOracles().find(oracle => oracle.slug === slug) } }
   return { props: { oracles: getOracles() } }
 }
