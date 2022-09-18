@@ -43,8 +43,8 @@ export default oracles
 
 function deriveIndex(oracle) {
   const match = oracle.title.match(/ (\d)+: /)
-  // should guard against bad data, eg. non-numeric
-  return match != null ? parseInt(match?.[2]) : -1
+  // TODO: guard against bad data, eg. non-numeric
+  return match != null ? parseInt(match?.[1]) : -1
 }
 
 function formatTitle(oracle) {
@@ -64,12 +64,38 @@ function createSlug(oracle) {
     .replace(/^-+|-+$/g, '')
 }
 
+function convertRollRangeString(rangeStr) {
+  const matches = rangeStr.match(/[0-9]+/g)
+  // TODO: guard against bad data, eg. non-numeric
+  // values of 100 are represented as '00' in the dataset
+  const values = matches.map(match => match === '00' ? 100 : parseInt(match))
+  // if there is only one value, use it for both min and max of the range
+  return { min: values[0], max: values[1] ?? values[0] }
+}
+
+function convertRollTable(table) {
+  // convert a array of range/result pairs to an array
+  // for every range, spread its result over those indices of the array
+  // later, we can look up results just using the roll as an index
+  // and we can determine the die size needed by the length of the array
+  let results = []
+  table.forEach(row => {
+    const range = convertRollRangeString(row.roll)
+    for (let i = range.min; i <= range.max; i++) {
+      results.push(row.result)
+    }
+  })
+  // we return the max along with the results for easier use in a map call
+  return { max: results.length, results }
+}
+
 function massageData(oracles) {
   return oracles.map(oracle => ({
     ...oracle,
     id: oracle.title,
     index: deriveIndex(oracle),
     title: formatTitle(oracle),
-    slug: createSlug(oracle)
+    slug: createSlug(oracle),
+    ...convertRollTable(oracle.table)
   }))
 }

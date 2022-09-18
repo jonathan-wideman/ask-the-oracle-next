@@ -9,7 +9,7 @@ export default function Home() {
       <main>
         <h1>Greetings, Ironsworn!</h1>
         <p>I am the Oracle.</p>
-        <Link href={"/oracles"}>ask...</Link>
+        You may <Link href={"/oracles"}>ask after your fate</Link>.
       </main>
     </Layout>
   )

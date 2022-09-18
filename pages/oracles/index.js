@@ -6,7 +6,7 @@ export default function Oracles({ oracles }) {
   return (
     <Layout pageTitle={'Oracles'}>
       <main>
-        <h1>Oracles...</h1>
+        <p>What do you seek?</p>
         <ul>
           {oracles?.map(oracle => <li key={oracle.id}>
             <Link href={`/oracles/${oracle.slug}`}>{oracle.title}</Link>

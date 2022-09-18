@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Layout from '../../components/Layout'
 import { useDiceContext } from '../../contexts/DiceContext'
 import { getOracles } from '../../lib/connector'
@@ -9,15 +9,30 @@ export default function Oracle({ oracles }) {
   const { slug } = router.query
   const oracle = oracles.find(oracle => oracle.slug === slug)
 
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState('consulting the oracle...')
   const { roll } = useDiceContext()
+
+  const rollOracle = () => {
+    setResult(roll(oracle))
+  }
+
+  useEffect(() => {
+    rollOracle()
+  }, [])
 
   return (
     <Layout pageTitle={slug}>
       <main>
-        <h1>Oracle: {oracle.title}</h1>
-        <button onClick={() => setResult(roll(oracle))}>Roll</button>
+        <p>Very well; {oracle.title}...</p>
         <p>{result}</p>
+
+        <button onClick={() => rollOracle()}>ask again</button>
+
+        <ul>
+          {oracle.table.map((row, index) => <li key={index}>
+            {row.roll} -- {row.result}
+          </li>)}
+        </ul>
       </main>
     </Layout>
   )
