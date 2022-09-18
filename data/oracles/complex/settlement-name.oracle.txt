@@ -1,0 +1,163 @@
+ORACLE 7: SETTLEMENT NAME
+01-15
+A feature of the landscape. Envision what it is. What makes it unusual or distinctive?
+Examples:
+1-10
+Highmount
+51-60
+Stoneford
+11-20
+Brackwater
+61-70
+Deepwater
+21-30
+Frostwood
+71-80
+Whitefall
+31-40
+Redcrest
+81-90
+Graycliff
+41-50
+Grimtree
+91-00
+Three Rivers
+16-30
+A manmade edifice. What is it? Why is it important to this settlement’s history?
+Examples:
+1-10
+Whitebridge
+51-60
+Timberwall
+11-20
+Lonefort
+61-70
+Stonetower
+21-30
+Highcairn
+71-80
+Thornhall
+31-40
+Redhall
+81-90
+Cinderhome
+41-50
+Darkwell
+91-00
+Fallowfield
+31-45
+A creature. Why have the people of this settlement chosen this creature as their totem? How is it represented in art or rituals?
+Examples:
+1-10
+Ravencliff
+51-60
+Boarwood
+11-20
+Bearmark
+61-70
+Foxhollow
+21-30
+Wolfcrag
+71-80
+Elderwatch
+31-40
+Eaglespire
+81-90
+Elkfield
+41-50
+Wyvern's Rest
+91-00
+Dragonshadow
+46-60
+A historical event. What happened here? What place or practice commemorates this event?
+Examples:
+1-10
+Swordbreak
+51-60
+Olgar's Stand
+11-20
+Fool's Fall
+61-70
+Lostwater
+21-30
+Firstmeet
+71-80
+Rojirra's Lament
+31-40
+Brokenhelm
+81-90
+Lastmarch
+41-50
+Mournhaunt
+91-00
+Rockfall
+61-75
+A word in an Old World language. What culture is represented by this word? What does it translate to?
+Examples:
+1-10
+Abon
+51-60
+Kazeera
+11-20
+Daveza
+61-70
+Khazu
+21-30
+Damula
+71-80
+Sova
+31-40
+Essus
+81-90
+Nabuma
+41-50
+Sina
+91-00
+Tiza
+76-90
+A season or environmental aspect. What influence does the weather have on this settlement?
+Examples:
+1-10
+Winterhome
+51-60
+Duskmoor
+11-20
+Windhaven
+61-70
+Frostcrag
+21-30
+Stormrest
+71-80
+Springbrook
+31-40
+Bleakfrost
+81-90
+Icebreak
+41-50
+Springtide
+91-00
+Summersong
+91-100
+Something Else....
+Examples:
+1-10
+A trade good (Ironhome)
+11-20
+An Old World city (New Arkesh)
+21-30
+A founder or famous settler (Kei's Hall)
+31-40
+A god (Elisora)
+41-50
+A historical item (Blackhelm)
+51-60
+A firstborn race (Elfbrook)
+61-70
+An elvish word or name (Nessana)
+71-80
+A mythic belief or event (Ghostwalk)
+81-90
+A positive term (Hope)
+91-00
+A negative term (Forsaken)
+e
