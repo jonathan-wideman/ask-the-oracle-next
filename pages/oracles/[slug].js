@@ -32,10 +32,9 @@ export default function Oracle({ oracles }) {
         <p>{result}</p>
 
         <button onClick={() => rollOracle()}>ask again</button>
+        <button onClick={() => toggleTable()}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
 
         <Link href="/oracles" >seek a different fate</Link>
-
-        <button onClick={() => toggleTable()}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
 
         {tableVisible ? <ul>
           {oracle.table.map((row, index) => <li key={index}>

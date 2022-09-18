@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <p>©2022 Jonathan Wideman</p>
-      <p>based on <Link href={"https://www.ironswornrpg.com/"}>Ironsworn RPG</Link> by Shawn Tomkin</p>
+      <p>based on <Link href={"https://www.ironswornrpg.com/"}>Ironsworn TTRPG</Link> by Shawn Tomkin</p>
     </footer >
   )
 }
