@@ -1,0 +1,10 @@
+.table {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: left;
+  font-size: var(--fs-200);
+  column-gap: 1em;
+  padding: 1em 2em;
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: 1em;
+}

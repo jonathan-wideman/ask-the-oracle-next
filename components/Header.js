@@ -1,13 +1,17 @@
 import Link from 'next/link'
 import React from 'react'
+import headerStyles from '../styles/Header.module.css'
+import utilityStyles from '../styles/utility.module.css'
 
 export default function Header() {
   return (
     <header>
-      <nav>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/oracles"}>Oracles</Link>
-      </nav>
+      <div className={utilityStyles.container}>
+        <nav className={headerStyles.nav}>
+          <Link href={"/"}><a className={headerStyles.nav_link}>Home</a></Link>
+          <Link href={"/oracles"}><a className={headerStyles.nav_link}>Oracles</a></Link>
+        </nav>
+      </div>
     </header>
   )
 }

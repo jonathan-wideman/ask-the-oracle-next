@@ -1,17 +1,21 @@
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 import { getOracles } from '../../lib/connector'
+import { classNames } from '../../lib/util'
+import utilityStyles from '../../styles/utility.module.css'
 
 export default function Oracles({ oracles }) {
   return (
     <Layout pageTitle={'Oracles'}>
       <main>
-        <p>What do you seek?</p>
-        <ul>
-          {oracles?.map(oracle => <li key={oracle.id}>
-            <Link href={`/oracles/${oracle.slug}`}>{oracle.title}</Link>
-          </li>)}
-        </ul>
+        <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
+          <p>What do you seek?</p>
+          <ul>
+            {oracles?.map(oracle => <li key={oracle.id}>
+              <Link href={`/oracles/${oracle.slug}`}>{oracle.title}</Link>
+            </li>)}
+          </ul>
+        </div>
       </main>
     </Layout>
   )

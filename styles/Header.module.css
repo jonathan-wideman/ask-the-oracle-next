@@ -1,0 +1,8 @@
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav_link {
+  padding: 1em 3em;
+}

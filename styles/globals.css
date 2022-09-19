@@ -1,26 +1,181 @@
+/* Andy Bell's CSS reset: https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+/* body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+} */
+
+/* Kevin Powell's aggressive margin, padding, font reset: https://youtu.be/h3bTwCqX4ns&t=993 */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Kevin Powell's body height reset: https://youtu.be/h3bTwCqX4ns&t=1084 */
 html,
 body {
-  padding: 0;
-  margin: 0;
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  /* min-height: 100vh; */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* Kevin Powell adds svg here */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* Defunct; see Kevin Powell's aggressive margin, padding, font reset */
+/* input,
+button,
+textarea,
+select {
+	font: inherit;
+} */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+:root {
+  --clr-neutral-000: #000;
+  --clr-neutral-200: #222;
+  --clr-neutral-300: #333;
+  --clr-neutral-700: #ddd;
+  --clr-neutral-900: #fff;
+
+  --clr-link-normal: var(--clr-neutral-000);
+  --clr-link-hover: var(--clr-neutral-200);
+
+  --fs-200: 0.8rem;
+  --fs-300: 0.9rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 3rem;
+}
+
+
+html,
+body {
+  font-size: clamp(16px, .8rem + .5vw, 20px);
+  line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+
 a {
-  color: inherit;
+  color: var(--clr-link-normal);
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+a:hover,
+a:focus {
+  color: var(--clr-link-hover);
+  text-decoration: underline;
 }
 
+button {
+  display: inline;
+  color: var(--clr-link-normal);
+  line-height: 1.5;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  color: var(--clr-link-hover);
+  text-decoration: underline;
+}
+
+
+
+main {
+  /* TODO: handle height differently; footer should be at the bottom of the page unless main content is longer */
+  min-height: 80vh;
+}
+
+
+ul {
+  list-style: none;
+}
+
+
+
+
+
 @media (prefers-color-scheme: dark) {
+  :root {
+    --clr-link-normal: var(--clr-neutral-700);
+    --clr-link-hover: var(--clr-neutral-900);
+  }
+
   html {
     color-scheme: dark;
   }
+
   body {
-    color: white;
-    background: black;
+    color: var(--clr-neutral-700);
+    background: var(--clr-neutral-200);
   }
 }

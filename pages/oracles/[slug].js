@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../../components/Layout'
 import { useDiceContext } from '../../contexts/DiceContext'
 import { getOracles } from '../../lib/connector'
+import { classNames } from '../../lib/util'
+import utilityStyles from '../../styles/utility.module.css'
+import rollTableStyles from '../../styles/RollTable.module.css'
 
 export default function Oracle({ oracles }) {
   const router = useRouter()
@@ -28,19 +31,22 @@ export default function Oracle({ oracles }) {
   return (
     <Layout pageTitle={oracle.title}>
       <main>
-        <p>Very well; {oracle.title}...</p>
-        <p>{result}</p>
+        <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
+          <p>Very well; {oracle.title}...</p>
+          <p>{result}</p>
 
-        <button onClick={() => rollOracle()}>ask again</button>
-        <button onClick={() => toggleTable()}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
+          <button onClick={() => rollOracle()}>ask again</button>
+          <button onClick={() => toggleTable()}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
 
-        <Link href="/oracles" >seek a different fate</Link>
+          <Link href="/oracles" >seek a different fate</Link>
 
-        {tableVisible ? <ul>
-          {oracle.table.map((row, index) => <li key={index}>
-            {row.roll} -- {row.result}
-          </li>)}
-        </ul> : null}
+          {tableVisible ? <div className={rollTableStyles.table}>
+            {oracle.table.map((row, index) => <React.Fragment key={index}>
+              <span>{row.roll}</span>
+              <span>{row.result}</span>
+            </React.Fragment>)}
+          </div> : null}
+        </div>
       </main>
     </Layout>
   )
