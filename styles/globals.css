@@ -99,6 +99,10 @@ select {
   --clr-neutral-700: #ddd;
   --clr-neutral-900: #fff;
 
+  --clr-primary-200: hsl(279, 22%, 20%);
+  --clr-primary-400: hsl(279, 22%, 50%);
+  --clr-primary-800: hsl(279, 22%, 80%);
+
   --clr-link-normal: var(--clr-neutral-000);
   --clr-link-hover: var(--clr-neutral-200);
 
@@ -110,6 +114,9 @@ select {
   --fs-700: 1.75rem;
   --fs-800: 2rem;
   --fs-900: 3rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
 }
 
 
@@ -124,13 +131,15 @@ body {
 
 a {
   color: var(--clr-link-normal);
-  text-decoration: none;
+  /* text-decoration: none; */
+  text-decoration: underline;
 }
 
 a:hover,
 a:focus {
   color: var(--clr-link-hover);
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  text-shadow: 0 0 1em var(--clr-primary-400), 0 0 0.4em var(--clr-primary-800);
 }
 
 button {
@@ -140,12 +149,14 @@ button {
   background-color: unset;
   border: unset;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 button:hover,
 button:focus-visible {
   color: var(--clr-link-hover);
   text-decoration: underline;
+  text-shadow: 0 0 1em var(--clr-primary-400), 0 0 0.4em var(--clr-primary-800);
 }
 
 

@@ -1,0 +1,27 @@
+.table {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: left;
+  font-size: var(--fs-200);
+  gap: 0.5em 1em;
+  padding: 1em 2em;
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: 1em;
+}
+
+.text_xl {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-600);
+}
+
+.text_l {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-600);
+}
+
+.result {
+  margin: 1em 0;
+  padding: 1em 2em;
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: 1em;
+}

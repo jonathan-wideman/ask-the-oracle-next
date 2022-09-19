@@ -6,7 +6,7 @@ import { useDiceContext } from '../../contexts/DiceContext'
 import { getOracles } from '../../lib/connector'
 import { classNames } from '../../lib/util'
 import utilityStyles from '../../styles/utility.module.css'
-import rollTableStyles from '../../styles/RollTable.module.css'
+import oracleStyles from '../../styles/Oracle.module.css'
 
 export default function Oracle({ oracles }) {
   const router = useRouter()
@@ -32,15 +32,16 @@ export default function Oracle({ oracles }) {
     <Layout pageTitle={oracle.title}>
       <main>
         <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
-          <p>Very well; {oracle.title}...</p>
-          <p>{result}</p>
+          <p className={oracleStyles.text_xl}> Very well;</p>
+          <p className={oracleStyles.text_l}>{oracle.title}...</p>
+          <p className={oracleStyles.result}>{result}</p>
 
           <button onClick={() => rollOracle()}>ask again</button>
           <button onClick={() => toggleTable()}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
 
           <Link href="/oracles" >seek a different fate</Link>
 
-          {tableVisible ? <div className={rollTableStyles.table}>
+          {tableVisible ? <div className={oracleStyles.table}>
             {oracle.table.map((row, index) => <React.Fragment key={index}>
               <span>{row.roll}</span>
               <span>{row.result}</span>
