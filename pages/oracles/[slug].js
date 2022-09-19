@@ -34,12 +34,12 @@ export default function Oracle({ oracles }) {
         <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
           <p className={oracleStyles.text_xl}> Very well;</p>
           <p className={oracleStyles.text_l}>{oracle.title}...</p>
-          <p className={oracleStyles.result}>{result}</p>
 
           <button onClick={() => rollOracle()}>ask again</button>
           <button onClick={() => toggleTable()}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
-
           <Link href="/oracles" >seek a different fate</Link>
+
+          <p className={oracleStyles.result}>{result}</p>
 
           {tableVisible ? <div className={oracleStyles.table}>
             {oracle.table.map((row, index) => <React.Fragment key={index}>
