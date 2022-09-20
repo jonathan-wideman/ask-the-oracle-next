@@ -45,18 +45,18 @@ export default function Oracle({ oracles }) {
       <main>
         <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
           <p className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}> Very well;</p>
-          <p className={classNames(oracleStyles.text_l, utilityStyles.fadein)} style={styleAnimationDelay(500)}>{oracle.title}...</p>
+          <p className={classNames(oracleStyles.text_l, utilityStyles.fadein)} style={styleAnimationDelay(0.5)}>{oracle.title}...</p>
 
-          <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1500)}>ask again</button>
-          <button onClick={() => toggleTable()} className={utilityStyles.fadein} style={styleAnimationDelay(1500)}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
-          <Link href="/oracles" ><a className={utilityStyles.fadein} style={styleAnimationDelay(1500)}>seek a different fate</a></Link>
+          <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>ask again</button>
+          <button onClick={() => toggleTable()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
+          <Link href="/oracles" ><a className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>seek a different fate</a></Link>
 
           <p className={classNames(oracleStyles.result, rolling ? utilityStyles.transparent : utilityStyles.fadein)}>{result}</p>
 
           {tableVisible ? <div className={classNames(oracleStyles.table, utilityStyles.fadein)}>
             {oracle.table.map((row, index) => <React.Fragment key={index}>
-              <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 25 + 250)}>{row.roll}</span>
-              <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 25 + 250)}>{row.result}</span>
+              <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 0.025 + 0.25)}>{row.roll}</span>
+              <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 0.025 + 0.25)}>{row.result}</span>
             </React.Fragment>)}
           </div> : null}
         </div>

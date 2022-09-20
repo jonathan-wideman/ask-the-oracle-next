@@ -13,7 +13,7 @@ export default function Oracles({ oracles }) {
           <p className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}>What do you seek?</p>
           <ul>
             {oracles?.map((oracle, index) => <li key={oracle.id}>
-              <Link href={`/oracles/${oracle.slug}`}><a className={utilityStyles.fadein} style={styleAnimationDelay(index * 25 + 250)}>{oracle.title}</a></Link>
+              <Link href={`/oracles/${oracle.slug}`}><a className={utilityStyles.fadein} style={styleAnimationDelay(index * 0.025 + 0.25)}>{oracle.title}</a></Link>
             </li>)}
           </ul>
         </div>
