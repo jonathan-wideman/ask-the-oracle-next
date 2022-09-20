@@ -93,11 +93,16 @@ select {
 
 
 :root {
-  --clr-neutral-000: #000;
-  --clr-neutral-200: #222;
-  --clr-neutral-300: #333;
-  --clr-neutral-700: #ddd;
-  --clr-neutral-900: #fff;
+  --clr-neutral-000: hsl(0, 0%, 0%);
+  --clr-neutral-100: hsl(0, 0%, 7%);
+  --clr-neutral-190: hsl(0, 0%, 11%);
+  --clr-neutral-200: hsl(0, 0%, 13%);
+  --clr-neutral-300: hsl(0, 0%, 20%);
+  --clr-neutral-700: hsl(0, 0%, 87%);
+  --clr-neutral-900: hsl(0, 0%, 100%);
+
+  --clr-muted-700: hsl(40, 5%, 75%);
+  --clr-muted-710: hsl(40, 5%, 79%);
 
   --clr-primary-200: hsl(279, 22%, 20%);
   --clr-primary-400: hsl(279, 22%, 50%);
@@ -117,6 +122,8 @@ select {
 
   --fw-400: 400;
   --fw-600: 700;
+
+  --main-padding: 3rem;
 }
 
 
@@ -163,9 +170,34 @@ button:focus-visible {
 
 
 
+
+/* push footer to bottom of screen without it being sticky or fixed */
+/* see: https://codeconvey.com/footer-at-bottom-of-page-but-not-fixed/ */
+body>div {
+  position: relative;
+  padding-bottom: calc(var(--main-padding) * 2);
+  min-height: 100%;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body {
+  color: var(--clr-neutral-000);
+  background-color: var(--clr-muted-700);
+}
+
+header,
+footer {
+  background-color: var(--clr-muted-710);
+}
+
 main {
-  /* TODO: handle height differently; footer should be at the bottom of the page unless main content is longer */
-  min-height: 80vh;
+  padding-top: var(--main-padding);
 }
 
 
@@ -189,6 +221,11 @@ ul {
 
   body {
     color: var(--clr-neutral-700);
-    background: var(--clr-neutral-200);
+    background-color: var(--clr-neutral-190);
+  }
+
+  header,
+  footer {
+    background-color: var(--clr-neutral-200);
   }
 }
