@@ -116,7 +116,7 @@ select {
   --fs-900: 3rem;
 
   --fw-400: 400;
-  --fw-600: 600;
+  --fw-600: 700;
 }
 
 
@@ -124,8 +124,9 @@ html,
 body {
   font-size: clamp(16px, .8rem + .5vw, 20px);
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Caudex', serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 
@@ -150,6 +151,7 @@ button {
   border: unset;
   cursor: pointer;
   text-decoration: underline;
+  font-family: inherit;
 }
 
 button:hover,
