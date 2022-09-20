@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 import { getOracles } from '../../lib/connector'
-import { classNames } from '../../lib/util'
+import { classNames, styleAnimationDelay } from '../../lib/util'
 import utilityStyles from '../../styles/utility.module.css'
 import oracleStyles from '../../styles/Oracle.module.css'
 
@@ -10,10 +10,10 @@ export default function Oracles({ oracles }) {
     <Layout pageTitle={'Oracles'}>
       <main>
         <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
-          <p className={oracleStyles.text_xl}>What do you seek?</p>
+          <p className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}>What do you seek?</p>
           <ul>
-            {oracles?.map(oracle => <li key={oracle.id}>
-              <Link href={`/oracles/${oracle.slug}`}>{oracle.title}</Link>
+            {oracles?.map((oracle, index) => <li key={oracle.id}>
+              <Link href={`/oracles/${oracle.slug}`}><a className={utilityStyles.fadein} style={styleAnimationDelay(index * 25 + 250)}>{oracle.title}</a></Link>
             </li>)}
           </ul>
         </div>

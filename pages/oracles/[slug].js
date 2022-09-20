@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Layout from '../../components/Layout'
 import { useDiceContext } from '../../contexts/DiceContext'
 import { getOracles } from '../../lib/connector'
-import { classNames } from '../../lib/util'
+import { classNames, styleAnimationDelay } from '../../lib/util'
 import utilityStyles from '../../styles/utility.module.css'
 import oracleStyles from '../../styles/Oracle.module.css'
 
@@ -18,12 +18,24 @@ export default function Oracle({ oracles }) {
   const [result, setResult] = useState('consulting the oracle...')
   const { roll } = useDiceContext()
 
-  const rollOracle = () => {
+  const [rolling, setRolling] = useState(false)
+  const timeoutRef = useRef(null);
+  const resetAnimation = (delay) => {
+    timeoutRef.current = setTimeout(() => setRolling(false), delay);
+  }
+  useEffect(() => {
+    // Clear the timeout interval when the component unmounts
+    return () => clearTimeout(timeoutRef.current);
+  }, []);
+
+  const rollOracle = (delay = 10) => {
+    setRolling(true)
+    resetAnimation(delay)
     setResult(roll(oracle))
   }
 
   useEffect(() => {
-    rollOracle()
+    rollOracle(1000)
   }, [])
 
   const toggleTable = () => setTableVisible(visible => !visible)
@@ -32,24 +44,24 @@ export default function Oracle({ oracles }) {
     <Layout pageTitle={oracle.title}>
       <main>
         <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
-          <p className={oracleStyles.text_xl}> Very well;</p>
-          <p className={oracleStyles.text_l}>{oracle.title}...</p>
+          <p className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}> Very well;</p>
+          <p className={classNames(oracleStyles.text_l, utilityStyles.fadein)} style={styleAnimationDelay(500)}>{oracle.title}...</p>
 
-          <button onClick={() => rollOracle()}>ask again</button>
-          <button onClick={() => toggleTable()}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
-          <Link href="/oracles" >seek a different fate</Link>
+          <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1500)}>ask again</button>
+          <button onClick={() => toggleTable()} className={utilityStyles.fadein} style={styleAnimationDelay(1500)}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
+          <Link href="/oracles" ><a className={utilityStyles.fadein} style={styleAnimationDelay(1500)}>seek a different fate</a></Link>
 
-          <p className={oracleStyles.result}>{result}</p>
+          <p className={classNames(oracleStyles.result, rolling ? utilityStyles.transparent : utilityStyles.fadein)}>{result}</p>
 
-          {tableVisible ? <div className={oracleStyles.table}>
+          {tableVisible ? <div className={classNames(oracleStyles.table, utilityStyles.fadein)}>
             {oracle.table.map((row, index) => <React.Fragment key={index}>
-              <span>{row.roll}</span>
-              <span>{row.result}</span>
+              <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 25 + 250)}>{row.roll}</span>
+              <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 25 + 250)}>{row.result}</span>
             </React.Fragment>)}
           </div> : null}
         </div>
-      </main>
-    </Layout>
+      </main >
+    </Layout >
   )
 }
 

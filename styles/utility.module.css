@@ -10,3 +10,36 @@
   align-items: center;
   text-align: center;
 }
+
+.transparent {
+  opacity: 0;
+}
+
+.fadein {
+  --delay: 0s;
+  /* opacity: 0; */
+  animation: fadein 0.5s ease-in var(--delay) backwards;
+  /* animation: fadein 1s ease-in var(--delay) paused; */
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    /* transform: translateX(0); */
+  }
+
+  100% {
+    opacity: 1;
+    /* transform: translateX(100px); */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transparent {
+    opacity: 1;
+  }
+
+  .fadein {
+    animation: unset;
+  }
+}
