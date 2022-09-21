@@ -10,7 +10,6 @@
   margin-bottom: 1em;
 }
 
-.inline_pre {
-  display: inline;
-  margin: 0 0.25em;
+.header_route {
+  display: block;
 }
