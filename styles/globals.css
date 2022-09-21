@@ -175,7 +175,7 @@ button:focus-visible {
 /* see: https://codeconvey.com/footer-at-bottom-of-page-but-not-fixed/ */
 body>div {
   position: relative;
-  padding-bottom: calc(var(--main-padding) * 2);
+  padding-bottom: calc(var(--main-padding) * 3);
   min-height: 100%;
 }
 

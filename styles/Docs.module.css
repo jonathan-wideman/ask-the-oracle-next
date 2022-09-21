@@ -1,0 +1,16 @@
+.content_sections {
+  gap: 3em;
+}
+
+.content_sections p:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.section_head {
+  margin-bottom: 1em;
+}
+
+.inline_pre {
+  display: inline;
+  margin: 0 0.25em;
+}

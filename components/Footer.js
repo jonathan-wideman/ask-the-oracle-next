@@ -11,7 +11,8 @@ export default function Footer() {
       <div className={utilityStyles.container}>
         <div className={footerStyles.content}>
           <p>©2022 Jonathan Wideman</p>
-          <p>based on <Link href={"https://www.ironswornrpg.com/"}>Ironsworn TTRPG</Link> by Shawn Tomkin</p>
+          <Link href={"/api-docs"}>API Documentation</Link>
+          <p>Based on <Link href={"https://www.ironswornrpg.com/"}>Ironsworn TTRPG</Link> by Shawn Tomkin</p>
         </div>
       </div>
     </footer >
