@@ -191,13 +191,6 @@ body {
   background-color: var(--clr-muted-700);
 }
 
-main {
-  background-image: url('/public/oracle-bg.svg');
-  /* background-image: url('/public/Jonathan\ Wideman.jpeg'); */
-  background-repeat: repeat;
-  background-position: center;
-}
-
 header,
 footer {
   background-color: var(--clr-muted-710);
