@@ -29,7 +29,7 @@ export default function Home() {
 
           <section>
             <h3 className={docsStyles.section_head}>Oracle Result<code className={docsStyles.header_route}>GET /api/oracles/[slug]/[value]</code></h3>
-            <p>Returns a single oracle table result and corresponding roll, by the table index. Index value can be determined by referencing <code>oracle.results</code> from the orcale metadata, or by referencing "runic charts" in the app and subtracting 1 from those values.</p>
+            <p>Returns a single oracle table result and corresponding roll, by the table index. Index value can be determined by referencing <code>oracle.results</code> from the orcale metadata, or by referencing &quot;runic charts&quot; in the app and subtracting 1 from those values.</p>
             <p>Eg. <code>GET api/oracles/action/0</code> returns <code>{'{"roll":1,"result":"Scheme"}'}</code></p>
           </section>
 
