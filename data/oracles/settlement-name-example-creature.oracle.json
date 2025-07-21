@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 7: SETTLEMENT NAME EXAMPLE - CREATURE",
+  "category": "location",
+  "table": [
+    { "roll": "1-10", "result": "Ravencliff" },
+    { "roll": "11-20", "result": "Bearmark" },
+    { "roll": "21-30", "result": "Wolfcrag" },
+    { "roll": "31-40", "result": "Eaglespire" },
+    { "roll": "41-50", "result": "Wyvern's Rest" },
+    { "roll": "51-60", "result": "Boarwood" },
+    { "roll": "61-70", "result": "Foxhollow" },
+    { "roll": "71-80", "result": "Elderwatch" },
+    { "roll": "81-90", "result": "Elkfield" },
+    { "roll": "91-00", "result": "Dragonshadow" }
+  ]
+}

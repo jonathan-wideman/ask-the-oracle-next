@@ -1,0 +1,31 @@
+{
+  "title": "ORACLE 8: SETTLEMENT NAME PREFIX",
+  "category": "location",
+  "table": [
+    { "roll": "1-4", "result": "Bleak-" },
+    { "roll": "5-8", "result": "Green-" },
+    { "roll": "9-12", "result": "Wolf-" },
+    { "roll": "13-16", "result": "Raven-" },
+    { "roll": "17-20", "result": "Gray-" },
+    { "roll": "21-24", "result": "Red-" },
+    { "roll": "25-28", "result": "Axe-" },
+    { "roll": "29-32", "result": "Great-" },
+    { "roll": "33-36", "result": "Wood-" },
+    { "roll": "37-40", "result": "Low-" },
+    { "roll": "41-44", "result": "White-" },
+    { "roll": "45-48", "result": "Storm-" },
+    { "roll": "49-52", "result": "Black-" },
+    { "roll": "53-56", "result": "Mourn-" },
+    { "roll": "57-60", "result": "New-" },
+    { "roll": "61-64", "result": "Stone-" },
+    { "roll": "65-68", "result": "Grim-" },
+    { "roll": "69-72", "result": "Lost-" },
+    { "roll": "73-76", "result": "High-" },
+    { "roll": "77-80", "result": "Rock-" },
+    { "roll": "81-84", "result": "Shield-" },
+    { "roll": "85-88", "result": "Sword-" },
+    { "roll": "89-92", "result": "Frost-" },
+    { "roll": "93-96", "result": "Thorn-" },
+    { "roll": "97-00", "result": "Long-" }
+  ]
+}

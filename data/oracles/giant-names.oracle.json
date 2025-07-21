@@ -1,0 +1,106 @@
+{
+  "title": "ORACLE 15: GIANT NAMES",
+  "category": "character",
+  "table": [
+    {
+      "roll": "1-4",
+      "result": "Chony"
+    },
+    {
+      "roll": "5-8",
+      "result": "Banda"
+    },
+    {
+      "roll": "9-12",
+      "result": "Jochu"
+    },
+    {
+      "roll": "13-16",
+      "result": "Kira"
+    },
+    {
+      "roll": "17-20",
+      "result": "Khatir"
+    },
+    {
+      "roll": "21-24",
+      "result": "Chaidu"
+    },
+    {
+      "roll": "25-28",
+      "result": "Atan"
+    },
+    {
+      "roll": "29-32",
+      "result": "Buandu"
+    },
+    {
+      "roll": "33-36",
+      "result": "Javyn"
+    },
+    {
+      "roll": "37-40",
+      "result": "Khashin"
+    },
+    {
+      "roll": "41-44",
+      "result": "Bayara"
+    },
+    {
+      "roll": "45-48",
+      "result": "Temura"
+    },
+    {
+      "roll": "49-52",
+      "result": "Kidha"
+    },
+    {
+      "roll": "53-56",
+      "result": "Kathos"
+    },
+    {
+      "roll": "57-60",
+      "result": "Tanua"
+    },
+    {
+      "roll": "61-64",
+      "result": "Bashtu"
+    },
+    {
+      "roll": "65-68",
+      "result": "Jaran"
+    },
+    {
+      "roll": "69-72",
+      "result": "Othos"
+    },
+    {
+      "roll": "73-76",
+      "result": "Khutan"
+    },
+    {
+      "roll": "77-80",
+      "result": "Otaan"
+    },
+    {
+      "roll": "81-84",
+      "result": "Martu"
+    },
+    {
+      "roll": "85-88",
+      "result": "Baku"
+    },
+    {
+      "roll": "89-92",
+      "result": "Tuban"
+    },
+    {
+      "roll": "93-96",
+      "result": "Qudan"
+    },
+    {
+      "roll": "97-00",
+      "result": "Denua"
+    }
+  ]
+}

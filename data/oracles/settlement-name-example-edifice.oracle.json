@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 7: SETTLEMENT NAME EXAMPLE - EDIFICE",
+  "category": "location",
+  "table": [
+    { "roll": "1-10", "result": "Whitebridge" },
+    { "roll": "11-20", "result": "Lonefort" },
+    { "roll": "21-30", "result": "Highcairn" },
+    { "roll": "31-40", "result": "Redhall" },
+    { "roll": "41-50", "result": "Darkwell" },
+    { "roll": "51-60", "result": "Timberwall" },
+    { "roll": "61-70", "result": "Stonetower" },
+    { "roll": "71-80", "result": "Thornhall" },
+    { "roll": "81-90", "result": "Cinderhome" },
+    { "roll": "91-00", "result": "Fallowfield" }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "ORACLE 7: SETTLEMENT NAME THEME",
+  "category": "location",
+  "table": [
+    {
+      "roll": "1-15",
+      "result": "A feature of the landscape. Envision what it is. What makes it unusual or distinctive?"
+    },
+    {
+      "roll": "16-30",
+      "result": "A manmade edifice. What is it? Why is it important to this settlement’s history?"
+    },
+    {
+      "roll": "31-45",
+      "result": "A creature. Why have the people of this settlement chosen this creature as their totem? How is it represented in art or rituals?"
+    },
+    {
+      "roll": "46-60",
+      "result": "A historical event. What happened here? What place or practice commemorates this event?"
+    },
+    {
+      "roll": "61-75",
+      "result": "A word in an Old World language. What culture is represented by this word? What does it translate to?"
+    },
+    {
+      "roll": "76-90",
+      "result": "A season or environmental aspect. What influence does the weather have on this settlement?"
+    },
+    { "roll": "91-00", "result": "Something Else...." }
+  ]
+}

@@ -160,4 +160,3 @@ A mythic belief or event (Ghostwalk)
 A positive term (Hope)
 91-00
 A negative term (Forsaken)
-e

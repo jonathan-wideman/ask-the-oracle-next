@@ -1,0 +1,106 @@
+{
+  "title": "ORACLE 15: TROLL NAMES",
+  "category": "character",
+  "table": [
+    {
+      "roll": "1-4",
+      "result": "Rattle"
+    },
+    {
+      "roll": "5-8",
+      "result": "Scratch"
+    },
+    {
+      "roll": "9-12",
+      "result": "Wallow"
+    },
+    {
+      "roll": "13-16",
+      "result": "Groak"
+    },
+    {
+      "roll": "17-20",
+      "result": "Gimble"
+    },
+    {
+      "roll": "21-24",
+      "result": "Scar"
+    },
+    {
+      "roll": "25-28",
+      "result": "Cratch"
+    },
+    {
+      "roll": "29-32",
+      "result": "Creech"
+    },
+    {
+      "roll": "33-36",
+      "result": "Shush"
+    },
+    {
+      "roll": "37-40",
+      "result": "Glush"
+    },
+    {
+      "roll": "41-44",
+      "result": "Slar"
+    },
+    {
+      "roll": "45-48",
+      "result": "Gnash"
+    },
+    {
+      "roll": "49-52",
+      "result": "Stoad"
+    },
+    {
+      "roll": "53-56",
+      "result": "Grig"
+    },
+    {
+      "roll": "57-60",
+      "result": "Bleat"
+    },
+    {
+      "roll": "61-64",
+      "result": "Chortle"
+    },
+    {
+      "roll": "65-68",
+      "result": "Cluck"
+    },
+    {
+      "roll": "69-72",
+      "result": "Slith"
+    },
+    {
+      "roll": "73-76",
+      "result": "Mongo"
+    },
+    {
+      "roll": "77-80",
+      "result": "Creak"
+    },
+    {
+      "roll": "81-84",
+      "result": "Burble"
+    },
+    {
+      "roll": "85-88",
+      "result": "Vrusk"
+    },
+    {
+      "roll": "89-92",
+      "result": "Snuffle"
+    },
+    {
+      "roll": "93-96",
+      "result": "Leech"
+    },
+    {
+      "roll": "97-00",
+      "result": "Herk"
+    }
+  ]
+}

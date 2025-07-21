@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 7: SETTLEMENT NAME EXAMPLE - WORD",
+  "category": "location",
+  "table": [
+    { "roll": "1-10", "result": "Abon" },
+    { "roll": "11-20", "result": "Daveza" },
+    { "roll": "21-30", "result": "Damula" },
+    { "roll": "31-40", "result": "Essus" },
+    { "roll": "41-50", "result": "Sina" },
+    { "roll": "51-60", "result": "Kazeera" },
+    { "roll": "61-70", "result": "Khazu" },
+    { "roll": "71-80", "result": "Sova" },
+    { "roll": "81-90", "result": "Nabuma" },
+    { "roll": "91-00", "result": "Tiza" }
+  ]
+}

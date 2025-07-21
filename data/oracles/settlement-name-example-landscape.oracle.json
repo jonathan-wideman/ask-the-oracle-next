@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 7: SETTLEMENT NAME EXAMPLE - LANDSCAPE",
+  "category": "location",
+  "table": [
+    { "roll": "1-10", "result": "Highmount" },
+    { "roll": "11-20", "result": "Brackwater" },
+    { "roll": "21-30", "result": "Frostwood" },
+    { "roll": "31-40", "result": "Redcrest" },
+    { "roll": "41-50", "result": "Grimtree" },
+    { "roll": "51-60", "result": "Stoneford" },
+    { "roll": "61-70", "result": "Deepwater" },
+    { "roll": "71-80", "result": "Whitefall" },
+    { "roll": "81-90", "result": "Graycliff" },
+    { "roll": "91-00", "result": "Three Rivers" }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "title": "ORACLE 15: VAROU NAMES",
+  "category": "character",
+  "table": [
+    {
+      "roll": "1-4",
+      "result": "Vata"
+    },
+    {
+      "roll": "5-8",
+      "result": "Zora"
+    },
+    {
+      "roll": "9-12",
+      "result": "Jasna"
+    },
+    {
+      "roll": "13-16",
+      "result": "Charna"
+    },
+    {
+      "roll": "17-20",
+      "result": "Tana"
+    },
+    {
+      "roll": "21-24",
+      "result": "Soveen"
+    },
+    {
+      "roll": "25-28",
+      "result": "Radka"
+    },
+    {
+      "roll": "29-32",
+      "result": "Zlata"
+    },
+    {
+      "roll": "33-36",
+      "result": "Leesla"
+    },
+    {
+      "roll": "37-40",
+      "result": "Byna"
+    },
+    {
+      "roll": "41-44",
+      "result": "Meeka"
+    },
+    {
+      "roll": "45-48",
+      "result": "Iskra"
+    },
+    {
+      "roll": "49-52",
+      "result": "Jarek"
+    },
+    {
+      "roll": "53-56",
+      "result": "Darva"
+    },
+    {
+      "roll": "57-60",
+      "result": "Neda"
+    },
+    {
+      "roll": "61-64",
+      "result": "Keha"
+    },
+    {
+      "roll": "65-68",
+      "result": "Zhivka"
+    },
+    {
+      "roll": "69-72",
+      "result": "Kvata"
+    },
+    {
+      "roll": "73-76",
+      "result": "Staysa"
+    },
+    {
+      "roll": "77-80",
+      "result": "Evka"
+    },
+    {
+      "roll": "81-84",
+      "result": "Vuksha"
+    },
+    {
+      "roll": "85-88",
+      "result": "Muko"
+    },
+    {
+      "roll": "89-92",
+      "result": "Dreko"
+    },
+    {
+      "roll": "93-96",
+      "result": "Aleko"
+    },
+    {
+      "roll": "97-00",
+      "result": "Vojan"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 7: SETTLEMENT NAME EXAMPLE - SEASON",
+  "category": "location",
+  "table": [
+    { "roll": "1-10", "result": "Winterhome" },
+    { "roll": "11-20", "result": "Windhaven" },
+    { "roll": "21-30", "result": "Stormrest" },
+    { "roll": "31-40", "result": "Bleakfrost" },
+    { "roll": "41-50", "result": "Springtide" },
+    { "roll": "51-60", "result": "Duskmoor" },
+    { "roll": "61-70", "result": "Frostcrag" },
+    { "roll": "71-80", "result": "Springbrook" },
+    { "roll": "81-90", "result": "Icebreak" },
+    { "roll": "91-00", "result": "Summersong" }
+  ]
+}

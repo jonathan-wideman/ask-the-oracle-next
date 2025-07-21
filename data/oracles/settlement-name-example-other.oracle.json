@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 7: SETTLEMENT NAME EXAMPLE - OTHER",
+  "category": "location",
+  "table": [
+    { "roll": "1-10", "result": "A trade good (Ironhome)" },
+    { "roll": "11-20", "result": "A founder or famous settler (Kei's Hall)" },
+    { "roll": "21-30", "result": "A historical item (Blackhelm)" },
+    { "roll": "31-40", "result": "An elvish word or name (Nessana)" },
+    { "roll": "41-50", "result": "A positive term (Hope)" },
+    { "roll": "51-60", "result": "An Old World city (New Arkesh)" },
+    { "roll": "61-70", "result": "A god (Elisora)" },
+    { "roll": "71-80", "result": "A firstborn race (Elfbrook)" },
+    { "roll": "81-90", "result": "A mythic belief or event (Ghostwalk)" },
+    { "roll": "91-00", "result": "A negative term (Forsaken)" }
+  ]
+}

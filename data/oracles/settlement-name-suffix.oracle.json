@@ -1,0 +1,31 @@
+{
+  "title": "ORACLE 8: SETTLEMENT NAME SUFFIX",
+  "category": "location",
+  "table": [
+    { "roll": "1-4", "result": "-moor" },
+    { "roll": "5-8", "result": "-ford" },
+    { "roll": "9-12", "result": "-crag" },
+    { "roll": "13-16", "result": "-watch" },
+    { "roll": "17-20", "result": "-hope" },
+    { "roll": "21-24", "result": "-wood" },
+    { "roll": "25-28", "result": "-ridge" },
+    { "roll": "29-32", "result": "-stone" },
+    { "roll": "33-36", "result": "-haven" },
+    { "roll": "37-40", "result": "-fall(s)" },
+    { "roll": "41-44", "result": "-river" },
+    { "roll": "45-48", "result": "-field" },
+    { "roll": "49-52", "result": "-hill" },
+    { "roll": "53-56", "result": "-bridge" },
+    { "roll": "57-60", "result": "-mark" },
+    { "roll": "61-64", "result": "-cairn" },
+    { "roll": "65-68", "result": "-land" },
+    { "roll": "69-72", "result": "-hall" },
+    { "roll": "73-76", "result": "-mount" },
+    { "roll": "77-80", "result": "-rock" },
+    { "roll": "81-84", "result": "-brook" },
+    { "roll": "85-88", "result": "-barrow" },
+    { "roll": "89-92", "result": "-stead" },
+    { "roll": "93-96", "result": "-home" },
+    { "roll": "97-00", "result": "-wick" }
+  ]
+}

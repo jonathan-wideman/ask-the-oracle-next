@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 7: SETTLEMENT NAME EXAMPLE - EVENT",
+  "category": "location",
+  "table": [
+    { "roll": "1-10", "result": "Swordbreak" },
+    { "roll": "11-20", "result": "Fool's Fall" },
+    { "roll": "21-30", "result": "Firstmeet" },
+    { "roll": "31-40", "result": "Brokenhelm" },
+    { "roll": "41-50", "result": "Mournhaunt" },
+    { "roll": "51-60", "result": "Olgar's Stand" },
+    { "roll": "61-70", "result": "Lostwater" },
+    { "roll": "71-80", "result": "Rojirra's Lament" },
+    { "roll": "81-90", "result": "Lastmarch" },
+    { "roll": "91-00", "result": "Rockfall" }
+  ]
+}
