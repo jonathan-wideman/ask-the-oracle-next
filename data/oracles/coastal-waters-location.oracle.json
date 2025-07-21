@@ -1,1 +1,23 @@
-{"title": "ORACLE 5: COASTAL WATERS LOCATION", "table": [{"roll": "1", "result": "Fleet"}, {"roll": "2", "result": "Sargassum"}, {"roll": "3", "result": "Flotsam"}, {"roll": "4", "result": "Mystical Site"}, {"roll": "5", "result": "Lair"}, {"roll": "6-10", "result": "Wreck"}, {"roll": "11-15", "result": "Harbor"}, {"roll": "16-23", "result": "Ship"}, {"roll": "24-30", "result": "Rocks"}, {"roll": "31-38", "result": "Fjord"}, {"roll": "39-46", "result": "Estuary"}, {"roll": "47-54", "result": "Cove"}, {"roll": "55-62", "result": "Bay"}, {"roll": "63-70", "result": "Ice"}, {"roll": "71-85", "result": "Island"}, {"roll": "86-99", "result": "Open Water"}, {"roll": "00", "result": "Anomaly"}]}
+{
+  "title": "ORACLE 5: COASTAL WATERS LOCATION",
+  "category": "location",
+  "table": [
+    { "roll": "1", "result": "Fleet" },
+    { "roll": "2", "result": "Sargassum" },
+    { "roll": "3", "result": "Flotsam" },
+    { "roll": "4", "result": "Mystical Site" },
+    { "roll": "5", "result": "Lair" },
+    { "roll": "6-10", "result": "Wreck" },
+    { "roll": "11-15", "result": "Harbor" },
+    { "roll": "16-23", "result": "Ship" },
+    { "roll": "24-30", "result": "Rocks" },
+    { "roll": "31-38", "result": "Fjord" },
+    { "roll": "39-46", "result": "Estuary" },
+    { "roll": "47-54", "result": "Cove" },
+    { "roll": "55-62", "result": "Bay" },
+    { "roll": "63-70", "result": "Ice" },
+    { "roll": "71-85", "result": "Island" },
+    { "roll": "86-99", "result": "Open Water" },
+    { "roll": "00", "result": "Anomaly" }
+  ]
+}

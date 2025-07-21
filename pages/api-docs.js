@@ -10,7 +10,7 @@ export default function Home() {
     <Layout>
       <main>
         <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
-          <h1 className={oracleStyles.text_xl}>API Documentation</h1>
+          <h1 className={oracleStyles.text_xxl}>API Documentation</h1>
           <h2 className={oracleStyles.text_l}>Routes</h2>
         </div>
 

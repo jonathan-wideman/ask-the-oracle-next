@@ -96,6 +96,7 @@ function massageData(oracles) {
     index: deriveIndex(oracle),
     title: formatTitle(oracle),
     slug: createSlug(oracle),
+    category: oracle.category,
     ...convertRollTable(oracle.table)
   }))
 }

@@ -9,7 +9,7 @@ export default function Home() {
     <Layout>
       <main>
         <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
-          <p className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}>Greetings, Ironsworn!</p>
+          <p className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}>Greetings, Ironsworn!</p>
           <p className={classNames(oracleStyles.text_l, utilityStyles.fadein)} style={styleAnimationDelay(0.5)}>I am the Oracle.</p>
           <p className={utilityStyles.fadein} style={styleAnimationDelay(1)}>You may <Link href={"/oracles"}>ask after your fate</Link>.</p>
         </div>

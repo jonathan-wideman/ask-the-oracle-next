@@ -1,1 +1,36 @@
-{"title": "ORACLE 10: CHARACTER ROLE", "table": [{"roll": "1-2", "result": "Criminal"}, {"roll": "3-4", "result": "Healer"}, {"roll": "5-6", "result": "Bandit"}, {"roll": "7-9", "result": "Guide"}, {"roll": "10-12", "result": "Performer"}, {"roll": "13-15", "result": "Miner"}, {"roll": "16-18", "result": "Mercenary"}, {"roll": "19-21", "result": "Outcast"}, {"roll": "22-24", "result": "Vagrant"}, {"roll": "25-27", "result": "Forester"}, {"roll": "28-30", "result": "Traveler"}, {"roll": "31-33", "result": "Mystic"}, {"roll": "34-36", "result": "Priest"}, {"roll": "37-39", "result": "Sailor"}, {"roll": "40-42", "result": "Pilgrim"}, {"roll": "43-45", "result": "Thief"}, {"roll": "46-48", "result": "Adventurer"}, {"roll": "49-51", "result": "Forager"}, {"roll": "52-54", "result": "Leader"}, {"roll": "55-58", "result": "Guard"}, {"roll": "59-62", "result": "Artisan"}, {"roll": "63-66", "result": "Scout"}, {"roll": "67-70", "result": "Herder"}, {"roll": "71-74", "result": "Fisher"}, {"roll": "75-79", "result": "Warrior"}, {"roll": "80-84", "result": "Hunter"}, {"roll": "85-89", "result": "Raider"}, {"roll": "90-94", "result": "Trader"}, {"roll": "95-99", "result": "Farmer"}, {"roll": "00", "result": "Unusual role"}]}
+{
+  "title": "ORACLE 10: CHARACTER ROLE",
+  "category": "character",
+  "table": [
+    { "roll": "1-2", "result": "Criminal" },
+    { "roll": "3-4", "result": "Healer" },
+    { "roll": "5-6", "result": "Bandit" },
+    { "roll": "7-9", "result": "Guide" },
+    { "roll": "10-12", "result": "Performer" },
+    { "roll": "13-15", "result": "Miner" },
+    { "roll": "16-18", "result": "Mercenary" },
+    { "roll": "19-21", "result": "Outcast" },
+    { "roll": "22-24", "result": "Vagrant" },
+    { "roll": "25-27", "result": "Forester" },
+    { "roll": "28-30", "result": "Traveler" },
+    { "roll": "31-33", "result": "Mystic" },
+    { "roll": "34-36", "result": "Priest" },
+    { "roll": "37-39", "result": "Sailor" },
+    { "roll": "40-42", "result": "Pilgrim" },
+    { "roll": "43-45", "result": "Thief" },
+    { "roll": "46-48", "result": "Adventurer" },
+    { "roll": "49-51", "result": "Forager" },
+    { "roll": "52-54", "result": "Leader" },
+    { "roll": "55-58", "result": "Guard" },
+    { "roll": "59-62", "result": "Artisan" },
+    { "roll": "63-66", "result": "Scout" },
+    { "roll": "67-70", "result": "Herder" },
+    { "roll": "71-74", "result": "Fisher" },
+    { "roll": "75-79", "result": "Warrior" },
+    { "roll": "80-84", "result": "Hunter" },
+    { "roll": "85-89", "result": "Raider" },
+    { "roll": "90-94", "result": "Trader" },
+    { "roll": "95-99", "result": "Farmer" },
+    { "roll": "00", "result": "Unusual role" }
+  ]
+}

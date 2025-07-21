@@ -1,1 +1,27 @@
-{"title": "ORACLE 16: COMBAT ACTION", "table": [{"roll": "1-3", "result": "Compel a surrender."}, {"roll": "4-6", "result": "Coordinate with allies."}, {"roll": "7-9", "result": "Gather reinforcements."}, {"roll": "10-13", "result": "Seize something or someone."}, {"roll": "14-17", "result": "Provoke a reckless response."}, {"roll": "18-21", "result": "Intimidate or frighten."}, {"roll": "22-25", "result": "Reveal a surprising truth."}, {"roll": "26-29", "result": "Shift focus to someone or something else."}, {"roll": "30-33", "result": "Destroy something, or render it useless."}, {"roll": "34-39", "result": "Take a decisive action."}, {"roll": "40-45", "result": "Reinforce defenses."}, {"roll": "46-52", "result": "Ready an action."}, {"roll": "53-60", "result": "Use the terrain to gain advantage."}, {"roll": "61-68", "result": "Leverage the advantage of a weapon or ability."}, {"roll": "69-78", "result": "Create an opportunity."}, {"roll": "79-89", "result": "Attack with precision."}, {"roll": "90-99", "result": "Attack with power."}, {"roll": "00", "result": "Take a completely unexpected action."}]}
+{
+  "title": "ORACLE 16: COMBAT ACTION",
+  "category": "plot",
+  "table": [
+    { "roll": "1-3", "result": "Compel a surrender." },
+    { "roll": "4-6", "result": "Coordinate with allies." },
+    { "roll": "7-9", "result": "Gather reinforcements." },
+    { "roll": "10-13", "result": "Seize something or someone." },
+    { "roll": "14-17", "result": "Provoke a reckless response." },
+    { "roll": "18-21", "result": "Intimidate or frighten." },
+    { "roll": "22-25", "result": "Reveal a surprising truth." },
+    { "roll": "26-29", "result": "Shift focus to someone or something else." },
+    { "roll": "30-33", "result": "Destroy something, or render it useless." },
+    { "roll": "34-39", "result": "Take a decisive action." },
+    { "roll": "40-45", "result": "Reinforce defenses." },
+    { "roll": "46-52", "result": "Ready an action." },
+    { "roll": "53-60", "result": "Use the terrain to gain advantage." },
+    {
+      "roll": "61-68",
+      "result": "Leverage the advantage of a weapon or ability."
+    },
+    { "roll": "69-78", "result": "Create an opportunity." },
+    { "roll": "79-89", "result": "Attack with precision." },
+    { "roll": "90-99", "result": "Attack with power." },
+    { "roll": "00", "result": "Take a completely unexpected action." }
+  ]
+}

@@ -44,7 +44,7 @@ export default function Oracle({ oracles }) {
     <Layout pageTitle={oracle.title}>
       <main>
         <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
-          <p className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}> Very well;</p>
+          <p className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}> Very well;</p>
           <p className={classNames(oracleStyles.text_l, utilityStyles.fadein)} style={styleAnimationDelay(0.5)}>{oracle.title}...</p>
 
           <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>ask again</button>

@@ -1,1 +1,16 @@
-{"title": "ORACLE 3: REGION", "table": [{"roll": "1-12", "result": "Barrier Islands"}, {"roll": "13-24", "result": "Ragged Coast"}, {"roll": "25-34", "result": "Deep Wilds"}, {"roll": "35-46", "result": "Flooded Lands"}, {"roll": "47-60", "result": "Havens"}, {"roll": "61-72", "result": "Hinterlands"}, {"roll": "73-84", "result": "Tempest Hills"}, {"roll": "85-94", "result": "Veiled Mountains"}, {"roll": "95-99", "result": "Shattered Wastes"}, {"roll": "00", "result": "Elsewhere"}]}
+{
+  "title": "ORACLE 3: REGION",
+  "category": "location",
+  "table": [
+    { "roll": "1-12", "result": "Barrier Islands" },
+    { "roll": "13-24", "result": "Ragged Coast" },
+    { "roll": "25-34", "result": "Deep Wilds" },
+    { "roll": "35-46", "result": "Flooded Lands" },
+    { "roll": "47-60", "result": "Havens" },
+    { "roll": "61-72", "result": "Hinterlands" },
+    { "roll": "73-84", "result": "Tempest Hills" },
+    { "roll": "85-94", "result": "Veiled Mountains" },
+    { "roll": "95-99", "result": "Shattered Wastes" },
+    { "roll": "00", "result": "Elsewhere" }
+  ]
+}
