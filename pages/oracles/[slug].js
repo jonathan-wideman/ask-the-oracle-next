@@ -35,7 +35,8 @@ export default function Oracle({ oracles }) {
   }
 
   useEffect(() => {
-    rollOracle(1000)
+    // rollOracle(1000)
+    rollOracle(500)
   }, [])
 
   const toggleTable = () => setTableVisible(visible => !visible)
@@ -47,11 +48,11 @@ export default function Oracle({ oracles }) {
           <p className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}> Very well;</p>
           <p className={classNames(oracleStyles.text_l, utilityStyles.fadein)} style={styleAnimationDelay(0.5)}>{oracle.title}...</p>
 
+          <p className={classNames(oracleStyles.result, rolling ? utilityStyles.transparent : utilityStyles.fadein)}>{result}</p>
+
           <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>ask again</button>
           <button onClick={() => toggleTable()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
           <Link href="/oracles" ><a className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>seek a different fate</a></Link>
-
-          <p className={classNames(oracleStyles.result, rolling ? utilityStyles.transparent : utilityStyles.fadein)}>{result}</p>
 
           {tableVisible ? <div className={classNames(oracleStyles.table, utilityStyles.fadein)}>
             {oracle.table.map((row, index) => <React.Fragment key={index}>

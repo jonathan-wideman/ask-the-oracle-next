@@ -5,6 +5,7 @@
   text-align: left;
   font-size: var(--fs-200);
   gap: 0.5em 1em;
+  margin-top: 2em;
   padding: 1em 2em;
   border: 1px solid var(--clr-neutral-300);
   border-radius: 1em;
