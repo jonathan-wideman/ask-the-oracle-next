@@ -35,4 +35,12 @@
   font-size: var(--fs-500);
   border: 1px solid var(--clr-neutral-300);
   border-radius: 1em;
+  text-decoration: unset;
+}
+
+.result:hover,
+.result:focus-visible {
+  border: 1px solid var(--clr-primary-800);
+  box-shadow: 0 0 1em var(--clr-primary-200),
+    0 0 1em inset var(--clr-primary-200);
 }
