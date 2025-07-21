@@ -56,20 +56,6 @@ export default function Oracles({ oracles }) {
               </ul>
             </div>
           ))}
-          {/* <ul>
-            {oracles?.map((oracle, index) => (
-              <li key={oracle.id}>
-                <Link href={`/oracles/${oracle.slug}`}>
-                  <a
-                    className={utilityStyles.fadein}
-                    style={styleAnimationDelay(index * 0.025 + 0.25)}
-                  >
-                    {oracle.title}
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul> */}
         </div>
       </main>
     </Layout>
