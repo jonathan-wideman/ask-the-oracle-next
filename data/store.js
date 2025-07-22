@@ -1,7 +1,9 @@
 import oracles from './oracles'
+import moves from "./moves/moves.json";
 
 const store = {
-  oracles
+  oracles,
+  moves
 }
 
 export default store

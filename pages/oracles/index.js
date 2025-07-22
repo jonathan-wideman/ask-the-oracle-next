@@ -14,8 +14,6 @@ export default function Oracles({ oracles }) {
     {}
   );
 
-  console.log(oraclesByCategory);
-
   return (
     <Layout pageTitle={"Oracles"}>
       <main>
