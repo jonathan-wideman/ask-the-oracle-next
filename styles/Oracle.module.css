@@ -44,3 +44,23 @@
   box-shadow: 0 0 1em var(--clr-primary-200),
     0 0 1em inset var(--clr-primary-200);
 }
+
+.move_rules {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-400);
+  text-align: left;
+}
+
+.move_rules strong {
+  font-weight: var(--fw-600);
+  color: var(--clr-accent-600);
+}
+
+.move_rules ul {
+  list-style-type: "⋅";
+  margin-left: 1em;
+}
+
+.move_rules ul li {
+  padding-left: 0.5em;
+}

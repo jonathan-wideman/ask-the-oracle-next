@@ -107,6 +107,11 @@ select {
   --clr-primary-200: hsl(279, 22%, 20%);
   --clr-primary-400: hsl(279, 22%, 50%);
   --clr-primary-800: hsl(279, 22%, 80%);
+  
+  --clr-accent-200: hsl(240, 22%, 20%);
+  --clr-accent-400: hsl(240, 22%, 50%);
+  --clr-accent-600: hsl(240, 22%, 60%);
+  --clr-accent-800: hsl(240, 22%, 80%);
 
   --clr-link-normal: var(--clr-neutral-000);
   --clr-link-hover: var(--clr-neutral-200);

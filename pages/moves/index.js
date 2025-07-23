@@ -4,6 +4,8 @@ import { getMoves } from "../../lib/connector";
 import { classNames, styleAnimationDelay, toTitleCase } from "../../lib/util";
 import utilityStyles from "../../styles/utility.module.css";
 import oracleStyles from "../../styles/Oracle.module.css";
+import Markdown from "react-markdown";
+import { useState } from "react";
 
 export default function Moves({ moves }) {
   const movesByCategory = moves.reduce(
@@ -38,24 +40,7 @@ export default function Moves({ moves }) {
               <ul>
                 {movesByCategory[category].map((move, index) => (
                   <li key={move.name}>
-                    {/* <Link href={`/moves/${move.slug}`}> */}
-                    <Link href={`/moves`}>
-                      <a
-                        className={classNames(
-                          oracleStyles.text_l,
-                          utilityStyles.fadein
-                        )}
-                        style={styleAnimationDelay(index * 0.025 + 0.25)}
-                      >
-                        {move.name}
-                      </a>
-                    </Link>
-                    {/* {move.rules && (
-                      <div
-                        style={{ fontSize: "0.9rem" }}
-                        dangerouslySetInnerHTML={{ __html: move.rules }}
-                      ></div>
-                    )} */}
+                    <Move move={move} index={index} />
                   </li>
                 ))}
               </ul>
@@ -64,6 +49,26 @@ export default function Moves({ moves }) {
         </div>
       </main>
     </Layout>
+  );
+}
+
+export function Move({ move, index }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <a
+        className={classNames(oracleStyles.text_l, utilityStyles.fadein)}
+        style={styleAnimationDelay(index * 0.025 + 0.25)}
+        onClick={() => setOpen(!open)}
+      >
+        {move.name}
+      </a>
+      {open && (
+        <div className={oracleStyles.move_rules}>
+          <Markdown>{move.rules}</Markdown>
+        </div>
+      )}
+    </>
   );
 }
 
