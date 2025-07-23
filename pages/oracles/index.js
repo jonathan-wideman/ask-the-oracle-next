@@ -34,7 +34,7 @@ export default function Oracles({ oracles }) {
               className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
               style={styleAnimationDelay(index * 0.025 + 0.25)}
             >
-              <p>{toTitleCase(category)}</p>
+              <p className={oracleStyles.heading_margin}>{toTitleCase(category)}</p>
               <ul>
                 {oraclesByCategory[category].map((oracle, index) => (
                   <li key={oracle.id}>

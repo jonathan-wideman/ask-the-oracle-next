@@ -36,7 +36,7 @@ export default function Moves({ moves }) {
               className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
               style={styleAnimationDelay(index * 0.025 + 0.25)}
             >
-              <p>{toTitleCase(category)}</p>
+              <p className={oracleStyles.heading_margin}>{toTitleCase(category)}</p>
               <ul>
                 {movesByCategory[category].map((move, index) => (
                   <li key={move.name}>

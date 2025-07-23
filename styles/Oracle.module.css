@@ -29,6 +29,10 @@
   font-weight: var(--fw-600);
 }
 
+.heading_margin {
+  margin: 0.5em 0 0.25em 0;
+}
+
 .result {
   margin: 1em 0;
   padding: 1em 2em;
