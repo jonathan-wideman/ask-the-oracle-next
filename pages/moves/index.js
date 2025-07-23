@@ -16,6 +16,10 @@ export default function Moves({ moves }) {
     {}
   );
 
+  const allMoveNamesWithoutAsterisks = moves.map((move) =>
+    move.name.replace("*", "")
+  );
+
   return (
     <Layout pageTitle={"Moves"}>
       <main>
@@ -36,11 +40,17 @@ export default function Moves({ moves }) {
               className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
               style={styleAnimationDelay(index * 0.025 + 0.25)}
             >
-              <p className={oracleStyles.heading_margin}>{toTitleCase(category)}</p>
+              <p className={oracleStyles.heading_margin}>
+                {toTitleCase(category)}
+              </p>
               <ul>
                 {movesByCategory[category].map((move, index) => (
                   <li key={move.name}>
-                    <Move move={move} index={index} />
+                    <Move
+                      move={move}
+                      index={index}
+                      allMoveNames={allMoveNamesWithoutAsterisks}
+                    />
                   </li>
                 ))}
               </ul>
@@ -52,7 +62,7 @@ export default function Moves({ moves }) {
   );
 }
 
-export function Move({ move, index }) {
+export function Move({ move, index, allMoveNames }) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -65,7 +75,37 @@ export function Move({ move, index }) {
       </a>
       {open && (
         <div className={oracleStyles.move_rules}>
-          <Markdown>{move.rules}</Markdown>
+          <Markdown
+            components={{
+              em: ({ node, ...rest }) => {
+                const isMoveName = allMoveNames.includes(rest.children);
+                console.log(isMoveName, rest.children);
+                return (
+                  <em
+                    className={isMoveName ? oracleStyles.move_name : undefined}
+                    {...rest}
+                  />
+                );
+              },
+              code(props) {
+                const { node, ...rest } = props;
+                const type = rest.children.startsWith("Roll") ? "roll" : "stat";
+                return (
+                  <span
+                    className={
+                      {
+                        roll: oracleStyles.roll,
+                        stat: oracleStyles.stat,
+                      }[type]
+                    }
+                    {...rest}
+                  />
+                );
+              },
+            }}
+          >
+            {move.rules}
+          </Markdown>
         </div>
       )}
     </>
