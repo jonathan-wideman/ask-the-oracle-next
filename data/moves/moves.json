@@ -126,7 +126,7 @@
         "rules": "When **you fight a battle, and it happens in a blur**, envision your objective and roll. If you primarily...  \n\n*   Fight at range, or using your speed and the terrain to your advantage: `Roll +edge`.\n*   Fight depending on your courage, allies, or companions: `Roll +heart`.\n*   Fight in close to overpower your opponents: `Roll +iron`.\n*   Fight using trickery to befuddle your opponents: `Roll +shadow`.\n*   Fight using careful tactics to outsmart your opponents: `Roll +wits`.\n\nOn a **strong hit**, you achieve your objective unconditionally. Take +2 momentum.  \n  \nOn a **weak hit**, you achieve your objective, but not without cost. _Pay the Price_.  \n  \nOn a **miss**, you are defeated and the objective is lost to you. _Pay the Price_."
     },
     {
-        "name": "Endure Harm*",
+        "name": "Endure Harm",
         "category": "suffer",
         "source": "Ironsworn Rulebook, page 91",
         "rules": "When **you face physical damage**, suffer -health equal to your foe’s rank or as appropriate to the situation. If your health is 0, suffer -momentum equal to any remaining -health. Then, `roll +health` or +iron, whichever is higher.  \n  \nOn a **strong hit**, choose one.  \n\n*   Shake it off: If your health is greater than 0, suffer `-1 momentum` in exchange for `+1 health`.\n*   Embrace the pain: Take `+1 momentum`.\n\nOn a **weak hit**, you press on.  \n  \nOn a **miss**, also suffer `-1 momentum`. If you are at 0 health, you must mark wounded or maimed (if currently unmarked) or roll on the following table. `ORACLE:Endure Harm`"
@@ -144,7 +144,7 @@
         "rules": "When **your companion faces physical damage**, they suffer -health equal to the amount of harm inflicted. If your companion’s health is 0, exchange any leftover -health for -momentum. Then, `roll +heart` or +your companion’s health, whichever is higher.  \n  \nOn a **strong hit**, your companion rallies. Give them `+1 health`.  \n  \nOn a **weak hit**, your companion is battered. If their health is 0, they cannot assist you until they gain at least `+1 health`.  \n  \nOn a **miss**, also suffer `-1 momentum`. If your companion’s health is 0, they are gravely wounded and out of action. Without aid, they die in an hour or two. If you roll a miss with a 1 on your action die, and your companion’s health is 0, they are now dead. Take 1 experience for each marked ability on your companion asset, and remove it."
     },
     {
-        "name": "Endure Stress*",
+        "name": "Endure Stress",
         "category": "suffer",
         "source": "Ironsworn Rulebook, page 95",
         "rules": "When **you face mental shock or despair**, suffer -spirit equal to your foe’s rank or as appropriate to the situation. If your spirit is 0, suffer -momentum equal to any remaining -spirit. Then, `roll +spirit` or +heart, whichever is higher.  \n  \nOn a **strong hit**, choose one.  \n\n*   Shake it off: If your spirit is greater than 0, suffer `-1 momentum` in exchange for `+1 spirit`\n*   Embrace the darkness: Take `+1 momentum`\n\nOn a **weak hit**, you press on.  \n  \nOn a **miss**, also suffer `-1 momentum`. If you are at 0 spirit, you must mark shaken or corrupted (if currently unmarked) or roll on the following table. `ORACLE:Endure Stress`"
@@ -198,13 +198,13 @@
         "rules": "When **you focus on your skills, receive training, find inspiration, earn a reward, or gain a companion**, you may spend 3 experience to add a new asset, or 2 experience to upgrade an asset."
     },
     {
-        "name": "Pay the Price*",
+        "name": "Pay the Price",
         "category": "fate",
         "source": "Ironsworn Rulebook, page 105",
         "rules": "When **you suffer the outcome of a move**, choose one.  \n\n*   Make the most obvious negative outcome happen.\n*   Envision two negative outcomes. Rate one as ‘likely’, and _Ask the Oracle_ using the yes/no table. On a ‘yes’, make that outcome happen. Otherwise, make it the other.\n*   Roll on the following table. If you have difficulty interpreting the result to fit the current situation, roll again. `ORACLE:Pay the Price`"
     },
     {
-        "name": "Ask the Oracle*",
+        "name": "Ask the Oracle",
         "category": "fate",
         "source": "Ironsworn Rulebook, page 107",
         "rules": "When **you seek to resolve questions, discover details in the world, determine how other characters respond, or trigger encounters or events**, you may...  \n\n*   Draw a conclusion: Decide the answer based on the most interesting and obvious result.\n*   Ask a yes/no question: Decide the odds of a ‘yes’, and roll on the table below to check the answer.\n*   Pick two: Envision two options. Rate one as ‘likely’, and roll on the table below to see if it is true. If not, it is the other.\n*   Spark an idea: Brainstorm or use a random prompt.\n\nOdds\n\nThe answer is ‘yes’ if you roll...\n\nAlmost Certain\n\n11 or greater\n\nLikely\n\n26 or greater\n\n50/50\n\n51 or greater\n\nUnlikely\n\n76 or greater\n\nSmall Chance\n\n91 or greater `ORACLE:Ask the Oracle`"
@@ -216,19 +216,19 @@
         "rules": "When **you resolve to enter a perilous site in pursuit of an objective**, choose the theme and domain which best represent its nature (_Ask the Oracle_ if unsure), and give it a rank.  \n\n*   Troublesome site: 3 progress per area.\n*   Dangerous site: 2 progress per area.\n*   Formidable site: 1 progress per area.\n*   Extreme site: 2 ticks per area.\n*   Epic site: 1 tick per area.\n\nIf you are returning to a previously explored site, roll both challenge dice, take the lowest value, and clear that number of progress boxes.  \nThen, **Delve the Depths** to explore this place."
     },
     {
-        "name": "Delve the Depths*",
+        "name": "Delve the Depths",
         "category": "delve",
         "source": "Ironsworn: Delve, page 21",
         "rules": "When you **traverse an area within a perilous site**, envision your surroundings (_Ask the Oracle_ if unsure). Then, consider your approach. If you navigate this area...  \n\n*   With haste: `Roll +edge`.\n*   With stealth or trickery: `Roll +shadow`.\n*   With observation, intuition, or expertise: `Roll +wits`.\n\nOn a **strong hit**, you delve deeper. Mark progress and _Find an Opportunity_. On a **weak hit**, roll on the following table according to your stat.  \n  \nOn a **miss**, _Reveal a Danger_. `ORACLE:Delve the Depths`"
     },
     {
-        "name": "Find an Opportunity*",
+        "name": "Find an Opportunity",
         "category": "delve",
         "source": "Ironsworn: Delve, page 30",
         "rules": "When **you encounter a helpful situation or feature within a site**, roll on the following table. If you are making this move as a result of a strong hit on _Delve the Depths_, you may pick or envision an opportunity instead of rolling.  \nThen, choose one.  \n\n*   Gain insight or prepare: Take `+1 momentum`.\n*   Take action now: You and any allies may make a move (not a progress move) which directly leverages the opportunity. When you do, add `+1 and` take `+1 momentum` on a hit. `ORACLE:Find an Opportunity`"
     },
     {
-        "name": "Reveal a Danger*",
+        "name": "Reveal a Danger",
         "category": "delve",
         "source": "Ironsworn: Delve, page 34",
         "rules": "When **you encounter a risky situation within a site**, envision the danger or roll on the following table. `ORACLE:Reveal a Danger`"
@@ -252,7 +252,7 @@
         "rules": "When **you flee or withdraw from a site**, consider the situation and your approach. If you...  \n\n*   Find the fastest way out: `Roll +edge`.\n*   Steel yourself against the horrors of this place: `Roll +heart`.\n*   Fight your way out: `Roll +iron`.\n*   Retrace your steps or locate an alternate path: `Roll +wits`.\n*   Keep out of sight: `Roll +shadow`.\n\nOn a **strong hit**, you make your way safely out of the site. Take `+1 momentum`.  \nOn a **weak hit**, you find your way out, but this place exacts its price. Choose one.  \n\n*   You are weary or wounded: _Endure Harm_.\n*   The experience leaves you shaken: _Endure Stress_.\n*   You are delayed, and it costs you.\n*   You leave behind something important.\n*   You face a new complication as you emerge from the depths.\n*   A denizen plots their revenge.\n\nOn a **miss**, a dire threat or imposing obstacle stands in your way. _Reveal a Danger_. If you survive, you may make your escape."
     },
     {
-        "name": "Reveal a Danger (alternate version)*",
+        "name": "Reveal a Danger (alternate version)",
         "category": "optional",
         "source": "Ironsworn: Delve, page 68",
         "rules": "When **you encounter a risky situation within a site**, envision the danger or roll on the following table. `ORACLE:Reveal a Danger (alternate version)`"
@@ -270,7 +270,7 @@
         "rules": "When **you spend time reflecting on your hardships and missteps**, and your failure track is +6 or greater, roll your challenge dice and compare to your progress. Momentum is ignored on this roll.  \n  \nOn a **strong hit**, you commit to making a dramatic change. Take 3 experience and clear all progress. Then, choose one.  \n\n*   Adjust your approach: Discard a single asset, and take 2 experience for each marked ability.\n*   Make an oath: _Swear an Iron Vow_, and reroll any dice.\n*   Ready your next steps: Take +3 momentum.\n\nOn a **weak hit**, you learn from your mistakes. Take 2 experience and clear all progress.  \n  \nOn a **miss**, you’ve learned the wrong lessons. Take 1 experience and clear all progress. Then, envision how you set off on an ill-fated path."
     },
     {
-        "name": "Advance a Threat*",
+        "name": "Advance a Threat",
         "category": "optional",
         "source": "Ironsworn: Delve, page 154",
         "rules": "When **you give ground to a threat through inaction, failure, or delay**, roll on the table below and envision how the change manifests in your world (_Ask the Oracle_ if unsure). `ORACLE:Advance a Threat`"
@@ -282,7 +282,7 @@
         "rules": "When **you spend an extended time recovering in a safe place while a threat is active**, do any of the following.  \n\n*   Clear any marked conditions.\n*   Set your health, spirit, supply, and companion health to their maximum values.\n*   Set your momentum to its reset value.\n\nThen, for each active threat, _Advance a Threat_."
     },
     {
-        "name": "Wield a Rarity*~",
+        "name": "Wield a Rarity*",
         "category": "optional",
         "source": "Ironsworn: Delve, page 176",
         "rules": "When _you make a move aided by an augmented asset_, roll your rarity die in place of your action die.  \n  \nOn _any result_ with 6 showing on the rarity die, the power of the rarity manifests in a dramatic and obvious way. You score an automatic **strong hit** and take `+1 momentum`.  \n  \nOn a _hit_ with 5 showing on the rarity die, the power of the rarity manifests in a subtle way. Take `+1 momentum`.  \n  \nOn a _miss_ with 1 showing on the rarity die, the rarity’s power fails or works against you."
