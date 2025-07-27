@@ -62,6 +62,59 @@ export default function Moves({ moves }) {
   );
 }
 
+const specialTextRegexPerElements = {
+  code: [
+    {
+      // regex: /^◈([Rr]oll )?[+-](edge|iron|heart|shadow|wits)$/,
+      // regex: /^◈([Rr]oll )?[+-]\w+$/,
+      // regex: /^◈([Rr]oll )?[+-][\w\s]+/,
+      regex: /^◈.*$/,
+      component: ({ children }) => (
+        <span style={{ color: "magenta" }}>{children}</span>
+      ),
+    },
+    {
+      // 1 progress
+      // 1 tick
+      // 2 ticks
+      regex: /^\d (progress|tick|ticks)$/,
+      component: ({ children }) => (
+        <span style={{ color: "green" }}>{children}</span>
+      ),
+    },
+    // +1 momentum
+    // +2 momentum
+    // +3 momentum
+    // -1 momentum
+    // (1 harm)
+    // add +1
+    // 1 harm
+    // -health
+    // -momentum
+    // -spirit
+    // -supply
+    // -2 momentum
+    // 1 experience
+  ],
+  strong: [
+    {
+      regex: /^strong hit$/,
+      component: ({ children }) => <strong>◆◆ {children}</strong>,
+    },
+    {
+      regex: /^weak hit$/,
+      component: ({ children }) => <strong>◆◇ {children}</strong>,
+    },
+    {
+      regex: /^miss$/,
+      component: ({ children }) => <strong>◇◇ {children}</strong>,
+    },
+    // **any result with 6**
+    // **hit with 5**
+    // **miss with 1**
+  ],
+};
+
 export function Move({ move, index, allMoveNames }) {
   const [open, setOpen] = useState(false);
   return (
@@ -87,8 +140,24 @@ export function Move({ move, index, allMoveNames }) {
                   />
                 );
               },
-              code(props) {
-                const { node, ...rest } = props;
+              strong: ({ node, ...rest }) => {
+                const matches = specialTextRegexPerElements.strong.filter(
+                  (rule) => rule.regex.test(rest.children)
+                );
+                const replacementComponent = matches[0]?.component;
+                if (replacementComponent) {
+                  return replacementComponent(rest);
+                }
+                return <strong {...rest} />;
+              },
+              code({ node, ...rest }) {
+                const matches = specialTextRegexPerElements.code.filter(
+                  (rule) => rule.regex.test(rest.children)
+                );
+                const replacementComponent = matches[0]?.component;
+                if (replacementComponent) {
+                  return replacementComponent(rest);
+                }
                 const type = rest.children.startsWith("Roll") ? "roll" : "stat";
                 return (
                   <span
