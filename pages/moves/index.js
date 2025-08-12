@@ -65,21 +65,31 @@ export default function Moves({ moves }) {
 const specialTextRegexPerElements = {
   code: [
     {
-      // regex: /^◈([Rr]oll )?[+-](edge|iron|heart|shadow|wits)$/,
-      // regex: /^◈([Rr]oll )?[+-]\w+$/,
-      // regex: /^◈([Rr]oll )?[+-][\w\s]+/,
       regex: /^◈.*$/,
       component: ({ children }) => (
-        <span style={{ color: "magenta" }}>{children}</span>
+        <span
+          style={{
+            color: "cornflowerblue",
+            fontFamily: '"Cinzel", serif',
+            fontWeight: "bold",
+          }}
+        >
+          {children.slice(1)}
+        </span>
       ),
     },
     {
-      // 1 progress
-      // 1 tick
-      // 2 ticks
       regex: /^\d (progress|tick|ticks)$/,
       component: ({ children }) => (
-        <span style={{ color: "green" }}>{children}</span>
+        <span
+          style={{
+            color: "cornflowerblue",
+            fontFamily: '"Cinzel", serif',
+            fontWeight: "bold",
+          }}
+        >
+          {children}
+        </span>
       ),
     },
     // +1 momentum
@@ -95,23 +105,35 @@ const specialTextRegexPerElements = {
     // -supply
     // -2 momentum
     // 1 experience
+    {
+      regex: /^ORACLE:.*$/,
+      component: ({ children }) => (
+        <span
+          style={{
+            color: "magenta",
+            fontFamily: '"Cinzel", serif',
+            fontWeight: "bold",
+          }}
+        >
+          {children}
+        </span>
+      ),
+    },
   ],
   strong: [
     {
-      regex: /^strong hit$/,
-      component: ({ children }) => <strong>◆◆ {children}</strong>,
+      regex:
+        /^(strong hit|weak hit|miss|any result with 6|hit with 5|miss with 1)$/,
+      component: ({ children }) => (
+        <strong
+          style={{
+            color: "cornflowerblue",
+          }}
+        >
+          {children}
+        </strong>
+      ),
     },
-    {
-      regex: /^weak hit$/,
-      component: ({ children }) => <strong>◆◇ {children}</strong>,
-    },
-    {
-      regex: /^miss$/,
-      component: ({ children }) => <strong>◇◇ {children}</strong>,
-    },
-    // **any result with 6**
-    // **hit with 5**
-    // **miss with 1**
   ],
 };
 
@@ -148,7 +170,7 @@ export function Move({ move, index, allMoveNames }) {
                 if (replacementComponent) {
                   return replacementComponent(rest);
                 }
-                return <strong {...rest} />;
+                return <strong style={{ color: "gold" }} {...rest} />;
               },
               code({ node, ...rest }) {
                 const matches = specialTextRegexPerElements.code.filter(
@@ -158,15 +180,13 @@ export function Move({ move, index, allMoveNames }) {
                 if (replacementComponent) {
                   return replacementComponent(rest);
                 }
-                const type = rest.children.startsWith("Roll") ? "roll" : "stat";
                 return (
                   <span
-                    className={
-                      {
-                        roll: oracleStyles.roll,
-                        stat: oracleStyles.stat,
-                      }[type]
-                    }
+                    style={{
+                      color: "cornflowerblue",
+                      fontFamily: '"Cinzel", serif',
+                      fontWeight: "bold",
+                    }}
                     {...rest}
                   />
                 );

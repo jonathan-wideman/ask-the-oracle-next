@@ -55,11 +55,6 @@
   text-align: left;
 }
 
-.move_rules strong {
-  font-weight: var(--fw-600);
-  color: cornflowerblue;
-}
-
 .move_rules ul {
   list-style-type: "⋅";
   margin-left: 1em;
@@ -67,17 +62,6 @@
 
 .move_rules ul li {
   padding-left: 0.5em;
-}
-
-.roll {
-  color: gold;
-}
-
-.stat {
-  /* color: var(--clr-accent-600); */
-  /* color: var(--clr-primary-400); */
-  /* color: blueviolet; */
-  color: mediumpurple;
 }
 
 .move_name {
