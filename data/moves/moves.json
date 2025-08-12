@@ -44,6 +44,7 @@
     {
         "name": "Reach Your Destination",
         "category": "adventure",
+        "progress": true,
         "source": "Ironsworn Rulebook, page 68",
         "rules": "When **your journey comes to an end**, roll the challenge dice and compare to your progress. Momentum is ignored on this roll.  \n  \nOn a **strong hit**, the situation at your destination favors you. Choose one.  \n\n*   Make another move now (not a _progress move_), and `add +1`.\n*   Take `+1 momentum`.\n\nOn a **weak hit**, you arrive but face an unforeseen hazard or complication. Envision what you find (_Ask the Oracle_ if unsure).  \n  \nOn a **miss**, you have gone hopelessly astray, your objective is lost to you, or you were misled about your destination. If your journey continues, clear all but one filled progress, and raise the journey’s rank by one (if not already epic)."
     },
@@ -86,6 +87,7 @@
     {
         "name": "Write Your Epilogue",
         "category": "relationship",
+        "progress": true,
         "source": "Ironsworn Rulebook, page 77",
         "rules": "When **you retire from your life as Ironsworn**, envision two things: What you hope for, and what you fear. Then, roll the challenge dice and compare to your bonds. Momentum is ignored on this roll.  \n  \nOn a **strong hit**, things come to pass as you hoped.  \n  \nOn a **weak hit**, your life takes an unexpected turn, but not necessarily for the worse. You find yourself spending your days with someone or in a place you did not foresee. Envision it (_Ask the Oracle_ if unsure).  \n  \nOn a **miss**, your fears are realized."
     },
@@ -116,6 +118,7 @@
     {
         "name": "End the Fight",
         "category": "combat",
+        "progress": true,
         "source": "Ironsworn Rulebook, page 82",
         "rules": "When **you make a move to take decisive action**, and score a strong hit, you may resolve the outcome of this fight. If you do, roll the challenge dice and compare to your progress. Momentum is ignored on this roll.  \n  \nOn a **strong hit**, this foe is no longer in the fight. They are killed, out of action, flee, or surrender as appropriate to the situation and your intent (_Ask the Oracle_ if unsure).  \n  \nOn a **weak hit**, as above, but you must also choose one.  \n\n*   It’s worse than you thought: _Endure Harm_.\n*   You are overcome: _Endure Stress_.\n*   Your victory is short-lived: A new danger or foe appears, or an existing danger worsens.\n*   You suffer collateral damage: Something of value is lost or broken, or someone important must pay the cost.\n*   You’ll pay for it: An objective falls out of reach.\n*   Others won’t forget: You are marked for vengeance.\n\nOn a **miss**, you have lost this fight. _Pay the Price_."
     },
@@ -182,6 +185,7 @@
     {
         "name": "Fulfill Your Vow",
         "category": "quest",
+        "progress": true,
         "source": "Ironsworn Rulebook, page 101",
         "rules": "When **you achieve what you believe to be the fulfillment of your vow**, roll the challenge dice and compare to your progress. Momentum is ignored on this roll.  \n  \nOn a **strong hit**, your quest is complete. Mark experience (troublesome=1; dangerous=2; formidable=3; extreme=4; epic=5).  \n  \nOn a **weak hit**, there is more to be done or you realize the truth of your quest. Envision what you discover (_Ask the Oracle_ if unsure). Then, mark experience (troublesome=0; dangerous=1; formidable=2; extreme=3; epic=4). You may _Swear an Iron Vow_ to set things right. If you do, `add +1`.  \n  \nOn a **miss**, your quest is undone. Envision what happens (_Ask the Oracle_ if unsure), and choose one.  \n\n*   You recommit: Clear all but one filled progress, and raise the quest’s rank by one (if not already epic).\n*   You give up: _Forsake Your Vow_."
     },
@@ -242,6 +246,7 @@
     {
         "name": "Locate Your Objective",
         "category": "delve",
+        "progress": true,
         "source": "Ironsworn: Delve, page 40",
         "rules": "When **your exploration of a site comes to an end**, roll the challenge dice and compare to your progress. Momentum is ignored on this roll.  \n  \nOn a **strong hit**, you locate your objective and the situation favors you. Choose one.  \n\n*   Make another move now (not a progress move), and `add +1`.\n*   Take `+1 momentum`.\n\nOn a **weak hit**, you locate your objective but face an unforeseen hazard or complication. Envision what you find (_Ask the Oracle_ if unsure).  \n  \nOn a **miss**, your objective falls out of reach, you have been misled about the nature of your objective, or you discover that this site holds unexpected depths. If you continue your exploration, clear all but one filled progress and raise the site’s rank by one (if not already epic)."
     },
@@ -266,6 +271,7 @@
     {
         "name": "Learn From Your Failures",
         "category": "optional",
+        "progress": true,
         "source": "Ironsworn: Delve, page 59",
         "rules": "When **you spend time reflecting on your hardships and missteps**, and your failure track is +6 or greater, roll your challenge dice and compare to your progress. Momentum is ignored on this roll.  \n  \nOn a **strong hit**, you commit to making a dramatic change. Take `3 experience` and clear all progress. Then, choose one.  \n\n*   Adjust your approach: Discard a single asset, and take `2 experience` for each marked ability.\n*   Make an oath: _Swear an Iron Vow_, and reroll any dice.\n*   Ready your next steps: Take `+3 momentum`.\n\nOn a **weak hit**, you learn from your mistakes. Take `2 experience` and clear all progress.  \n  \nOn a **miss**, you’ve learned the wrong lessons. Take `1 experience` and clear all progress. Then, envision how you set off on an ill-fated path."
     },

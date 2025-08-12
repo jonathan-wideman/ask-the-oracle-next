@@ -147,7 +147,20 @@ export function Move({ move, index, allMoveNames }) {
         onClick={() => setOpen(!open)}
       >
         {move.name}
+        {move.progress ? " ✴" : null}
       </a>
+      {open && move.progress && (
+        <div
+          style={{
+            color: "cornflowerblue",
+            fontSize: "1rem",
+            fontFamily: '"Cinzel", serif',
+            fontWeight: "bold",
+          }}
+        >
+          Progress Move
+        </div>
+      )}
       {open && (
         <div className={oracleStyles.move_rules}>
           <Markdown
