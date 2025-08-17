@@ -1,0 +1,11 @@
+{
+  "title": "ORACLE 99: MOVE - DELVE THE DEPTHS - EDGE",
+  "category": "move",
+  "table": [
+    { "roll": "1-45", "result": "Mark progress and _Reveal a Danger_." },
+    { "roll": "46-65", "result": "Mark progress." },
+    { "roll": "66-75", "result": "Choose one: Mark progress or _Find an Opportunity_." },
+    { "roll": "76-80", "result":  "Take both: Mark progress and _Find an Opportunity_." },
+    { "roll": "81-00", "result":  "Mark progress twice and _Reveal a Danger_." }
+  ]
+}

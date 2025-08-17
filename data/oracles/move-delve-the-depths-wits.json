@@ -1,0 +1,11 @@
+{
+  "title": "ORACLE 99: MOVE - DELVE THE DEPTHS - WITS",
+  "category": "move",
+  "table": [
+    { "roll": "1-40", "result": "Mark progress and _Reveal a Danger_." },
+    { "roll": "41-55", "result": "Mark progress." },
+    { "roll": "56-80", "result": "Choose one: Mark progress or _Find an Opportunity_." },
+    { "roll": "81-99", "result":  "Take both: Mark progress and _Find an Opportunity_." },
+    { "roll": "00", "result":  "Mark progress twice and _Reveal a Danger_." }
+  ]
+}

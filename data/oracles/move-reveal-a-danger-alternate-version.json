@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 99: MOVE - REVEAL A DANGER - ALTERNATE VERSION",
+  "category": "move",
+  "table": [
+    {"roll": "1-22", "result": "You encounter a hostile denizen."},
+    {"roll": "23-42", "result": "You face an environmental or architectural hazard."},
+    {"roll": "43-58", "result": "A discovery undermines or complicates your quest."},
+    {"roll": "59-64", "result": "You confront a harrowing situation or sensation."},
+    {"roll": "65-70", "result": "You face the consequences of an earlier choice or approach."},
+    {"roll": "71-76", "result": "The path is blocked or trapped."},
+    {"roll": "77-82", "result": "A resource is diminished, broken, or lost."},
+    {"roll": "83-88", "result": "You face a perplexing mystery or tough choice."},
+    {"roll": "89-94", "result": "You lose your way or are delayed."},
+    {"roll": "95-00", "result": "Roll twice more on this table. Both results occur. If they are the same result, make it worse."}
+  ]
+}

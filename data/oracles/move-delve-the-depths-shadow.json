@@ -1,0 +1,11 @@
+{
+  "title": "ORACLE 99: MOVE - DELVE THE DEPTHS - SHADOW",
+  "category": "move",
+  "table": [
+    { "roll": "1-30", "result": "Mark progress and _Reveal a Danger_." },
+    { "roll": "31-65", "result": "Mark progress." },
+    { "roll": "66-90", "result": "Choose one: Mark progress or _Find an Opportunity_." },
+    { "roll": "91-99", "result":  "Take both: Mark progress and _Find an Opportunity_." },
+    { "roll": "00", "result":  "Mark progress twice and _Reveal a Danger_." }
+  ]
+}

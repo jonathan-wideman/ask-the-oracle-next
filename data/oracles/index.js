@@ -13,6 +13,16 @@ import ironlander_names_b from "./ironlander-names-b.oracle.json";
 import location_descriptor from "./location-descriptor.oracle.json";
 import location from "./location.oracle.json";
 import major_plot_twist from "./major-plot-twist.oracle.json";
+import move_advance_a_threat from "./move-advance-a-threat.json";
+import move_delve_the_depths_edge from "./move-delve-the-depths-edge.json";
+import move_delve_the_depths_shadow from "./move-delve-the-depths-shadow.json";
+import move_delve_the_depths_wits from "./move-delve-the-depths-wits.json";
+import move_endure_harm from "./move-endure-harm.json";
+import move_endure_stress from "./move-endure-stress.json";
+import move_find_an_opportunity from "./move-find-an-opportunity.json";
+import move_pay_the_price from "./move-pay-the-price.json";
+import move_reveal_a_danger_alternate_version from "./move-reveal-a-danger-alternate-version.json";
+import move_reveal_a_danger from "./move-reveal-a-danger.json";
 import mystic_backlash from "./mystic-backlash.oracle.json";
 import region from "./region.oracle.json";
 import settlement_name_example_creature from "./settlement-name-example-creature.oracle.json";
@@ -45,6 +55,16 @@ const oracleData = [
   location_descriptor,
   location,
   major_plot_twist,
+  move_advance_a_threat,
+  move_delve_the_depths_edge,
+  move_delve_the_depths_shadow,
+  move_delve_the_depths_wits,
+  move_endure_harm,
+  move_endure_stress,
+  move_find_an_opportunity,
+  move_pay_the_price,
+  move_reveal_a_danger_alternate_version,
+  move_reveal_a_danger,
   mystic_backlash,
   region,
   settlement_name_example_creature,

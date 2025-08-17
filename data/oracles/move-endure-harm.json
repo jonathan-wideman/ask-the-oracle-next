@@ -1,0 +1,11 @@
+{
+  "title": "ORACLE 99: MOVE - ENDURE HARM",
+  "category": "move",
+  "table": [
+    { "roll": "1-10", "result": "The harm is mortal. _Face Death_." },
+    { "roll": "11-20", "result": "You are dying. You need to Heal within an hour or two, or _Face Death_." },
+    { "roll": "21-35", "result": "You are unconscious and out of action. If left alone, you come back to your senses in an hour or two. If you are vulnerable to a foe not inclined to show mercy, _Face Death_." },
+    { "roll": "36-50", "result": "You are reeling and fighting to stay conscious. If you engage in any vigorous activity (such as running or fighting) before taking a breather for a few minutes, roll on this table again (before resolving the other move)." },
+    { "roll": "51-00", "result": "You are battered but still standing." }
+  ]
+}

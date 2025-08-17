@@ -1,0 +1,18 @@
+{
+  "title": "ORACLE 99: MOVE - REVEAL A DANGER",
+  "category": "move",
+  "table": [
+    {"roll":"1-30", "result": "Check the theme card."},
+    {"roll":"31-45", "result": "Check the domain card."},
+    {"roll":"46-57", "result": "You encounter a hostile denizen."},
+    {"roll":"58-68", "result": "You face an environmental or architectural hazard."},
+    {"roll":"69-76", "result": "A discovery undermines or complicates your quest."},
+    {"roll":"77-79", "result": "You confront a harrowing situation or sensation."},
+    {"roll":"80-82", "result": "You face the consequences of an earlier choice or approach."},
+    {"roll":"83-85", "result": "Your way is blocked or trapped."},
+    {"roll":"86-88", "result": "A resource is diminished, broken, or lost."},
+    {"roll":"89-91", "result": "You face a perplexing mystery or tough choice."},
+    {"roll":"92-94", "result": "You lose your way or are delayed."},
+    {"roll":"95-00", "result": "Roll twice more on this table. Both results occur. If they are the same result, make it worse."}
+  ]
+}

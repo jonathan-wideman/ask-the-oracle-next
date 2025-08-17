@@ -1,0 +1,10 @@
+{
+  "title": "ORACLE 99: MOVE - ENDURE STRESS",
+  "category": "move",
+  "table": [
+    { "roll": "1-10", "result": "You are overwhelmed. _Face Desolation_." },
+    { "roll": "11-25", "result": "You give up. _Forsake Your Vow_ (if possible, one relevant to your current crisis)." },
+    { "roll": "26-50", "result": "You give in to a fear or compulsion, and act against your better instincts." },
+    { "roll": "51-00", "result":  "You persevere." }
+  ]
+}

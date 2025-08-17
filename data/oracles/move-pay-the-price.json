@@ -1,0 +1,22 @@
+{
+  "title": "ORACLE 99: MOVE - PAY THE PRICE",
+  "category": "move",
+  "table": [
+    {"roll":"1-2", "result": "Roll again and apply that result but make it worse. If you roll this result yet again, think of something dreadful that changes the course of your quest (_Ask the Oracle_ if unsure) and make it happen."},
+    {"roll":"3-5", "result": "A person or community you trusted loses faith in you, or acts against you."},
+    {"roll":"6-9", "result": "A person or community you care about is exposed to danger."},
+    {"roll":"10-16", "result": "You are separated from something or someone."},
+    {"roll":"17-23", "result": "Your action has an unintended effect."},
+    {"roll":"24-32", "result": "Something of value is lost or destroyed."},
+    {"roll":"33-41", "result": "The current situation worsens."},
+    {"roll":"42-50", "result": "A new danger or foe is revealed."},
+    {"roll":"51-59", "result": "It causes a delay or puts you at a disadvantage."},
+    {"roll":"60-68", "result": "It is harmful."},
+    {"roll":"69-76", "result": "It is stressful."},
+    {"roll":"77-85", "result": "A surprising development complicates your quest."},
+    {"roll":"86-90", "result": "It wastes resources."},
+    {"roll":"91-94", "result": "It forces you to act against your best intentions. "},
+    {"roll":"95-98", "result": "A friend, companion, or ally is put in harm’s way (or you are, if alone)."},
+    {"roll":"99-00", "result": "Roll twice more on this table. Both results occur. If they are the same result, make it worse."}
+  ]
+}

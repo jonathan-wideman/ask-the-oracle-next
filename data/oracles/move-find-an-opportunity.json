@@ -1,0 +1,16 @@
+{
+  "title": "ORACLE 99: MOVE - FIND AN OPPORTUNITY",
+  "category": "move",
+  "table": [
+    {"roll": "1-25", "result": "The terrain favors you, or you find a hidden path."},
+    {"roll": "26-45", "result": "An aspect of the history or nature of this place is revealed."},
+    {"roll": "46-57", "result": "You locate a secure area."},
+    {"roll": "58-68", "result": "A clue offers insight or direction."},
+    {"roll": "69-78", "result": "You get the drop on a denizen."},
+    {"roll": "79-86", "result": "This area provides an opportunity to scavenge, forage, or hunt."},
+    {"roll": "87-90", "result": "You locate an interesting or helpful object."},
+    {"roll": "91-94", "result": "You are alerted to a potential threat."},
+    {"roll": "95-98", "result": "You encounter a denizen who might support you."},
+    {"roll": "99-00", "result": "You encounter a denizen in need of help."}
+  ]
+}

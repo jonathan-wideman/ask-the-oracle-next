@@ -1,0 +1,9 @@
+{
+  "title": "ORACLE 99: MOVE - ADVANCE A THREAT",
+  "category": "move",
+  "table": [
+  {"roll": "1-30", "result": "The threat readies its next step, or a new danger looms. If you are in a position to prevent this development, you may attempt to do so. If you succeed, Reach a Milestone. Otherwise, mark menace."},
+  {"roll": "31-70", "result": "The threat works subtly to advance toward its goal, or the danger escalates. Mark menace."},
+  {"roll": "71-00", "result": "The threat makes a dramatic and immediate move, or a major event reveals new complications. Mark menace twice."}
+  ]
+}
