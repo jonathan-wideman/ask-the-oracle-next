@@ -13,6 +13,8 @@
 ## Dev Goals
 - [ ] Add section hash links to moves
 - [ ] cleanup
+  - [x] refactor moves
+- [ ] markdown styles within Oracle results
 - [ ] darkmode toggle
 - [ ] tailwind
 - [ ] upgrade next?
@@ -44,3 +46,21 @@
 ◆◇
 ◈
 ◊ 💍 💎 ⋄ ⬖ ⬗ ⬘ ⬙ 💠 🞜 ♦️ ⃟ ⌺ ⍚ ◆ ◇ ◈ ♢ ♦ ⛋ ❖ ⟐
+
+## Additional Move Markdown
+
+These are other types of `code` blocks within the moves markdown which are not currently explicitly matched or styled:
+
++1 momentum
++2 momentum
++3 momentum
+-1 momentum
+(1 harm)
+add +1
+1 harm
+-health
+-momentum
+-spirit
+-supply
+-2 momentum
+1 experience
