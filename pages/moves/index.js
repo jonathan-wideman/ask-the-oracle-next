@@ -62,5 +62,5 @@ export default function Moves({ moves, oracles }) {
 }
 
 export async function getStaticProps() {
-  return { props: { moves: getMoves(), oracles: getOracles() } };
+  return { props: { moves: getMoves(), oracles: getOracles(["move"]) } };
 }
