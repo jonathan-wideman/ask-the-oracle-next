@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 import headerStyles from '../styles/Header.module.css'
 import utilityStyles from '../styles/utility.module.css'
 

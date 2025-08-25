@@ -1,6 +1,5 @@
-import Link from 'next/link'
 import Layout from '../components/Layout'
-import { classNames, styleAnimationDelay } from '../lib/util'
+import { classNames } from '../lib/util'
 import utilityStyles from '../styles/utility.module.css'
 import oracleStyles from '../styles/Oracle.module.css'
 import docsStyles from '../styles/Docs.module.css'

@@ -1,5 +1,5 @@
 import { Random } from "random-js";
-import { React, createContext, useContext, useState } from "react"
+import { createContext, useContext } from "react"
 
 export const DiceContext = createContext()
 
