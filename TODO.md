@@ -1,13 +1,16 @@
 # Roadmap
 
 ## Requested
-- [ ] nicer styles
 - [ ] compound/combined oracles
   - [ ] action / theme
   - [ ] full npc
   - [ ] full settlement
   - [ ] full location
-- [ ] oracle category tabs
+- [ ] oracle & move categories
+  - [x] category tabs
+  - [ ] cycle between categories
+  - [ ] category dropdown menus
+- [ ] nicer styles
 - [ ] better lightmode
 
 ## Dev Goals
