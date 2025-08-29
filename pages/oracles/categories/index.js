@@ -24,14 +24,20 @@ export default function Oracles({ categories }) {
           >
             What do you seek?
           </p>
-          {categories.map((category, index) => (
+          {[...categories, "all"].map((category, index) => (
             <div
               key={category}
               className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
               style={styleAnimationDelay(index * 0.025 + 0.25)}
             >
               <p className={oracleStyles.heading_margin}>
-                <Link href={`/oracles/categories/${category}`}>
+                <Link
+                  href={
+                    category === "all"
+                      ? `/oracles`
+                      : `/oracles/categories/${category}`
+                  }
+                >
                   {toTitleCase(category)}
                 </Link>
               </p>

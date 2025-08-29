@@ -24,14 +24,20 @@ export default function Moves({ categories }) {
           >
             What will you do?
           </p>
-          {categories.map((category, index) => (
+          {[...categories, "all"].map((category, index) => (
             <div
               key={category}
               className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
               style={styleAnimationDelay(index * 0.025 + 0.25)}
             >
               <p className={oracleStyles.heading_margin}>
-                <Link href={`/moves/categories/${category}`}>
+                <Link
+                  href={
+                    category === "all"
+                      ? `/moves`
+                      : `/moves/categories/${category}`
+                  }
+                >
                   {toTitleCase(category)}
                 </Link>
               </p>

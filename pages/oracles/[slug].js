@@ -52,7 +52,7 @@ export default function Oracle({ oracles }) {
 
           <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>ask again</button>
           <button onClick={() => toggleTable()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
-          <Link href="/oracles" ><a className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>seek a different fate</a></Link>
+          <Link href={`/oracles/categories/${oracle.category}`} ><a className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>seek a different fate</a></Link>
 
           {tableVisible ? <div className={classNames(oracleStyles.table, utilityStyles.fadein)}>
             {oracle.table.map((row, index) => <React.Fragment key={index}>

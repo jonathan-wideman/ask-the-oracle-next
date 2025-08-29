@@ -12,6 +12,7 @@ import {
 import utilityStyles from "../../../styles/utility.module.css";
 import oracleStyles from "../../../styles/Oracle.module.css";
 import { Move } from "../../../components/Move";
+import Link from "next/link";
 
 export default function Moves({ moves, oracles }) {
   const movesByCategory = moves.reduce(
@@ -63,6 +64,14 @@ export default function Moves({ moves, oracles }) {
               </ul>
             </div>
           ))}
+          <Link href={`/moves/categories`}>
+            <a
+              className={utilityStyles.fadein}
+              style={styleAnimationDelay(1)}
+            >
+              consider a different action
+            </a>
+          </Link>
         </div>
       </main>
     </Layout>

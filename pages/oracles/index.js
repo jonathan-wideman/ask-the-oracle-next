@@ -34,7 +34,9 @@ export default function Oracles({ oracles }) {
               className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
               style={styleAnimationDelay(index * 0.025 + 0.25)}
             >
-              <p className={oracleStyles.heading_margin}>{toTitleCase(category)}</p>
+              <p className={oracleStyles.heading_margin}>
+                {toTitleCase(category)}
+              </p>
               <ul>
                 {oraclesByCategory[category].map((oracle, index) => (
                   <li key={oracle.id}>
@@ -54,6 +56,11 @@ export default function Oracles({ oracles }) {
               </ul>
             </div>
           ))}
+          <Link href={`/moves/categories`}>
+            <a className={utilityStyles.fadein} style={styleAnimationDelay(1)}>
+              seek a different fate
+            </a>
+          </Link>
         </div>
       </main>
     </Layout>

@@ -63,6 +63,14 @@ export default function Oracles({ oracles }) {
               </ul>
             </div>
           ))}
+          <Link href={`/moves/categories`}>
+            <a
+              className={utilityStyles.fadein}
+              style={styleAnimationDelay(1)}
+            >
+              seek a different fate
+            </a>
+          </Link>
         </div>
       </main>
     </Layout>
