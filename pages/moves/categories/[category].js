@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Layout from "../../../components/Layout";
 import {
-  getOraclesCategories,
-  getOraclesListings,
+  getMoves,
+  getMovesCategories,
+  getOracles,
 } from "../../../lib/connector";
 import {
   classNames,
@@ -11,18 +11,23 @@ import {
 } from "../../../lib/util";
 import utilityStyles from "../../../styles/utility.module.css";
 import oracleStyles from "../../../styles/Oracle.module.css";
+import { Move } from "../../../components/Move";
 
-export default function Oracles({ oracles }) {
-  const oraclesByCategory = oracles.reduce(
-    (acc, oracle) => ({
+export default function Moves({ moves, oracles }) {
+  const movesByCategory = moves.reduce(
+    (acc, move) => ({
       ...acc,
-      [oracle.category]: [...(acc[oracle.category] || []), oracle],
+      [move.category]: [...(acc[move.category] || []), move],
     }),
     {}
   );
 
+  const allMoveNamesWithoutAsterisks = moves.map((move) =>
+    move.name.replace("*", "")
+  );
+
   return (
-    <Layout pageTitle={"Oracles"}>
+    <Layout pageTitle={"Moves"}>
       <main>
         <div
           className={classNames(
@@ -33,9 +38,9 @@ export default function Oracles({ oracles }) {
           <p
             className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}
           >
-            What do you seek?
+            What will you do?
           </p>
-          {Object.keys(oraclesByCategory).map((category, index) => (
+          {Object.keys(movesByCategory).map((category, index) => (
             <div
               key={category}
               className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
@@ -45,19 +50,14 @@ export default function Oracles({ oracles }) {
                 {toTitleCase(category)}
               </p>
               <ul>
-                {oraclesByCategory[category].map((oracle, index) => (
-                  <li key={oracle.id}>
-                    <Link href={`/oracles/${oracle.slug}`}>
-                      <a
-                        className={classNames(
-                          oracleStyles.text_l,
-                          utilityStyles.fadein
-                        )}
-                        style={styleAnimationDelay(index * 0.025 + 0.25)}
-                      >
-                        {oracle.title}
-                      </a>
-                    </Link>
+                {movesByCategory[category].map((move, index) => (
+                  <li key={move.name}>
+                    <Move
+                      move={move}
+                      index={index}
+                      allMoveNames={allMoveNamesWithoutAsterisks}
+                      oracles={oracles}
+                    />
                   </li>
                 ))}
               </ul>
@@ -70,7 +70,7 @@ export default function Oracles({ oracles }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getOraclesCategories().map((category) => ({
+  const paths = getMovesCategories().map((category) => ({
     params: { category },
   }));
   return { paths, fallback: false };
@@ -78,5 +78,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { category } = context.params;
-  return { props: { oracles: getOraclesListings([category]) } };
+  return {
+    props: { moves: getMoves([category]), oracles: getOracles(["move"]) },
+  };
 }
