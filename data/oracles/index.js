@@ -148,3 +148,11 @@ function massageData(oracles) {
     ...convertRollTable(oracle.table),
   }));
 }
+
+export const getOracleListing = (oracle) => ({
+  id: oracle.id,
+  index: oracle.index,
+  title: oracle.title,
+  slug: oracle.slug,
+  category: oracle.category,
+});
