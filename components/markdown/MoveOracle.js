@@ -27,5 +27,11 @@ export function MoveOracle({ children, oracles }) {
     return null;
   }
 
-  return <Oracle oracle={oracle} rollOnCreate={false} />;
+  return (
+    <Oracle
+      oracle={oracle}
+      rollOnCreate={false}
+      initialResult={"Seek your fate..."}
+    />
+  );
 }

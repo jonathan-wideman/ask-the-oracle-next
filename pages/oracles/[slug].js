@@ -1,45 +1,20 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useEffect, useRef, useState } from 'react'
+import { Fragment } from 'react'
 import Layout from '../../components/Layout'
-import { useDiceContext } from '../../contexts/DiceContext'
 import { getOracles } from '../../lib/connector'
 import { classNames, styleAnimationDelay } from '../../lib/util'
 import utilityStyles from '../../styles/utility.module.css'
 import oracleStyles from '../../styles/Oracle.module.css'
+import { useOracleState } from '../../hooks/useOracleState'
 
 export default function Oracle({ oracles }) {
   const router = useRouter()
   const { slug } = router.query
   const oracle = oracles.find(oracle => oracle.slug === slug)
 
-  const [tableVisible, setTableVisible] = useState(false)
-
-  const [result, setResult] = useState('consulting the oracle...')
-  const { roll } = useDiceContext()
-
-  const [rolling, setRolling] = useState(false)
-  const timeoutRef = useRef(null);
-  const resetAnimation = (delay) => {
-    timeoutRef.current = setTimeout(() => setRolling(false), delay);
-  }
-  useEffect(() => {
-    // Clear the timeout interval when the component unmounts
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
-
-  const rollOracle = (delay = 10) => {
-    setRolling(true)
-    resetAnimation(delay)
-    setResult(roll(oracle))
-  }
-
-  useEffect(() => {
-    // rollOracle(1000)
-    rollOracle(500)
-  }, [])
-
-  const toggleTable = () => setTableVisible(visible => !visible)
+  const { rollOracle, tableVisible, toggleTable, result, rolling } =
+    useOracleState(oracle, true, undefined, 500);
 
   return (
     <Layout pageTitle={oracle.title}>
@@ -55,10 +30,10 @@ export default function Oracle({ oracles }) {
           <Link href={`/oracles/categories/${oracle.category}`} ><a className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>seek a different fate</a></Link>
 
           {tableVisible ? <div className={classNames(oracleStyles.table, utilityStyles.fadein)}>
-            {oracle.table.map((row, index) => <React.Fragment key={index}>
+            {oracle.table.map((row, index) => <Fragment key={index}>
               <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 0.025 + 0.25)}>{row.roll}</span>
               <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 0.025 + 0.25)}>{row.result}</span>
-            </React.Fragment>)}
+            </Fragment>)}
           </div> : null}
         </div>
       </main >

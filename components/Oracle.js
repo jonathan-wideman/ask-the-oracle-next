@@ -1,35 +1,12 @@
-import { useState, useRef, useEffect } from "react";
 import { Fragment } from "react/jsx-runtime";
 import oracleStyles from "../styles/Oracle.module.css";
 import utilityStyles from "../styles/utility.module.css";
-import { useDiceContext } from "../contexts/DiceContext";
 import { classNames, styleAnimationDelay } from "../lib/util";
+import { useOracleState } from "../hooks/useOracleState";
 
-export function Oracle({ oracle, rollOnCreate = false }) {
-  const [tableVisible, setTableVisible] = useState(false);
-
-  const [result, setResult] = useState("Seek your fate...");
-  const { roll } = useDiceContext();
-
-  const [rolling, setRolling] = useState(false);
-  const timeoutRef = useRef(null);
-  const resetAnimation = (delay) => {
-    timeoutRef.current = setTimeout(() => setRolling(false), delay);
-  };
-  useEffect(() => {
-    if (rollOnCreate) rollOracle(50);
-
-    // Clear the timeout interval when the component unmounts
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
-
-  const rollOracle = (delay = 10) => {
-    setRolling(true);
-    resetAnimation(delay);
-    setResult(roll(oracle));
-  };
-
-  const toggleTable = () => setTableVisible((visible) => !visible);
+export function Oracle({ oracle, rollOnCreate = false, initialResult = undefined }) {
+  const { rollOracle, tableVisible, toggleTable, result, rolling } =
+    useOracleState(oracle, rollOnCreate, initialResult);
 
   return (
     <div style={{ textAlign: "center", marginBottom: "2rem" }}>
