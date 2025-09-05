@@ -24,7 +24,7 @@ export default function Oracles({ categories }) {
           >
             What do you seek?
           </p>
-          {[...categories, "all"].map((category, index) => (
+          {[...categories, "combined", "all"].map((category, index) => (
             <div
               key={category}
               className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}

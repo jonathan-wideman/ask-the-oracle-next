@@ -2,10 +2,14 @@
 
 ## Requested
 - [ ] compound/combined oracles
-  - [ ] action / theme
-  - [ ] full npc
-  - [ ] full settlement
-  - [ ] full location
+  - [x] action / theme
+  - [x] full npc
+  - [x] full settlement
+  - [x] full location
+  - [ ] multiple of the same oracle in one
+  - [ ] better ux
+  - [ ] better layout
+  - [ ] customizable
 - [ ] oracle & move categories
   - [x] category tabs
   - [ ] cycle between categories
