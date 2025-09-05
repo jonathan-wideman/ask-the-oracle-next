@@ -7,12 +7,12 @@ export const useOracleState = (
   oracle,
   rollOnCreate = false,
   initialResult = undefined,
-  initialDelay = 50,
+  initialDelay = 50
 ) => {
-  const [tableVisible, setTableVisible] = useState(
+  const [tableVisible, setTableVisible] = useState(false);
+  const [result, setResult] = useState(
     initialResult ?? DEFAULT_ORACLE_INITIAL_STATE
   );
-  const [result, setResult] = useState(initialResult);
   const { roll } = useDiceContext();
   const [rolling, setRolling] = useState(false);
 
