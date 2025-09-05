@@ -77,23 +77,23 @@ export default function Oracles({ oracles }) {
 export async function getStaticProps(context) {
   const { category } = "combined";
   return {
-    props: {
+    props: { 
       oracles: [
         { category: "combined", title: "Action, Theme", slug: "action,theme" },
         {
           category: "combined",
           title: "Ironlander Character",
-          slug: "ironlander-names-a,ironlander-names-b,character-descriptor,character-role,character-goal",
+          slug: "ironlander-names-a,ironlander-names-b,character-descriptor,character-descriptor,character-role,character-goal",
         },
         {
           category: "combined",
           title: "Location",
-          slug: "region,location,location-descriptor",
+          slug: "location-descriptor,location-descriptor,location,region",
         },
         {
           category: "combined",
           title: "Settlement",
-          slug: "region,settlement-name-prefix,settlement-name-suffix,location-descriptor,settlement-trouble",
+          slug: "region,settlement-name-prefix,settlement-name-suffix,location-descriptor,location-descriptor,settlement-trouble,theme",
         },
       ],
     },

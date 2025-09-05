@@ -18,9 +18,12 @@ export default function Oracles({ oracles }) {
     ? router.query.oracles
     : router.query.oracles?.split(",").filter(Boolean);
 
-  const filteredOracles = oracles.filter((oracle) =>
-    oracleSlugs?.includes(oracle.slug)
-  );
+  // const filteredOracles = oracles.filter((oracle) =>
+  //   oracleSlugs?.includes(oracle.slug)
+  // );
+  const mappedOracles = (oracleSlugs ?? [])
+    .map((slug) => oracles.find((oracle) => oracle.slug === slug))
+    .filter(Boolean);
 
   return (
     <Layout pageTitle={oracleSlugs?.join(", ")}>
@@ -38,7 +41,7 @@ export default function Oracles({ oracles }) {
             Very well;
           </p>
 
-          {filteredOracles?.map((oracle, index) => (
+          {mappedOracles?.map((oracle, index) => (
             <div key={index}>
               <p
                 className={classNames(

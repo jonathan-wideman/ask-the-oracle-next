@@ -6,10 +6,13 @@
   - [x] full npc
   - [x] full settlement
   - [x] full location
-  - [ ] multiple of the same oracle in one
+  - [x] multiple of the same oracle in one
   - [ ] better ux
   - [ ] better layout
   - [ ] customizable
+  - [ ] DSL for complex oracles like settlement
+    - [ ] choice among several oracles, eg ironlander names
+    - [ ] dependant, eg settlement name theme, egs
 - [ ] oracle & move categories
   - [x] category tabs
   - [ ] cycle between categories
