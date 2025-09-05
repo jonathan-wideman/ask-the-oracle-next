@@ -1,10 +1,5 @@
-import { useState, useRef, useEffect } from "react";
-import { Fragment } from "react/jsx-runtime";
-import oracleStyles from "../../styles/Oracle.module.css";
-import utilityStyles from "../../styles/utility.module.css";
-import { useDiceContext } from "../../contexts/DiceContext";
-import { toTitleCase, classNames, styleAnimationDelay } from "../../lib/util";
-
+import { toTitleCase } from "../../lib/util";
+import { Oracle } from "../Oracle";
 
 export function MoveOracle({ children, oracles }) {
   const matches = children.match(/ORACLE:(.*)/);
@@ -28,85 +23,9 @@ export function MoveOracle({ children, oracles }) {
   const slug = createSlug(oracleTitle);
   const oracle = oracles.find((oracle) => oracle.slug === slug);
 
-  const [tableVisible, setTableVisible] = useState(false);
+  if (!oracle) {
+    return null;
+  }
 
-  const [result, setResult] = useState("Seek your fate...");
-  const { roll } = useDiceContext();
-
-  const [rolling, setRolling] = useState(false);
-  const timeoutRef = useRef(null);
-  const resetAnimation = (delay) => {
-    timeoutRef.current = setTimeout(() => setRolling(false), delay);
-  };
-  useEffect(() => {
-    // Clear the timeout interval when the component unmounts
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
-
-  const rollOracle = (delay = 10) => {
-    setRolling(true);
-    resetAnimation(delay);
-    setResult(roll(oracle));
-  };
-
-  // useEffect(() => {
-  //   rollOracle(50);
-  // }, []);
-  const toggleTable = () => setTableVisible((visible) => !visible);
-
-  return (
-    <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-      {/* <div
-              style={{
-                color: "magenta",
-                fontFamily: '"Cinzel", serif',
-                fontWeight: "bold",
-              }}
-            >
-              {children}
-            </div>
-            <div>title: {oracleTitle}</div>
-            <div>slug: {slug}</div>
-            <div>id: {oracle?.id}</div> */}
-      <div>
-        <button
-          onClick={() => rollOracle()}
-          className={classNames(
-            oracleStyles.result,
-            rolling ? utilityStyles.transparent : utilityStyles.fadein
-          )}
-        >
-          {result}
-        </button>
-      </div>
-
-      {tableVisible ? (
-        <div className={classNames(oracleStyles.table, utilityStyles.fadein)}>
-          {oracle.table.map((row, index) => (
-            <Fragment key={index}>
-              <span
-                className={utilityStyles.fadein}
-                style={styleAnimationDelay(index * 0.025 + 0.1)}
-              >
-                {row.roll}
-              </span>
-              <span
-                className={utilityStyles.fadein}
-                style={styleAnimationDelay(index * 0.025 + 0.1)}
-              >
-                {row.result}
-              </span>
-            </Fragment>
-          ))}
-        </div>
-      ) : null}
-      <button
-        onClick={() => toggleTable()}
-        className={utilityStyles.fadein}
-        style={styleAnimationDelay(0.5)}
-      >
-        {tableVisible ? "put away" : "consult"} the runic charts
-      </button>
-    </div>
-  );
+  return <Oracle oracle={oracle} rollOnCreate={false} />;
 }
