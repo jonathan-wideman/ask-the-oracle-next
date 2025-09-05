@@ -7,6 +7,9 @@ import { classNames, styleAnimationDelay } from '../../lib/util'
 import utilityStyles from '../../styles/utility.module.css'
 import oracleStyles from '../../styles/Oracle.module.css'
 import { useOracleState } from '../../hooks/useOracleState'
+import { OracleTable } from '../../components/OracleTable'
+import { OracleTableToggleButton } from '../../components/OracleTableToggleButton'
+import { OracleResult } from '../../components/OracleResult'
 
 export default function Oracle({ oracles }) {
   const router = useRouter()
@@ -23,18 +26,13 @@ export default function Oracle({ oracles }) {
           <p className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}> Very well;</p>
           <p className={classNames(oracleStyles.text_l, utilityStyles.fadein)} style={styleAnimationDelay(0.5)}>{oracle.title}...</p>
 
-          <button onClick={() => rollOracle()} className={classNames(oracleStyles.result, rolling ? utilityStyles.transparent : utilityStyles.fadein)}>{result}</button>
+          <OracleResult result={result} rolling={rolling} rollOracle={rollOracle} />
 
           <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>ask again</button>
-          <button onClick={() => toggleTable()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>{tableVisible ? 'put away' : 'consult'} the runic charts</button>
+          <OracleTableToggleButton toggleTable={toggleTable} tableVisible={tableVisible} animationDelay={1.5} />
           <Link href={`/oracles/categories/${oracle.category}`} ><a className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>seek a different fate</a></Link>
 
-          {tableVisible ? <div className={classNames(oracleStyles.table, utilityStyles.fadein)}>
-            {oracle.table.map((row, index) => <Fragment key={index}>
-              <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 0.025 + 0.25)}>{row.roll}</span>
-              <span className={utilityStyles.fadein} style={styleAnimationDelay(index * 0.025 + 0.25)}>{row.result}</span>
-            </Fragment>)}
-          </div> : null}
+          <OracleTable oracle={oracle} tableVisible={tableVisible} />
         </div>
       </main >
     </Layout >
