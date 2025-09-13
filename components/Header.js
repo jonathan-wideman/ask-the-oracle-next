@@ -7,14 +7,14 @@ export default function Header() {
     <header>
       <div className={utilityStyles.container}>
         <nav className={headerStyles.nav}>
-          <Link href={"/"}>
-            <a className={headerStyles.nav_link}>Home</a>
+          <Link href={"/"} className={headerStyles.nav_link}>
+            Home
           </Link>
-          <Link href={"/oracles/categories"}>
-            <a className={headerStyles.nav_link}>Oracles</a>
+          <Link href={"/oracles/categories"} className={headerStyles.nav_link}>
+            Oracles
           </Link>
-          <Link href={"/moves/categories"}>
-            <a className={headerStyles.nav_link}>Moves</a>
+          <Link href={"/moves/categories"} className={headerStyles.nav_link}>
+            Moves
           </Link>
         </nav>
       </div>

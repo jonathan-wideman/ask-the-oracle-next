@@ -30,13 +30,16 @@ export default function Oracle({ oracles }) {
 
           <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>ask again</button>
           <OracleTableToggleButton toggleTable={toggleTable} tableVisible={tableVisible} animationDelay={1.5} />
-          <Link href={`/oracles/categories/${oracle.category}`} ><a className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>seek a different fate</a></Link>
+          <Link
+            href={`/oracles/categories/${oracle.category}`}
+            className={utilityStyles.fadein}
+            style={styleAnimationDelay(1.5)}>seek a different fate</Link>
 
           <OracleTable oracle={oracle} tableVisible={tableVisible} />
         </div>
       </main >
     </Layout >
-  )
+  );
 }
 
 export async function getStaticPaths() {

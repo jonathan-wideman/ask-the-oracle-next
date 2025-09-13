@@ -47,29 +47,29 @@ export default function Oracles({ oracles }) {
               <ul>
                 {oraclesByCategory[category].map((oracle, index) => (
                   <li key={oracle.id}>
-                    <Link href={`/oracles/${oracle.slug}`}>
-                      <a
-                        className={classNames(
-                          oracleStyles.text_l,
-                          utilityStyles.fadein
-                        )}
-                        style={styleAnimationDelay(index * 0.025 + 0.25)}
-                      >
-                        {oracle.title}
-                      </a>
+                    <Link
+                      href={`/oracles/${oracle.slug}`}
+                      className={classNames(
+                        oracleStyles.text_l,
+                        utilityStyles.fadein
+                      )}
+                      style={styleAnimationDelay(index * 0.025 + 0.25)}>
+
+                      {oracle.title}
+
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
-          <Link href={`/oracles/categories`}>
-            <a
-              className={utilityStyles.fadein}
-              style={styleAnimationDelay(1)}
-            >
+          <Link
+            href={`/oracles/categories`}
+            className={utilityStyles.fadein}
+            style={styleAnimationDelay(1)}>
+            
               seek a different fate
-            </a>
+            
           </Link>
         </div>
       </main>

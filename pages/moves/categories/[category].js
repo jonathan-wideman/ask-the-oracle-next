@@ -64,13 +64,13 @@ export default function Moves({ moves, oracles }) {
               </ul>
             </div>
           ))}
-          <Link href={`/moves/categories`}>
-            <a
-              className={utilityStyles.fadein}
-              style={styleAnimationDelay(1)}
-            >
+          <Link
+            href={`/moves/categories`}
+            className={utilityStyles.fadein}
+            style={styleAnimationDelay(1)}>
+            
               consider a different action
-            </a>
+            
           </Link>
         </div>
       </main>

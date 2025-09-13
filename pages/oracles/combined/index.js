@@ -57,10 +57,13 @@ export default function Oracles({ oracles }) {
             </div>
           ))}
 
-          <Link href={`/oracles/categories/combined`}>
-            <a className={utilityStyles.fadein} style={styleAnimationDelay(1)}>
+          <Link
+            href={`/oracles/categories/combined`}
+            className={utilityStyles.fadein}
+            style={styleAnimationDelay(1)}>
+            
               seek a different fate
-            </a>
+            
           </Link>
         </div>
       </main>
