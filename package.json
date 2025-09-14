@@ -16,7 +16,7 @@
     "react-markdown": "^10.1.0"
   },
   "devDependencies": {
-    "eslint": "8.23.1",
+    "eslint": "9.35.0",
     "eslint-config-next": "15.5.3"
   },
   "packageManager": "pnpm@9.0.6+sha1.648f6014eb363abb36618f2ba59282a9eeb3e879"
