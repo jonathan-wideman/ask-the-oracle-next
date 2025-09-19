@@ -9,7 +9,7 @@ export default function Layout({ children, pageTitle }) {
     <>
       <CustomHead pageTitle={pageTitle} />
       <Header />
-      <main>{children}</main>
+      <main className="pt-12">{children}</main>
       <Footer />
     </>
   );
