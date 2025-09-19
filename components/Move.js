@@ -21,10 +21,10 @@ export function Move({ move, index, allMoveNames, oracles }) {
       </a>
       {open && move.progress && (
         <div
+          className="font-code"
           style={{
             color: "cornflowerblue",
             fontSize: "1rem",
-            fontFamily: '"Cinzel", serif',
             fontWeight: "bold",
           }}
         >

@@ -1,9 +1,10 @@
 export const MoveCodeTagDefault = ({ ...rest }) => (
   <span
+    className="font-code"
     style={{
       color: "cornflowerblue",
-      fontFamily: '"Cinzel", serif',
       fontWeight: "bold",
     }}
-    {...rest} />
+    {...rest}
+  />
 );
