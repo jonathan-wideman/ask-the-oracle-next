@@ -205,7 +205,6 @@ footer {
   background-color: var(--clr-muted-710);
 }
 
-/* TODO: */
 main {
   padding-top: var(--main-padding);
 }
@@ -213,7 +212,6 @@ main {
 ul {
   list-style: none;
 }
-/* end TODO: */
 
 @media (prefers-color-scheme: dark) {
   :root {
