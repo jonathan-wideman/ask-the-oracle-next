@@ -141,6 +141,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
+/* TODO: */
 a {
   color: var(--clr-link-normal);
   /* text-decoration: none; */
@@ -171,6 +172,8 @@ button:focus-visible {
   text-decoration: underline;
   text-shadow: 0 0 1em var(--clr-primary-400), 0 0 0.4em var(--clr-primary-800);
 }
+/* end TODO: */
+
 
 /* push footer to bottom of screen without it being sticky or fixed */
 /* see: https://codeconvey.com/footer-at-bottom-of-page-but-not-fixed/ */
@@ -202,6 +205,7 @@ footer {
   background-color: var(--clr-muted-710);
 }
 
+/* TODO: */
 main {
   padding-top: var(--main-padding);
 }
@@ -209,6 +213,7 @@ main {
 ul {
   list-style: none;
 }
+/* end TODO: */
 
 @media (prefers-color-scheme: dark) {
   :root {

@@ -30,6 +30,7 @@
   - [x] add tailwind
   - [ ] convert existing css
   - [x] convert existing inline
+  - [ ] convert or pick new colors
   - [ ] tw-merge sort and other utilities
   - [ ] re-add reduced motion preferences
 - [x] upgrade next
