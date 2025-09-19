@@ -32,7 +32,7 @@
   - [x] convert existing inline
   - [ ] tw-merge sort and other utilities
   - [ ] re-add reduced motion preferences
-- [ ] upgrade next?
+- [x] upgrade next
 - [ ] try tanstack start?
 - [ ] fix move links not working after categorization
   - [ ] because moves no longer gets full list of move names
