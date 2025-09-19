@@ -29,7 +29,7 @@
 - [ ] tailwind
   - [x] add tailwind
   - [ ] convert existing css
-  - [ ] convert existing inline
+  - [x] convert existing inline
   - [ ] tw-merge sort and other utilities
   - [ ] re-add reduced motion preferences
 - [ ] upgrade next?

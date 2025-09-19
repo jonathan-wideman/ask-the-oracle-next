@@ -12,7 +12,7 @@ export function Oracle({
     useOracleState(oracle, rollOnCreate, initialResult);
 
   return (
-    <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+    <div className="text-center mb-8">
       <OracleResult result={result} rolling={rolling} rollOracle={rollOracle} />
       <OracleTable oracle={oracle} tableVisible={tableVisible} />
       <OracleTableToggleButton

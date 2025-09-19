@@ -20,14 +20,7 @@ export function Move({ move, index, allMoveNames, oracles }) {
         {move.progress ? " ✴" : null}
       </a>
       {open && move.progress && (
-        <div
-          className="font-code"
-          style={{
-            color: "cornflowerblue",
-            fontSize: "1rem",
-            fontWeight: "bold",
-          }}
-        >
+        <div className="font-code text-indigo-600 text-base font-bold">
           Progress Move
         </div>
       )}
