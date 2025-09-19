@@ -1,6 +1,4 @@
 import { classNames } from "../lib/util";
-import oracleStyles from "../styles/Oracle.module.css";
-import utilityStyles from "../styles/utility.module.css";
 
 export function OracleResult({ result, rolling, rollOracle }) {
   return (
@@ -8,8 +6,10 @@ export function OracleResult({ result, rolling, rollOracle }) {
       <button
         onClick={() => rollOracle()}
         className={classNames(
-          oracleStyles.result,
-          rolling ? utilityStyles.transparent : utilityStyles.fadein
+          "m-4 px-4 py-8 text-xl border border-zinc-700 rounded-2xl",
+          "hover:border-zinc-300 hover:shadow-glow hover:shadow-zinc-800",
+          "focus-visible:border-zinc-300 focus-visible:shadow-glow focus-visible:shadow-zinc-800",
+          rolling ? "opacity-0" : "fadein"
         )}
       >
         {result}

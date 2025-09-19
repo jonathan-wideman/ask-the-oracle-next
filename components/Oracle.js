@@ -1,4 +1,3 @@
-import utilityStyles from "../styles/utility.module.css";
 import { useOracleState } from "../hooks/useOracleState";
 import { OracleResult } from "./OracleResult";
 import { OracleTable } from "./OracleTable";

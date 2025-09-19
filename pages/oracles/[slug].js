@@ -4,12 +4,11 @@ import { Fragment } from 'react'
 import Layout from '../../components/Layout'
 import { getOracles } from '../../lib/connector'
 import { classNames, styleAnimationDelay } from '../../lib/util'
-import utilityStyles from '../../styles/utility.module.css'
-import oracleStyles from '../../styles/Oracle.module.css'
 import { useOracleState } from '../../hooks/useOracleState'
 import { OracleTable } from '../../components/OracleTable'
 import { OracleTableToggleButton } from '../../components/OracleTableToggleButton'
 import { OracleResult } from '../../components/OracleResult'
+import { Container } from '../../components/atoms/Container'
 
 export default function Oracle({ oracles }) {
   const router = useRouter()
@@ -22,21 +21,21 @@ export default function Oracle({ oracles }) {
   return (
     <Layout pageTitle={oracle.title}>
       <main>
-        <div className={classNames(utilityStyles.container, utilityStyles.content_center)}>
-          <p className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}> Very well;</p>
-          <p className={classNames(oracleStyles.text_l, utilityStyles.fadein)} style={styleAnimationDelay(0.5)}>{oracle.title}...</p>
+        <Container variant='center'>
+          <p className={classNames("mb-4 text-3xl font-bold", "fadein")}> Very well;</p>
+          <p className={classNames("mb-4 text-lg font-bold", "fadein")} style={styleAnimationDelay(0.5)}>{oracle.title}...</p>
 
           <OracleResult result={result} rolling={rolling} rollOracle={rollOracle} />
 
-          <button onClick={() => rollOracle()} className={utilityStyles.fadein} style={styleAnimationDelay(1.5)}>ask again</button>
+          <button onClick={() => rollOracle()} className="fadein" style={styleAnimationDelay(1.5)}>ask again</button>
           <OracleTableToggleButton toggleTable={toggleTable} tableVisible={tableVisible} animationDelay={1.5} />
           <Link
             href={`/oracles/categories/${oracle.category}`}
-            className={utilityStyles.fadein}
+            className="fadein"
             style={styleAnimationDelay(1.5)}>seek a different fate</Link>
 
           <OracleTable oracle={oracle} tableVisible={tableVisible} />
-        </div>
+        </Container>
       </main >
     </Layout >
   );

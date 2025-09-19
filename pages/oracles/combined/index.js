@@ -6,10 +6,9 @@ import {
   styleAnimationDelay,
   toTitleCase,
 } from "../../../lib/util";
-import utilityStyles from "../../../styles/utility.module.css";
-import oracleStyles from "../../../styles/Oracle.module.css";
 import { useRouter } from "next/router";
 import { Oracle } from "../../../components/Oracle";
+import { Container } from "../../../components/atoms/Container";
 
 export default function Oracles({ oracles }) {
   const router = useRouter();
@@ -28,14 +27,9 @@ export default function Oracles({ oracles }) {
   return (
     <Layout pageTitle={oracleSlugs?.join(", ")}>
       <main>
-        <div
-          className={classNames(
-            utilityStyles.container,
-            utilityStyles.content_center
-          )}
-        >
+        <Container variant="center">
           <p
-            className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}
+            className={classNames("mb-4 text-3xl font-bold", "fadein")}
           >
             {" "}
             Very well;
@@ -45,8 +39,8 @@ export default function Oracles({ oracles }) {
             <div key={index}>
               <p
                 className={classNames(
-                  oracleStyles.text_l,
-                  utilityStyles.fadein
+                  "mb-4 text-lg font-bold",
+                  "fadein"
                 )}
                 style={styleAnimationDelay(0.5)}
               >
@@ -59,13 +53,13 @@ export default function Oracles({ oracles }) {
 
           <Link
             href={`/oracles/categories/combined`}
-            className={utilityStyles.fadein}
+            className="fadein"
             style={styleAnimationDelay(1)}>
             
               seek a different fate
             
           </Link>
-        </div>
+        </Container>
       </main>
     </Layout>
   );

@@ -1,5 +1,4 @@
 import { styleAnimationDelay } from "../lib/util";
-import utilityStyles from "../styles/utility.module.css";
 
 export function OracleTableToggleButton({
   toggleTable,
@@ -9,7 +8,7 @@ export function OracleTableToggleButton({
   return (
     <button
       onClick={() => toggleTable()}
-      className={utilityStyles.fadein}
+      className="fadein"
       style={styleAnimationDelay(animationDelay)}
     >
       {tableVisible ? "put away" : "consult"} the runic charts

@@ -6,31 +6,25 @@ import {
   styleAnimationDelay,
   toTitleCase,
 } from "../../../lib/util";
-import utilityStyles from "../../../styles/utility.module.css";
-import oracleStyles from "../../../styles/Oracle.module.css";
+import { Container } from "../../../components/atoms/Container";
 
 export default function Oracles({ categories }) {
   return (
     <Layout pageTitle={"Oracles"}>
       <main>
-        <div
-          className={classNames(
-            utilityStyles.container,
-            utilityStyles.content_center
-          )}
-        >
+        <Container variant="center">
           <p
-            className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}
+            className={classNames("mb-4 text-3xl font-bold", "fadein")}
           >
             What do you seek?
           </p>
           {[...categories, "combined", "all"].map((category, index) => (
             <div
               key={category}
-              className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
+              className={classNames("mb-4 text-xl font-bold", "fadein")}
               style={styleAnimationDelay(index * 0.025 + 0.25)}
             >
-              <p className={oracleStyles.heading_margin}>
+              <p className={"mt-2 mr-0 mb-1 ml-0"}>
                 <Link
                   href={
                     category === "all"
@@ -43,7 +37,7 @@ export default function Oracles({ categories }) {
               </p>
             </div>
           ))}
-        </div>
+        </Container>
       </main>
     </Layout>
   );
