@@ -13,9 +13,7 @@ export default function Moves({ categories }) {
     <Layout pageTitle={"Moves"}>
       <main>
         <Container variant="center">
-          <p
-            className={classNames("mb-4 text-3xl font-bold", "fadein")}
-          >
+          <p className={classNames("mb-4 text-3xl font-bold", "fadein")}>
             What will you do?
           </p>
           {[...categories, "all"].map((category, index) => (

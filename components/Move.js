@@ -44,8 +44,8 @@ export function Move({ move, index, allMoveNames, oracles }) {
                 );
               },
               strong: ({ node, ...rest }) => {
-                const matches = customMarkdownComponentMatchers.strong.filter((rule) =>
-                  rule.regex.test(rest.children)
+                const matches = customMarkdownComponentMatchers.strong.filter(
+                  (rule) => rule.regex.test(rest.children)
                 );
                 const replacementComponent = matches[0]?.component;
                 if (replacementComponent) {

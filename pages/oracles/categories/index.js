@@ -13,9 +13,7 @@ export default function Oracles({ categories }) {
     <Layout pageTitle={"Oracles"}>
       <main>
         <Container variant="center">
-          <p
-            className={classNames("mb-4 text-3xl font-bold", "fadein")}
-          >
+          <p className={classNames("mb-4 text-3xl font-bold", "fadein")}>
             What do you seek?
           </p>
           {[...categories, "combined", "all"].map((category, index) => (

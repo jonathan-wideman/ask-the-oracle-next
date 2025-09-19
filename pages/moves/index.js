@@ -22,9 +22,7 @@ export default function Moves({ moves, oracles }) {
     <Layout pageTitle={"Moves"}>
       <main>
         <Container variant="center">
-          <p
-            className={classNames("mb-4 text-3xl font-bold", "fadein")}
-          >
+          <p className={classNames("mb-4 text-3xl font-bold", "fadein")}>
             What will you do?
           </p>
           {Object.keys(movesByCategory).map((category, index) => (
@@ -33,9 +31,7 @@ export default function Moves({ moves, oracles }) {
               className={classNames("mb-4 text-xl font-bold", "fadein")}
               style={styleAnimationDelay(index * 0.025 + 0.25)}
             >
-              <p className="mt-2 mr-0 mb-1 ml-0">
-                {toTitleCase(category)}
-              </p>
+              <p className="mt-2 mr-0 mb-1 ml-0">{toTitleCase(category)}</p>
               <ul>
                 {movesByCategory[category].map((move, index) => (
                   <li key={move.name}>
@@ -53,10 +49,9 @@ export default function Moves({ moves, oracles }) {
           <Link
             href={`/moves/categories`}
             className="fadein"
-            style={styleAnimationDelay(1)}>
-            
-              consider a different action
-            
+            style={styleAnimationDelay(1)}
+          >
+            consider a different action
           </Link>
         </Container>
       </main>

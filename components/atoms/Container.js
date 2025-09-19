@@ -1,6 +1,11 @@
 import { classNames } from "../../lib/util";
 
-export function Container({ children, className, variant="default", ...props }) {
+export function Container({
+  children,
+  className,
+  variant = "default",
+  ...props
+}) {
   return (
     <div
       className={classNames(
