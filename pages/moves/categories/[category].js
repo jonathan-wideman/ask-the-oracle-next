@@ -9,10 +9,9 @@ import {
   styleAnimationDelay,
   toTitleCase,
 } from "../../../lib/util";
-import utilityStyles from "../../../styles/utility.module.css";
-import oracleStyles from "../../../styles/Oracle.module.css";
 import { Move } from "../../../components/Move";
-import Link from "next/link";
+import { Container } from "../../../components/atoms/Container";
+import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
 export default function Moves({ moves, oracles }) {
   const movesByCategory = moves.reduce(
@@ -29,51 +28,39 @@ export default function Moves({ moves, oracles }) {
 
   return (
     <Layout pageTitle={"Moves"}>
-      <main>
-        <div
-          className={classNames(
-            utilityStyles.container,
-            utilityStyles.content_center
-          )}
-        >
-          <p
-            className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}
+      <Container variant="center">
+        <p className={classNames("mb-4 text-3xl font-bold", "fadein")}>
+          What will you do?
+        </p>
+        {Object.keys(movesByCategory).map((category, index) => (
+          <div
+            key={category}
+            className={classNames("mb-4 text-xl font-bold", "fadein")}
+            style={styleAnimationDelay(index * 0.025 + 0.25)}
           >
-            What will you do?
-          </p>
-          {Object.keys(movesByCategory).map((category, index) => (
-            <div
-              key={category}
-              className={classNames(oracleStyles.text_xl, utilityStyles.fadein)}
-              style={styleAnimationDelay(index * 0.025 + 0.25)}
-            >
-              <p className={oracleStyles.heading_margin}>
-                {toTitleCase(category)}
-              </p>
-              <ul>
-                {movesByCategory[category].map((move, index) => (
-                  <li key={move.name}>
-                    <Move
-                      move={move}
-                      index={index}
-                      allMoveNames={allMoveNamesWithoutAsterisks}
-                      oracles={oracles}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <Link
-            href={`/moves/categories`}
-            className={utilityStyles.fadein}
-            style={styleAnimationDelay(1)}>
-            
-              consider a different action
-            
-          </Link>
-        </div>
-      </main>
+            <p className={"mt-2 mr-0 mb-1 ml-0"}>{toTitleCase(category)}</p>
+            <ul>
+              {movesByCategory[category].map((move, index) => (
+                <li key={move.name}>
+                  <Move
+                    move={move}
+                    index={index}
+                    allMoveNames={allMoveNamesWithoutAsterisks}
+                    oracles={oracles}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        <LinkVariant
+          href={`/moves/categories`}
+          className="fadein"
+          style={styleAnimationDelay(1)}
+        >
+          consider a different action
+        </LinkVariant>
+      </Container>
     </Layout>
   );
 }

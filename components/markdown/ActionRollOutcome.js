@@ -1,9 +1,3 @@
 export const ActionRollOutcome = ({ children }) => (
-  <strong
-    style={{
-      color: "cornflowerblue",
-    }}
-  >
-    {children}
-  </strong>
+  <strong className="text-indigo-600">{children}</strong>
 );

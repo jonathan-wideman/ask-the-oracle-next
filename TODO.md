@@ -27,8 +27,21 @@
 - [ ] markdown styles within Oracle results
 - [ ] darkmode toggle
 - [ ] tailwind
-- [ ] upgrade next?
+  - [x] add tailwind
+  - [ ] convert existing css
+  - [x] convert existing inline
+  - [ ] convert or pick new colors
+  - [ ] convert or pick new text sizes
+  - [ ] make typography and other atom components
+  - [ ] tw-merge sort and other utilities
+  - [ ] re-add reduced motion preferences
+- [x] upgrade next
 - [ ] try tanstack start?
+- [ ] fix move links not working after categorization
+  - [ ] because moves no longer gets full list of move names
+- [ ] replace animations with animation library, eg.
+  - [ ] https://www.react-spring.dev/
+  - [ ] https://motion.dev/
 
 
 

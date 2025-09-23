@@ -1,11 +1,3 @@
 export const Progress = ({ children }) => (
-  <span
-    style={{
-      color: "cornflowerblue",
-      fontFamily: '"Cinzel", serif',
-      fontWeight: "bold",
-    }}
-  >
-    {children}
-  </span>
+  <span className="font-code text-indigo-600 font-bold">{children}</span>
 );

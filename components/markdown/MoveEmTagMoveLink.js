@@ -1,5 +1,3 @@
-import oracleStyles from "../../styles/Oracle.module.css";
-
 export const MoveEmTagMoveLink = ({ ...rest }) => (
-  <em className={oracleStyles.move_name} {...rest} />
+  <em className="text-amber-300" {...rest} />
 );

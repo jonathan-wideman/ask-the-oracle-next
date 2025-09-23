@@ -1,23 +1,22 @@
-import Link from "next/link";
-import headerStyles from "../styles/Header.module.css";
-import utilityStyles from "../styles/utility.module.css";
+import { Container } from "./atoms/Container";
+import { LinkVariant } from "./atoms/LinkVariant";
 
 export default function Header() {
   return (
-    <header>
-      <div className={utilityStyles.container}>
-        <nav className={headerStyles.nav}>
-          <Link href={"/"} className={headerStyles.nav_link}>
+    <header className="bg-zinc-800">
+      <Container>
+        <nav className="flex justify-center gap-4">
+          <LinkVariant href={"/"} className="p-4">
             Home
-          </Link>
-          <Link href={"/oracles/categories"} className={headerStyles.nav_link}>
+          </LinkVariant>
+          <LinkVariant href={"/oracles/categories"} className="p-4">
             Oracles
-          </Link>
-          <Link href={"/moves/categories"} className={headerStyles.nav_link}>
+          </LinkVariant>
+          <LinkVariant href={"/moves/categories"} className="p-4">
             Moves
-          </Link>
+          </LinkVariant>
         </nav>
-      </div>
+      </Container>
     </header>
   );
 }

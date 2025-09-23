@@ -1,11 +1,5 @@
 export const ActionRoll = ({ children }) => (
-  <span
-    style={{
-      color: "cornflowerblue",
-      fontFamily: '"Cinzel", serif',
-      fontWeight: "bold",
-    }}
-  >
+  <span className="font-code text-indigo-600 font-bold">
     {children.slice(1)}
   </span>
 );

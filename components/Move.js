@@ -5,8 +5,6 @@ import { MoveEmTagDefault } from "./markdown/MoveEmTagDefault";
 import { MoveEmTagMoveLink } from "./markdown/MoveEmTagMoveLink";
 import { MoveStrongTagDefault } from "./markdown/MoveStrongTagDefault";
 import { classNames, styleAnimationDelay } from "../lib/util";
-import oracleStyles from "../styles/Oracle.module.css";
-import utilityStyles from "../styles/utility.module.css";
 import { customMarkdownComponentMatchers } from "../lib/customMarkdownComponentMatchers";
 
 export function Move({ move, index, allMoveNames, oracles }) {
@@ -14,7 +12,7 @@ export function Move({ move, index, allMoveNames, oracles }) {
   return (
     <>
       <a
-        className={classNames(oracleStyles.text_l, utilityStyles.fadein)}
+        className={classNames("mb-4 text-lg font-bold", "fadein")}
         style={styleAnimationDelay(index * 0.025 + 0.25)}
         onClick={() => setOpen(!open)}
       >
@@ -22,19 +20,12 @@ export function Move({ move, index, allMoveNames, oracles }) {
         {move.progress ? " ✴" : null}
       </a>
       {open && move.progress && (
-        <div
-          style={{
-            color: "cornflowerblue",
-            fontSize: "1rem",
-            fontFamily: '"Cinzel", serif',
-            fontWeight: "bold",
-          }}
-        >
+        <div className="font-code text-indigo-600 text-base font-bold">
           Progress Move
         </div>
       )}
       {open && (
-        <div className={oracleStyles.move_rules}>
+        <div className="text-base text-left">
           <Markdown
             components={{
               em: ({ node, ...rest }) => {
@@ -46,8 +37,8 @@ export function Move({ move, index, allMoveNames, oracles }) {
                 );
               },
               strong: ({ node, ...rest }) => {
-                const matches = customMarkdownComponentMatchers.strong.filter((rule) =>
-                  rule.regex.test(rest.children)
+                const matches = customMarkdownComponentMatchers.strong.filter(
+                  (rule) => rule.regex.test(rest.children)
                 );
                 const replacementComponent = matches[0]?.component;
                 if (replacementComponent) {

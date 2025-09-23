@@ -1,3 +1,3 @@
 export const MoveStrongTagDefault = ({ ...rest }) => (
-  <strong style={{ color: "gold" }} {...rest} />
+  <strong className="text-amber-300" {...rest} />
 );

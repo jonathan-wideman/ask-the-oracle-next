@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Layout from "../../../components/Layout";
 import { getOracles, getOraclesCategories } from "../../../lib/connector";
 import {
@@ -6,10 +5,10 @@ import {
   styleAnimationDelay,
   toTitleCase,
 } from "../../../lib/util";
-import utilityStyles from "../../../styles/utility.module.css";
-import oracleStyles from "../../../styles/Oracle.module.css";
 import { useRouter } from "next/router";
 import { Oracle } from "../../../components/Oracle";
+import { Container } from "../../../components/atoms/Container";
+import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
 export default function Oracles({ oracles }) {
   const router = useRouter();
@@ -27,46 +26,33 @@ export default function Oracles({ oracles }) {
 
   return (
     <Layout pageTitle={oracleSlugs?.join(", ")}>
-      <main>
-        <div
-          className={classNames(
-            utilityStyles.container,
-            utilityStyles.content_center
-          )}
+      <Container variant="center">
+        <p className={classNames("mb-4 text-3xl font-bold", "fadein")}>
+          {" "}
+          Very well;
+        </p>
+
+        {mappedOracles?.map((oracle, index) => (
+          <div key={index}>
+            <p
+              className={classNames("mb-4 text-lg font-bold", "fadein")}
+              style={styleAnimationDelay(0.5)}
+            >
+              {oracle.title}...
+            </p>
+
+            <Oracle oracle={oracle} rollOnCreate={true} />
+          </div>
+        ))}
+
+        <LinkVariant
+          href={`/oracles/categories/combined`}
+          className="fadein"
+          style={styleAnimationDelay(1)}
         >
-          <p
-            className={classNames(oracleStyles.text_xxl, utilityStyles.fadein)}
-          >
-            {" "}
-            Very well;
-          </p>
-
-          {mappedOracles?.map((oracle, index) => (
-            <div key={index}>
-              <p
-                className={classNames(
-                  oracleStyles.text_l,
-                  utilityStyles.fadein
-                )}
-                style={styleAnimationDelay(0.5)}
-              >
-                {oracle.title}...
-              </p>
-
-              <Oracle oracle={oracle} rollOnCreate={true} />
-            </div>
-          ))}
-
-          <Link
-            href={`/oracles/categories/combined`}
-            className={utilityStyles.fadein}
-            style={styleAnimationDelay(1)}>
-            
-              seek a different fate
-            
-          </Link>
-        </div>
-      </main>
+          seek a different fate
+        </LinkVariant>
+      </Container>
     </Layout>
   );
 }

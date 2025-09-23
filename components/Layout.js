@@ -1,6 +1,6 @@
-import CustomHead from './CustomHead'
-import Footer from './Footer'
-import Header from './Header'
+import CustomHead from "./CustomHead";
+import Footer from "./Footer";
+import Header from "./Header";
 
 // TODO: refactor to "Custom App" component, see: https://nextjs.org/docs/basic-features/layouts
 
@@ -9,8 +9,8 @@ export default function Layout({ children, pageTitle }) {
     <>
       <CustomHead pageTitle={pageTitle} />
       <Header />
-      {children}
+      <main className="pt-12">{children}</main>
       <Footer />
     </>
-  )
+  );
 }
