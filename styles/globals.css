@@ -4,17 +4,24 @@
 
 /* push footer to bottom of screen without it being sticky or fixed */
 /* see: https://codeconvey.com/footer-at-bottom-of-page-but-not-fixed/ */
-/* Can't target this element via tailwind */
-/* TODO: this may not be needed */
-/* body>div {
+/* Can't target the body>div element via tailwind */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+body > div {
   position: relative;
-  padding-bottom: calc(var(--main-padding) * 3);
+  padding-bottom: 8rem;
   min-height: 100%;
-} */
+}
 
 @theme {
   /* NB. haven't really figured out tailwind shadows */
-  --shadow-glow: 0 0 1em var(--tw-shadow-color), 0 0 1em inset var(--tw-shadow-color);
+  --shadow-glow-outer: 0 0 1em var(--tw-shadow-color);
+  --shadow-glow: 0 0 1em var(--tw-shadow-color),
+    0 0 1em inset var(--tw-shadow-color);
   --text-shadow-glow: 0 0 1em, 0 0 0.4em;
   --font-body: "Caudex", serif;
   --font-code: "Cinzel", serif;
@@ -26,7 +33,6 @@ box-shadow: 0 0 1em var(--clr-primary-200), 0 0 1em inset var(--clr-primary-200)
 --clr-primary-200: hsl(279, 22%, 20%);
 --clr-primary-400: hsl(279, 22%, 50%);
 --clr-primary-800: hsl(279, 22%, 80%); */
-
 
 .fadein {
   --delay: 0s;
