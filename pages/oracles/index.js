@@ -42,7 +42,7 @@ export default function Oracles({ oracles }) {
           </div>
         ))}
         <LinkVariant
-          href={`/moves/categories`}
+          href={`/oracles/categories`}
           className="fadein"
           style={styleAnimationDelay(1)}
         >
