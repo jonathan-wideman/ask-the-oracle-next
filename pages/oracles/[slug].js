@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 import Layout from "../../components/Layout";
@@ -9,6 +8,7 @@ import { OracleTable } from "../../components/OracleTable";
 import { OracleTableToggleButton } from "../../components/OracleTableToggleButton";
 import { OracleResult } from "../../components/OracleResult";
 import { Container } from "../../components/atoms/Container";
+import { LinkVariant } from "../../components/atoms/LinkVariant";
 
 export default function Oracle({ oracles }) {
   const router = useRouter();
@@ -40,7 +40,12 @@ export default function Oracle({ oracles }) {
 
         <button
           onClick={() => rollOracle()}
-          className="fadein"
+          className={classNames(
+            "fadein",
+            "cursor-pointer underline",
+            "hover:underline hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
+            "focus-visible:underline focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow"
+          )}
           style={styleAnimationDelay(1.5)}
         >
           ask again
@@ -50,13 +55,13 @@ export default function Oracle({ oracles }) {
           tableVisible={tableVisible}
           animationDelay={1.5}
         />
-        <Link
+        <LinkVariant
           href={`/oracles/categories/${oracle.category}`}
           className="fadein"
           style={styleAnimationDelay(1.5)}
         >
           seek a different fate
-        </Link>
+        </LinkVariant>
 
         <OracleTable oracle={oracle} tableVisible={tableVisible} />
       </Container>

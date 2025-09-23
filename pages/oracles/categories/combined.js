@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Layout from "../../../components/Layout";
 import {
   getOraclesCategories,
@@ -10,6 +9,7 @@ import {
   toTitleCase,
 } from "../../../lib/util";
 import { Container } from "../../../components/atoms/Container";
+import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
 export default function Oracles({ oracles }) {
   const oraclesByCategory = oracles.reduce(
@@ -36,25 +36,25 @@ export default function Oracles({ oracles }) {
             <ul>
               {oraclesByCategory[category].map((oracle, index) => (
                 <li key={oracle.id}>
-                  <Link
+                  <LinkVariant
                     href={`/oracles/combined?oracles=${oracle.slug}`}
                     className={classNames("mb-4 text-lg font-bold", "fadein")}
                     style={styleAnimationDelay(index * 0.025 + 0.25)}
                   >
                     {oracle.title}
-                  </Link>
+                  </LinkVariant>
                 </li>
               ))}
             </ul>
           </div>
         ))}
-        <Link
+        <LinkVariant
           href={`/oracles/categories`}
           className="fadein"
           style={styleAnimationDelay(1)}
         >
           seek a different fate
-        </Link>
+        </LinkVariant>
       </Container>
     </Layout>
   );

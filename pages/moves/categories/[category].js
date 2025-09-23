@@ -10,8 +10,8 @@ import {
   toTitleCase,
 } from "../../../lib/util";
 import { Move } from "../../../components/Move";
-import Link from "next/link";
 import { Container } from "../../../components/atoms/Container";
+import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
 export default function Moves({ moves, oracles }) {
   const movesByCategory = moves.reduce(
@@ -53,13 +53,13 @@ export default function Moves({ moves, oracles }) {
             </ul>
           </div>
         ))}
-        <Link
+        <LinkVariant
           href={`/moves/categories`}
           className="fadein"
           style={styleAnimationDelay(1)}
         >
           consider a different action
-        </Link>
+        </LinkVariant>
       </Container>
     </Layout>
   );

@@ -1,20 +1,20 @@
-import Link from "next/link";
 import { Container } from "./atoms/Container";
+import { LinkVariant } from "./atoms/LinkVariant";
 
 export default function Header() {
   return (
     <header className="bg-zinc-800">
       <Container>
         <nav className="flex justify-center gap-4">
-          <Link href={"/"} className="p-4">
+          <LinkVariant href={"/"} className="p-4">
             Home
-          </Link>
-          <Link href={"/oracles/categories"} className="p-4">
+          </LinkVariant>
+          <LinkVariant href={"/oracles/categories"} className="p-4">
             Oracles
-          </Link>
-          <Link href={"/moves/categories"} className="p-4">
+          </LinkVariant>
+          <LinkVariant href={"/moves/categories"} className="p-4">
             Moves
-          </Link>
+          </LinkVariant>
         </nav>
       </Container>
     </header>

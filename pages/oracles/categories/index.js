@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Layout from "../../../components/Layout";
 import { getOraclesCategories } from "../../../lib/connector";
 import {
@@ -7,6 +6,7 @@ import {
   toTitleCase,
 } from "../../../lib/util";
 import { Container } from "../../../components/atoms/Container";
+import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
 export default function Oracles({ categories }) {
   return (
@@ -22,7 +22,7 @@ export default function Oracles({ categories }) {
             style={styleAnimationDelay(index * 0.025 + 0.25)}
           >
             <p className={"mt-2 mr-0 mb-1 ml-0"}>
-              <Link
+              <LinkVariant
                 href={
                   category === "all"
                     ? `/oracles`
@@ -30,7 +30,7 @@ export default function Oracles({ categories }) {
                 }
               >
                 {toTitleCase(category)}
-              </Link>
+              </LinkVariant>
             </p>
           </div>
         ))}

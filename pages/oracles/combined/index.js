@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Layout from "../../../components/Layout";
 import { getOracles, getOraclesCategories } from "../../../lib/connector";
 import {
@@ -9,6 +8,7 @@ import {
 import { useRouter } from "next/router";
 import { Oracle } from "../../../components/Oracle";
 import { Container } from "../../../components/atoms/Container";
+import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
 export default function Oracles({ oracles }) {
   const router = useRouter();
@@ -45,13 +45,13 @@ export default function Oracles({ oracles }) {
           </div>
         ))}
 
-        <Link
+        <LinkVariant
           href={`/oracles/categories/combined`}
           className="fadein"
           style={styleAnimationDelay(1)}
         >
           seek a different fate
-        </Link>
+        </LinkVariant>
       </Container>
     </Layout>
   );

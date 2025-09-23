@@ -1,4 +1,4 @@
-import { styleAnimationDelay } from "../lib/util";
+import { classNames, styleAnimationDelay } from "../lib/util";
 
 export function OracleTableToggleButton({
   toggleTable,
@@ -8,7 +8,12 @@ export function OracleTableToggleButton({
   return (
     <button
       onClick={() => toggleTable()}
-      className="fadein"
+      className={classNames(
+        "fadein",
+        "cursor-pointer underline",
+        "hover:underline hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
+        "focus-visible:underline focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow"
+      )}
       style={styleAnimationDelay(animationDelay)}
     >
       {tableVisible ? "put away" : "consult"} the runic charts
