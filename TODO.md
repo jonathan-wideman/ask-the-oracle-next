@@ -28,7 +28,7 @@
 - [ ] darkmode toggle
 - [ ] tailwind
   - [x] add tailwind
-  - [ ] convert existing css
+  - [x] convert existing css
   - [x] convert existing inline
   - [ ] convert or pick new colors
   - [ ] convert or pick new text sizes
