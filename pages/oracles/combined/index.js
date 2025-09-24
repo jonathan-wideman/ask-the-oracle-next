@@ -6,7 +6,7 @@ import {
   toTitleCase,
 } from "../../../lib/util";
 import { useRouter } from "next/router";
-import { Oracle } from "../../../components/Oracle";
+import { Oracle, OracleAlt } from "../../../components/Oracle";
 import { Container } from "../../../components/atoms/Container";
 import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
@@ -42,7 +42,8 @@ export default function Oracles({ oracles }) {
               {oracle.title}...
             </p> */}
 
-            <Oracle oracle={oracle} rollOnCreate={true} />
+            {/* <Oracle oracle={oracle} rollOnCreate={true} /> */}
+            <OracleAlt oracle={oracle} rollOnCreate={true} />
           </div>
         ))}
 

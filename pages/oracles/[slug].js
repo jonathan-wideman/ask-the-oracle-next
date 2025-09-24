@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import { getOracles } from "../../lib/connector";
 import { classNames, styleAnimationDelay } from "../../lib/util";
 import { useOracleState } from "../../hooks/useOracleState";
-import { Oracle as OracleComponent } from "../../components/Oracle";
+import { OracleAlt, Oracle as OracleComponent } from "../../components/Oracle";
 import { OracleTable } from "../../components/OracleTable";
 import { OracleTableToggleButton } from "../../components/OracleTableToggleButton";
 import { OracleResult, OracleResultAlt } from "../../components/OracleResult";
@@ -66,7 +66,9 @@ export default function Oracle({ oracles }) {
         </LinkVariant>
         
         <OracleTable oracle={oracle} tableVisible={tableVisible} /> */}
-        <OracleComponent oracle={oracle} />
+        {/* <OracleComponent oracle={oracle} rollOnCreate={true} /> */}
+
+        <OracleAlt oracle={oracle} rollOnCreate={true} />
 
         <LinkVariant
           href={`/oracles/categories/${oracle.category}`}
