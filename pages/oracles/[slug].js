@@ -4,24 +4,26 @@ import Layout from "../../components/Layout";
 import { getOracles } from "../../lib/connector";
 import { classNames, styleAnimationDelay } from "../../lib/util";
 import { useOracleState } from "../../hooks/useOracleState";
+import { Oracle as OracleComponent } from "../../components/Oracle";
 import { OracleTable } from "../../components/OracleTable";
 import { OracleTableToggleButton } from "../../components/OracleTableToggleButton";
-import { OracleResult } from "../../components/OracleResult";
+import { OracleResult, OracleResultAlt } from "../../components/OracleResult";
 import { Container } from "../../components/atoms/Container";
 import { LinkVariant } from "../../components/atoms/LinkVariant";
 
 export default function Oracle({ oracles }) {
   const router = useRouter();
   const { slug } = router.query;
+
   const oracle = oracles.find((oracle) => oracle.slug === slug);
 
-  const { rollOracle, tableVisible, toggleTable, result, rolling } =
-    useOracleState(oracle, true, undefined, 500);
+  // const { rollOracle, tableVisible, toggleTable, result, rolling } =
+  //   useOracleState(oracle, true, undefined, 500);
 
   return (
     <Layout pageTitle={oracle.title}>
-      <Container variant="center">
-        <p className={classNames("mb-4 text-3xl font-bold", "fadein")}>
+      <Container variant="center" className={"gap-6"}>
+        {/* <p className={classNames("mb-4 text-3xl font-bold", "fadein")}>
           {" "}
           Very well;
         </p>
@@ -62,8 +64,17 @@ export default function Oracle({ oracles }) {
         >
           seek a different fate
         </LinkVariant>
+        
+        <OracleTable oracle={oracle} tableVisible={tableVisible} /> */}
+        <OracleComponent oracle={oracle} />
 
-        <OracleTable oracle={oracle} tableVisible={tableVisible} />
+        <LinkVariant
+          href={`/oracles/categories/${oracle.category}`}
+          className="fadein"
+          style={styleAnimationDelay(1.5)}
+        >
+          seek a different fate
+        </LinkVariant>
       </Container>
     </Layout>
   );

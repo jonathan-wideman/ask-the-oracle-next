@@ -6,8 +6,14 @@ export function OracleTable({ oracle, tableVisible }) {
 
   return (
     <div
+      // className={classNames(
+      //   "grid grid-cols-[auto_auto] mt-8 mb-4 px-8 py-4 text-left text-sm gap-x-4 gap-y-2 border border-zinc-700 rounded-2xl",
+      //   "fadein"
+      // )}
       className={classNames(
-        "grid grid-cols-[auto_auto] mt-8 mb-4 px-8 py-4 text-left text-sm gap-x-4 gap-y-2 border border-zinc-700 rounded-2xl",
+        // "grid grid-cols-[auto_auto] mt-8 mb-4 px-8 py-4 text-left text-sm gap-x-4 gap-y-2 rounded-3xl",
+        "grid grid-cols-[auto_auto] p-8 text-left text-sm gap-x-4 gap-y-2 rounded-3xl",
+        "bg-zinc-950/50",
         "fadein"
       )}
     >
