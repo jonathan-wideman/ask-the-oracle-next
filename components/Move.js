@@ -25,7 +25,7 @@ export function Move({ move, index, allMoveNames, oracles }) {
         </div>
       )}
       {open && (
-        <div className="text-base text-left">
+        <div className="text-base text-left font-normal">
           <Markdown
             components={{
               em: ({ node, ...rest }) => {
@@ -55,6 +55,19 @@ export function Move({ move, index, allMoveNames, oracles }) {
                   return replacementComponent({ ...rest, oracles });
                 }
                 return <MoveCodeTagDefault {...rest} />;
+              },
+              p({ node, ...rest }) {
+                return <p className="my-1" {...rest} />;
+              },
+              ul({ node, ...rest }) {
+                return (
+                  <ul className="list-['·'] list-outside ps-2">
+                    {rest.children}
+                  </ul>
+                );
+              },
+              li({ node, ...rest }) {
+                return <li className="ps-2" {...rest} />;
               },
             }}
           >
