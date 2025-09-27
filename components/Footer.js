@@ -11,7 +11,7 @@ export default function Footer() {
           <p>
             Based on{" "}
             <LinkVariant href={"https://www.ironswornrpg.com/"}>
-              Ironsworn TTRPG
+              Ironsworn
             </LinkVariant>{" "}
             by Shawn Tomkin
           </p>
