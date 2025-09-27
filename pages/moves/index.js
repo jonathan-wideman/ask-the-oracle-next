@@ -1,11 +1,11 @@
 import Layout from "../../components/Layout";
-import { getMoves, getOracles } from "../../lib/connector";
+import { getAllMovesNames, getMoves, getOracles } from "../../lib/connector";
 import { classNames, styleAnimationDelay, toTitleCase } from "../../lib/util";
 import { Move } from "../../components/Move";
 import { Container } from "../../components/atoms/Container";
 import { LinkVariant } from "../../components/atoms/LinkVariant";
 
-export default function Moves({ moves, oracles }) {
+export default function Moves({ moves, allMoveNames, oracles }) {
   const movesByCategory = moves.reduce(
     (acc, move) => ({
       ...acc,
@@ -14,8 +14,8 @@ export default function Moves({ moves, oracles }) {
     {}
   );
 
-  const allMoveNamesWithoutAsterisks = moves.map((move) =>
-    move.name.replace("*", "")
+  const allMoveNamesWithoutAsterisks = allMoveNames.map((name) =>
+    name.replace("*", "")
   );
 
   return (
@@ -58,5 +58,11 @@ export default function Moves({ moves, oracles }) {
 }
 
 export async function getStaticProps() {
-  return { props: { moves: getMoves(), oracles: getOracles(["move"]) } };
+  return {
+    props: {
+      moves: getMoves(),
+      allMoveNames: getAllMovesNames(),
+      oracles: getOracles(["move"]),
+    },
+  };
 }

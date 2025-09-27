@@ -1,5 +1,6 @@
 import Layout from "../../../components/Layout";
 import {
+  getAllMovesNames,
   getMoves,
   getMovesCategories,
   getOracles,
@@ -13,7 +14,7 @@ import { Move } from "../../../components/Move";
 import { Container } from "../../../components/atoms/Container";
 import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
-export default function Moves({ moves, oracles }) {
+export default function Moves({ moves, allMoveNames, oracles }) {
   const movesByCategory = moves.reduce(
     (acc, move) => ({
       ...acc,
@@ -22,8 +23,8 @@ export default function Moves({ moves, oracles }) {
     {}
   );
 
-  const allMoveNamesWithoutAsterisks = moves.map((move) =>
-    move.name.replace("*", "")
+  const allMoveNamesWithoutAsterisks = allMoveNames.map((name) =>
+    name.replace("*", "")
   );
 
   return (
@@ -75,6 +76,10 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { category } = context.params;
   return {
-    props: { moves: getMoves([category]), oracles: getOracles(["move"]) },
+    props: {
+      moves: getMoves([category]),
+      allMoveNames: getAllMovesNames(),
+      oracles: getOracles(["move"]),
+    },
   };
 }

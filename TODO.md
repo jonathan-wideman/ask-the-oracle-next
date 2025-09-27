@@ -37,8 +37,8 @@
   - [ ] re-add reduced motion preferences
 - [x] upgrade next
 - [ ] try tanstack start?
-- [ ] fix move links not working after categorization
-  - [ ] because moves no longer gets full list of move names
+- [x] fix move links not working after categorization
+  - [x] because moves no longer gets full list of move names
 - [ ] replace animations with animation library, eg.
   - [ ] https://www.react-spring.dev/
   - [ ] https://motion.dev/
