@@ -35,7 +35,7 @@ export default function Oracles({ oracles }) {
             <p className={"mt-2 mr-0 mb-1 ml-0"}>{toTitleCase(category)}</p>
             <ul>
               {oraclesByCategory[category].map((oracle, index) => (
-                <li key={oracle.id}>
+                <li key={oracle.slug}>
                   <LinkVariant
                     href={`/oracles/combined?oracles=${oracle.slug}`}
                     className={classNames("mb-4 text-lg font-bold", "fadein")}
