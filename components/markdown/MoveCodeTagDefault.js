@@ -1,3 +1,3 @@
 export const MoveCodeTagDefault = ({ ...rest }) => (
-  <span className="font-code text-indigo-600 font-bold" {...rest} />
+  <span className="font-code text-indigo-400 font-bold" {...rest} />
 );

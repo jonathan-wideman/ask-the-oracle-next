@@ -1,3 +1,3 @@
 export const ActionRollOutcome = ({ children }) => (
-  <strong className="text-indigo-600">{children}</strong>
+  <strong className="text-indigo-400">{children}</strong>
 );
