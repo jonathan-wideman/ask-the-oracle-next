@@ -1,11 +1,71 @@
+import { useState } from "react";
 import { useOracleState } from "../hooks/useOracleState";
-import { classNames } from "../lib/util";
+import { classNames, toTitleCase } from "../lib/util";
+import { LinkVariant } from "./atoms/LinkVariant";
 import { OracleTable } from "./OracleTable";
+
+export function OracleChooser({ oracleListings, onSelectOracle }) {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const oraclesByCategory = oracleListings.reduce(
+    (acc, oracle) => ({
+      ...acc,
+      [oracle.category]: [...(acc[oracle.category] || []), oracle],
+    }),
+    {}
+  );
+
+  return (
+    <div
+      className={classNames(
+        "flex flex-col gap-4",
+        "bg-zinc-950/50 px-12 py-5 min-w-86 rounded-3xl"
+      )}
+    >
+      <div className="text-lg text-center">Pick an Oracle</div>
+      {selectedCategory === null &&
+        Object.keys(oraclesByCategory).map((category, index) => (
+          <div
+            key={category}
+            className={classNames("text-xl font-bold", "fadein")}
+            // style={styleAnimationDelay(index * 0.025 + 0.25)}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {toTitleCase(category)}
+          </div>
+        ))}
+
+      {selectedCategory !== null && (
+        <div
+          className={classNames("text-xl font-bold", "fadein")}
+          onClick={() => {
+            setSelectedCategory(null);
+          }}
+        >
+          Back
+        </div>
+      )}
+
+      {selectedCategory !== null &&
+        oracleListings.map((oracle, index) => (
+          <div key={oracle.id}>
+            <div
+              className={classNames("font-bold", "fadein")}
+              onClick={() => onSelectOracle(oracle.slug)}
+            >
+              {oracle.title}
+            </div>
+          </div>
+        ))}
+    </div>
+  );
+}
 
 export function Oracle({
   oracle,
   rollOnCreate = false,
   initialResult,
+  onDelete,
   className,
 }) {
   const { rollOracle, tableVisible, toggleTable, result, rolling } =
@@ -32,7 +92,21 @@ export function Oracle({
       </button>
       {tableVisible && (
         <>
-          <div className="text-lg text-center">{oracle.title}</div>
+          <div className="text-lg text-center" onClick={toggleTable}>
+            {oracle.title}
+          </div>
+          {onDelete && (
+            <div
+              className={classNames(
+                "absolute top-6 right-6 cursor-pointer",
+                "hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
+                "focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow"
+              )}
+              onClick={() => onDelete()}
+            >
+              X
+            </div>
+          )}
           <OracleTable
             oracle={oracle}
             tableVisible={tableVisible}
