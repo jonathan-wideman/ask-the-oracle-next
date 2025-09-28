@@ -2,7 +2,7 @@ import Layout from "../../../components/Layout";
 import { getOraclesListings } from "../../../lib/connector";
 import { classNames, styleAnimationDelay } from "../../../lib/util";
 import { useRouter } from "next/router";
-import { OracleAlt } from "../../../components/Oracle";
+import { Oracle } from "../../../components/Oracle";
 import { Container } from "../../../components/atoms/Container";
 import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
@@ -27,7 +27,7 @@ export default function Oracles({ oracles }) {
 
         {mappedOracles?.map((oracle, index) => (
           <div key={index}>
-            <OracleAlt oracle={oracle} rollOnCreate={true} />
+            <Oracle oracle={oracle} rollOnCreate={true} />
           </div>
         ))}
 

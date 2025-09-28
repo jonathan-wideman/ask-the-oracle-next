@@ -32,6 +32,7 @@ export function MoveOracle({ children, oracles }) {
       oracle={oracle}
       rollOnCreate={false}
       initialResult={"Seek your fate..."}
+      className={"my-6"}  
     />
   );
 }

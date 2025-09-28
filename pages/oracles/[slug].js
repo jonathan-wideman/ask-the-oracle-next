@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import { getOracle, getOraclesListings } from "../../lib/connector";
 import { styleAnimationDelay } from "../../lib/util";
-import { OracleAlt } from "../../components/Oracle";
+import { Oracle as OracleComponent } from "../../components/Oracle";
 import { Container } from "../../components/atoms/Container";
 import { LinkVariant } from "../../components/atoms/LinkVariant";
 
@@ -9,7 +9,7 @@ export default function Oracle({ oracle }) {
   return (
     <Layout pageTitle={oracle.title}>
       <Container variant="center" className={"gap-6"}>
-        <OracleAlt oracle={oracle} rollOnCreate={true} />
+        <OracleComponent oracle={oracle} rollOnCreate={true} />
 
         <LinkVariant
           href={`/oracles/categories/${oracle.category}`}

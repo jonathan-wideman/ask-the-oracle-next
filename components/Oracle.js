@@ -1,58 +1,39 @@
 import { useOracleState } from "../hooks/useOracleState";
 import { classNames } from "../lib/util";
-import { OracleResult, OracleResultAlt } from "./OracleResult";
-import { OracleTable, OracleTableAlt } from "./OracleTable";
-import { OracleTableToggleButton } from "./OracleTableToggleButton";
+import { OracleTable } from "./OracleTable";
 
 export function Oracle({
   oracle,
   rollOnCreate = false,
-  initialResult = undefined,
+  initialResult,
+  className,
 }) {
   const { rollOracle, tableVisible, toggleTable, result, rolling } =
     useOracleState(oracle, rollOnCreate, initialResult);
 
   return (
-    // <div className="text-center mb-8">
-    <div>
-      {/* <OracleResult result={result} rolling={rolling} rollOracle={rollOracle} /> */}
-      <OracleResultAlt
-        result={result}
-        rolling={rolling}
-        rollOracle={rollOracle}
-        toggleTable={toggleTable}
-        title={oracle.title}
-      />
-      <OracleTable oracle={oracle} tableVisible={tableVisible} />
-      {/* <OracleTableToggleButton
-        toggleTable={toggleTable}
-        tableVisible={tableVisible}
-      /> */}
-    </div>
-  );
-}
-
-export function OracleAlt({ oracle, rollOnCreate = false, initialResult }) {
-  const { rollOracle, tableVisible, toggleTable, result, rolling } =
-    useOracleState(oracle, rollOnCreate, initialResult);
-
-  return (
-    <div className="relative flex flex-col gap-4 bg-zinc-950/50 px-12 py-5 min-w-86 rounded-3xl">
+    <div
+      className={classNames(
+        "relative flex flex-col gap-4 bg-zinc-950/50 px-12 py-5 min-w-86 rounded-3xl",
+        className
+      )}
+    >
       <button
         onClick={() => rollOracle()}
         className={classNames(
           "text-xl",
           "cursor-pointer",
           "hover:underline hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
-          "focus-visible:underline focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow"
+          "focus-visible:underline focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow",
+          rolling ? "opacity-0" : "fadein"
         )}
       >
         {result}
       </button>
       {tableVisible && (
         <>
-          <div className="text-lg">{oracle.title}</div>
-          <OracleTableAlt
+          <div className="text-lg text-center">{oracle.title}</div>
+          <OracleTable
             oracle={oracle}
             tableVisible={tableVisible}
             className="mb-4"
