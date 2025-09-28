@@ -1,5 +1,5 @@
 import Layout from "../../../components/Layout";
-import { getOraclesListings } from "../../../lib/connector";
+import { getOracles } from "../../../lib/connector";
 import { classNames, styleAnimationDelay } from "../../../lib/util";
 import { useRouter } from "next/router";
 import { Oracle } from "../../../components/Oracle";
@@ -44,5 +44,5 @@ export default function Oracles({ oracles }) {
 }
 
 export async function getStaticProps() {
-  return { props: { oracles: getOraclesListings() } };
+  return { props: { oracles: getOracles() } };
 }
