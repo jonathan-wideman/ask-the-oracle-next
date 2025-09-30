@@ -47,16 +47,18 @@ export function OracleChooser({ oracleListings, onSelectOracle }) {
       )}
 
       {selectedCategory !== null &&
-        oracleListings.map((oracle, index) => (
-          <div key={oracle.id}>
-            <div
-              className={classNames("font-bold", "fadein")}
-              onClick={() => onSelectOracle(oracle.slug)}
-            >
-              {oracle.title}
+        oracleListings
+          .filter((oracle) => oracle.category === selectedCategory)
+          .map((oracle, index) => (
+            <div key={oracle.id}>
+              <div
+                className={classNames("font-bold", "fadein")}
+                onClick={() => onSelectOracle(oracle.slug)}
+              >
+                {oracle.title}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
     </div>
   );
 }
