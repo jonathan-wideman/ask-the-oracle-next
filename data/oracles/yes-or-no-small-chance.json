@@ -1,0 +1,14 @@
+{
+  "title": "ORACLE 99: YES OR NO SMALL CHANCE",
+  "category": "yes or no",
+  "table": [
+    {
+      "roll": "1-90",
+      "result": "No"
+    },
+    {
+      "roll": "91-100",
+      "result": "Yes"
+    }
+  ]
+}

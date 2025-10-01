@@ -42,6 +42,7 @@
 - [ ] replace animations with animation library, eg.
   - [ ] https://www.react-spring.dev/
   - [ ] https://motion.dev/
+- [x] yes/no oracles with likelihoods
 
 
 
