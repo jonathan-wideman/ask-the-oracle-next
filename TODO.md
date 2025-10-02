@@ -7,9 +7,10 @@
   - [x] full settlement
   - [x] full location
   - [x] multiple of the same oracle in one
-  - [ ] better ux
-  - [ ] better layout
-  - [ ] customizable
+  - [x] better ux
+  - [x] better layout
+  - [x] customizable
+    - [ ] save to localstorage
   - [ ] DSL for complex oracles like settlement
     - [ ] choice among several oracles, eg ironlander names
     - [ ] dependant, eg settlement name theme, egs
@@ -43,7 +44,72 @@
   - [ ] https://www.react-spring.dev/
   - [ ] https://motion.dev/
 - [x] yes/no oracles with likelihoods
+- [ ] typescript
+- [ ] fix page titles
+- [ ] improve page heading content
+- [ ] improve site map
+- [ ] build out api
+- [ ] create & edit custom oracle tables
 
+## Future Scope
+
+### Play Aid
+- [ ] rules cheatsheet
+- [ ] asset listing
+  - [ ] custom assets
+- [ ] custom moves
+
+### Character & Rolls
+- [ ] character sheet
+  - [ ] track stats
+  - [ ] progress tracks (vow, journey, combat, delve, etc)
+    - [ ] ticks / progess per difficulty hint
+  - [ ] track assets
+    - [ ] mark asset levels
+    - [ ] assets with their own tracks (health, etc)
+  - [ ] wounded, encumbered, etc
+- [ ] dice roller
+  - [ ] plus stat
+  - [ ] plus arbitrary bonus
+  - [ ] momentum helper
+    - [ ] preview what burning momentum would achieve
+    - [ ] drop die matching negative momentum
+  - [ ] prompt for narrative effect with doubles
+
+### Journal & Notes
+- [ ] journal page
+  - [ ] rich text edit
+  - [ ] markdown edit
+  - [ ] multi-cursor edit
+  - [ ] vscode shortcuts
+- [ ] world truths
+- [ ] entity notes
+  - [ ] characters (people)
+  - [ ] locations (places)
+  - [ ] items (things)
+- [ ] type @ to reference an entity
+  - [ ] character spoken dialogue
+    - [ ] with @name "..."
+    - [ ] with "...", @name says
+  - [ ] maybe use @entity: to aggregate notes about entities from inline journal entries
+
+- [ ] type / to input commands for preformatted blocks
+  - [ ] roll
+  - [ ] oracle
+  - [ ] in-character section
+  - [ ] out-of-character section
+  
+### World & Game saving
+- [ ] save player character
+- [ ] save setting
+
+### LLM integration
+  - [ ] slash command within journal
+  - [ ] interpret move/roll results
+  - [ ] interpret oracles with/without active game context
+  - [ ] character dialogue
+  - [ ] setting and action descriptions
+  - [ ] auto roll oracles
 
 
 # Work in Progress
