@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useOracleState } from "../hooks/useOracleState";
 import { classNames, toTitleCase } from "../lib/util";
-import { LinkVariant } from "./atoms/LinkVariant";
 import { OracleTable } from "./OracleTable";
 
-export function OracleChooser({ oracleListings, onSelectOracle }) {
+export function OracleChooser({ oracleListings, onSelect, onCancel }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const oraclesByCategory = oracleListings.reduce(
@@ -19,46 +18,89 @@ export function OracleChooser({ oracleListings, onSelectOracle }) {
     <div
       className={classNames(
         "flex flex-col gap-4",
-        "bg-zinc-950/50 px-12 py-5 min-w-86 rounded-3xl"
+        "bg-zinc-950/50 px-12 py-5 min-w-86 rounded-3xl",
+        "fadein"
       )}
     >
-      <div className="text-lg text-center">Pick an Oracle</div>
-      {selectedCategory === null &&
-        Object.keys(oraclesByCategory).map((category, index) => (
-          <div
-            key={category}
-            className={classNames("text-xl font-bold", "fadein")}
-            // style={styleAnimationDelay(index * 0.025 + 0.25)}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {toTitleCase(category)}
+      <div className="flex flex-col gap-1">
+        <div className="text-xl text-center fadein">Choose a new Oracle</div>
+        {selectedCategory !== null && (
+          <div className="text-lg text-center fadein">
+            {toTitleCase(selectedCategory)}
           </div>
-        ))}
+        )}
+      </div>
 
-      {selectedCategory !== null && (
-        <div
-          className={classNames("text-xl font-bold", "fadein")}
-          onClick={() => {
-            setSelectedCategory(null);
-          }}
-        >
-          Back
+      {selectedCategory === null && (
+        <div className="flex flex-col gap-1">
+          {Object.keys(oraclesByCategory).map((category, index) => (
+            <div
+              key={category}
+              className={classNames(
+                "underline",
+                "hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
+                "focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow",
+                "fadein"
+              )}
+              // style={styleAnimationDelay(index * 0.025 + 0.25)}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {toTitleCase(category)}
+            </div>
+          ))}
         </div>
       )}
 
-      {selectedCategory !== null &&
-        oracleListings
-          .filter((oracle) => oracle.category === selectedCategory)
-          .map((oracle, index) => (
-            <div key={oracle.id}>
-              <div
-                className={classNames("font-bold", "fadein")}
-                onClick={() => onSelectOracle(oracle.slug)}
-              >
-                {oracle.title}
+      {selectedCategory !== null && (
+        <div className="flex flex-col gap-1">
+          {oracleListings
+            .filter((oracle) => oracle.category === selectedCategory)
+            .map((oracle, index) => (
+              <div key={oracle.id}>
+                <div
+                  className={classNames(
+                    "font-bold",
+                    "underline",
+                    "hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
+                    "focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow",
+                    "fadein"
+                  )}
+                  onClick={() => onSelect(oracle.slug)}
+                >
+                  {oracle.title}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+        </div>
+      )}
+
+      <div className="flex flex-col gap-1">
+        {selectedCategory !== null && (
+          <button
+            className={classNames(
+              "underline",
+              "hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
+              "focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow",
+              "fadein"
+            )}
+            onClick={() => setSelectedCategory(null)}
+          >
+            choose a different category
+          </button>
+        )}
+
+        <button
+          className={classNames(
+            "underline",
+            "hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
+            "focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow",
+            "fadein"
+          )}
+          onClick={() => onCancel()}
+        >
+          nevermind
+        </button>
+      </div>
     </div>
   );
 }
@@ -100,13 +142,13 @@ export function Oracle({
           {onDelete && (
             <div
               className={classNames(
-                "absolute top-6 right-6 cursor-pointer",
+                "absolute top-6 right-8 cursor-pointer",
                 "hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
                 "focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow"
               )}
               onClick={() => onDelete()}
             >
-              X
+              🗙
             </div>
           )}
           <OracleTable

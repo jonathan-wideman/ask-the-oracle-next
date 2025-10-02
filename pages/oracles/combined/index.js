@@ -64,6 +64,28 @@ export default function Oracles({ oracles, allOracleListings }) {
           </div>
         ))}
 
+        {!addingOracle && (
+          <button
+            className={classNames(
+              "underline",
+              "hover:text-zinc-50 hover:text-shadow-zinc-50/50 hover:text-shadow-glow",
+              "focus-visible:text-zinc-50 focus-visible:text-shadow-zinc-50/50 focus-visible:text-shadow-glow",
+              "fadein"
+            )}
+            onClick={() => setAddingOracle(true)}
+            style={styleAnimationDelay(0.75)}
+          >
+            add an oracle
+          </button>
+        )}
+        {addingOracle && (
+          <OracleChooser
+            oracleListings={allOracleListings}
+            onSelect={addOracleSlugToQuery}
+            onCancel={() => setAddingOracle(false)}
+          />
+        )}
+
         <LinkVariant
           href={`/oracles/categories/combined`}
           className="fadein"
@@ -71,19 +93,6 @@ export default function Oracles({ oracles, allOracleListings }) {
         >
           seek a different fate
         </LinkVariant>
-
-        {!addingOracle && (
-          <div onClick={() => setAddingOracle(true)}>Add an oracle</div>
-        )}
-        {addingOracle && (
-          <div onClick={() => setAddingOracle(false)}>Cancel</div>
-        )}
-        {addingOracle && (
-          <OracleChooser
-            oracleListings={allOracleListings}
-            onSelectOracle={addOracleSlugToQuery}
-          />
-        )}
       </Container>
     </Layout>
   );
