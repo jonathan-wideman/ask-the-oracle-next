@@ -39,11 +39,11 @@ import settlement_trouble from "./settlement-trouble.oracle.json";
 import theme from "./theme.oracle.json";
 import troll_names from "./troll-names.oracle.json";
 import varou_names from "./varou-names.oracle.json";
-import yes_or_no_almost_certain from "./yes-or-no-almost-certain.json";
-import yes_or_no_even_chance from "./yes-or-no-even-chance.json";
-import yes_or_no_likely from "./yes-or-no-likely.json";
-import yes_or_no_small_chance from "./yes-or-no-small-chance.json";
-import yes_or_no_unlikely from "./yes-or-no-unlikely.json";
+import probability_almost_certain from "./probability-almost-certain.json";
+import probability_even_chance from "./probability-even-chance.json";
+import probability_likely from "./probability-likely.json";
+import probability_small_chance from "./probability-small-chance.json";
+import probability_unlikely from "./probability-unlikely.json";
 
 const oracleData = [
   action,
@@ -86,11 +86,11 @@ const oracleData = [
   theme,
   troll_names,
   varou_names,
-  yes_or_no_almost_certain,
-  yes_or_no_even_chance,
-  yes_or_no_likely,
-  yes_or_no_small_chance,
-  yes_or_no_unlikely,
+  probability_almost_certain,
+  probability_even_chance,
+  probability_likely,
+  probability_small_chance,
+  probability_unlikely,
 ];
 
 const oracles = massageData(oracleData);

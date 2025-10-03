@@ -50,6 +50,7 @@
 - [ ] improve site map
 - [ ] build out api
 - [ ] create & edit custom oracle tables
+- [ ] don't load all oracles on combined page until needed
 
 ## Future Scope
 
