@@ -100,6 +100,7 @@ export default function Oracles({ oracles, allOracleListings }) {
 
 export async function getStaticProps() {
   return {
+    // props: { oracles: getOracles(), allOracleListings: getOraclesListings() },
     props: { oracles: getOracles(), allOracleListings: getOraclesListings() },
   };
 }

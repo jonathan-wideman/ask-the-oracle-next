@@ -148,7 +148,8 @@ export function Oracle({
               )}
               onClick={() => onDelete()}
             >
-              🗙
+              {/* 🗙 */}
+              X
             </div>
           )}
           <OracleTable
