@@ -12,11 +12,12 @@ import { Container } from "../../../components/atoms/Container";
 import { LinkVariant } from "../../../components/atoms/LinkVariant";
 
 export default function Oracles({ oracles }) {
-  const oraclesByCategory = oracles.reduce(
-    (acc, oracle) => ({
-      ...acc,
-      [oracle.category]: [...(acc[oracle.category] || []), oracle],
-    }),
+  const oraclesByCategory = oracles.toSorted((a, b) => a.index - b.index).reduce(
+    (acc, oracle) =>
+      ({
+        ...acc,
+        [oracle.category]: [...(acc[oracle.category] || []), oracle],
+      }),
     {}
   );
 
