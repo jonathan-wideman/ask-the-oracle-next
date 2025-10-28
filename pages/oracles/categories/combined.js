@@ -81,6 +81,7 @@ export async function getStaticProps(context) {
           title: "Settlement",
           slug: "region,settlement-name-prefix,settlement-name-suffix,location-descriptor,location-descriptor,settlement-trouble,theme",
         },
+        { category: "combined", title: "New Combined Oracle", slug: "" },
       ],
     },
   };
