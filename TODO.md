@@ -46,8 +46,8 @@
 - [x] yes/no oracles with likelihoods
 - [ ] typescript
 - [ ] fix page titles
-- [ ] improve page heading content
-- [ ] improve site map
+- [ ] improve page heading content "ask..." etc
+- [ ] improve site map (rearrange info arch)
 - [ ] build out api
 - [ ] create & edit custom oracle tables
 - [ ] don't load all oracles on combined page until needed
