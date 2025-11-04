@@ -3,15 +3,15 @@ import store from "../data/store";
 
 // Oracles
 
-export function getOracle(slug) {
+export function getOracle(slug: string) {
   return store.oracles.find((oracle) => oracle.slug === slug);
 }
 
-export function getOraclesBySlugs(slugs) {
+export function getOraclesBySlugs(slugs: string[]) {
   return store.oracles.filter((oracle) => slugs.includes(oracle.slug));
 }
 
-export function getOracles(categories) {
+export function getOracles(categories: string[]) {
   // These could instead be fetched from an API, CMS, etc.
   // Since getStaticProps will only be run at build, we can directly import json
   return store.oracles.filter(
@@ -19,7 +19,7 @@ export function getOracles(categories) {
   );
 }
 
-export function getOraclesListings(categories) {
+export function getOraclesListings(categories: string[]) {
   return store.oracles
     .filter((oracle) => !categories || categories.includes(oracle.category))
     .map((oracle) => getOracleListing(oracle));
@@ -31,13 +31,13 @@ export function getOraclesCategories() {
 
 // Moves
 
-export function getMoves(categories) {
+export function getMoves(categories: string[]) {
   return store.moves.filter(
     (move) => !categories || categories.includes(move.category)
   );
 }
 
-export function getMovesListings(categories) {
+export function getMovesListings(categories: string[]) {
   return store.moves
     .filter((move) => !categories || categories.includes(move.category))
     .map((move) => ({

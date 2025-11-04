@@ -1,30 +1,31 @@
 import { useState, useRef, useEffect } from "react";
 import { useDiceContext } from "../contexts/DiceContext";
+import { OracleData } from "../data/oracles";
 
 export const DEFAULT_ORACLE_INITIAL_STATE = "consulting the oracle...";
 
 export const useOracleState = (
-  oracle,
+  oracle: OracleData,
   rollOnCreate = false,
   initialResult = undefined,
   initialDelay = 50
 ) => {
-  const [tableVisible, setTableVisible] = useState(false);
-  const [result, setResult] = useState(
+  const [tableVisible, setTableVisible] = useState<boolean>(false);
+  const [result, setResult] = useState<string>(
     initialResult ?? DEFAULT_ORACLE_INITIAL_STATE
   );
   const { roll } = useDiceContext();
   const [rolling, setRolling] = useState(false);
 
-  const timeoutRef = useRef(null);
-  const resetAnimation = (delay) => {
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const resetAnimation = (delay: number) => {
     timeoutRef.current = setTimeout(() => setRolling(false), delay);
   };
   useEffect(() => {
     if (rollOnCreate) rollOracle(initialDelay);
 
     // Clear the timeout interval when the component unmounts
-    return () => clearTimeout(timeoutRef.current);
+    return () => clearTimeout(timeoutRef?.current ?? undefined);
   }, []);
 
   const rollOracle = (delay = 10) => {

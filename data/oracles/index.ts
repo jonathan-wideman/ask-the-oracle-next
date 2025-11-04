@@ -93,24 +93,62 @@ const oracleData = [
   probability_unlikely,
 ];
 
+export type OracleRawJSONTableEntry = {
+  roll: string;
+  result: string;
+};
+// export type OracleDataList = typeof oracleData;
+export type OracleRawJSON = {
+  title: string;
+  category: string;
+  table: OracleRawJSONTableEntry[];
+};
+
+export type OracleData = {
+  max: number;
+  results: any[];
+  id: string;
+  index: number;
+  title: any;
+  slug: any;
+  category: string;
+  table: {
+    roll: string;
+    result: string;
+  }[];
+};
+
+export type OracleListing = {
+  id: string;
+  index: number;
+  title: string;
+  slug: string;
+  category: string;
+};
+
+export type OracleRollRange = {
+  min: number | undefined;
+  max: number | undefined;
+};
+
 const oracles = massageData(oracleData);
 
 export default oracles;
 
-function deriveIndex(oracle) {
+function deriveIndex(oracle: OracleRawJSON) {
   const match = oracle.title.match(/ (\d)+: /);
   // TODO: guard against bad data, eg. non-numeric
   return match != null ? parseInt(match?.[1]) : -1;
 }
 
-function formatTitle(oracle) {
+function formatTitle(oracle: OracleRawJSON) {
   // trim the index from the raw title
   const trimmed = oracle.title.replace(/^.*: /, "");
   // convert to title case
   return toTitleCase(trimmed);
 }
 
-function createSlug(oracle) {
+function createSlug(oracle: OracleRawJSON) {
   // based on https://www.30secondsofcode.org/js/s/slugify
   return formatTitle(oracle)
     .toLowerCase()
@@ -120,26 +158,26 @@ function createSlug(oracle) {
     .replace(/^-+|-+$/g, "");
 }
 
-function convertRollRangeString(rangeStr) {
+function convertRollRangeString(rangeStr: string): OracleRollRange {
   const matches = rangeStr.match(/[0-9]+/g);
   // TODO: guard against bad data, eg. non-numeric
   // values of 100 are represented as '00' in the dataset
-  const values = matches.map((match) =>
+  const values = matches?.map((match) =>
     match === "00" ? 100 : parseInt(match)
   );
   // if there is only one value, use it for both min and max of the range
-  return { min: values[0], max: values[1] ?? values[0] };
+  return { min: values?.[0], max: values?.[1] ?? values?.[0] };
 }
 
-function convertRollTable(table) {
+function convertRollTable(table: OracleRawJSONTableEntry[]) {
   // convert a array of range/result pairs to an array
   // for every range, spread its result over those indices of the array
   // later, we can look up results just using the roll as an index
   // and we can determine the die size needed by the length of the array
-  let results = [];
+  let results: string[] = [];
   table.forEach((row) => {
     const range = convertRollRangeString(row.roll);
-    for (let i = range.min; i <= range.max; i++) {
+    for (let i = range.min ?? 0; i <= (range.max ?? 0); i++) {
       results.push(row.result);
     }
   });
@@ -147,7 +185,7 @@ function convertRollTable(table) {
   return { max: results.length, results };
 }
 
-function massageData(oracles) {
+function massageData(oracles: OracleRawJSON[]): OracleData[] {
   return oracles.map((oracle) => ({
     ...oracle,
     id: oracle.title,
@@ -159,7 +197,7 @@ function massageData(oracles) {
   }));
 }
 
-export const getOracleListing = (oracle) => ({
+export const getOracleListing = (oracle: OracleData): OracleListing => ({
   id: oracle.id,
   index: oracle.index,
   title: oracle.title,
