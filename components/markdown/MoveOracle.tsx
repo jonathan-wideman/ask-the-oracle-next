@@ -1,17 +1,28 @@
+import { ReactNode } from "react";
 import { toTitleCase } from "../../lib/util";
 import { Oracle } from "../Oracle";
+import { OracleData } from "../../data/oracles";
 
-export function MoveOracle({ children, oracles }) {
-  const matches = children.match(/ORACLE:(.*)/);
+export function MoveOracle({
+  children,
+  oracles,
+}: {
+  children?: ReactNode;
+  oracles: OracleData[];
+}) {
+  const matches = (children as string).match(/ORACLE:(.*)/);
+  if (!matches) throw new Error("MoveOracle: Oracle regex not found");
   const oracleTitle = matches[1];
-  // TODO: clean this up
-  function formatTitle(title) {
+
+  // TODO: extract
+  function formatTitle(title: string) {
     // trim the index from the raw title
     const trimmed = title.replace(/^.*: /, "");
     // convert to title case
     return toTitleCase(trimmed);
   }
-  function createSlug(title) {
+  // TODO: extract
+  function createSlug(title: string) {
     // based on https://www.30secondsofcode.org/js/s/slugify
     return formatTitle(title)
       .toLowerCase()
@@ -20,6 +31,7 @@ export function MoveOracle({ children, oracles }) {
       .replace(/[\s_-]+/g, "-")
       .replace(/^-+|-+$/g, "");
   }
+
   const slug = createSlug(oracleTitle);
   const oracle = oracles.find((oracle) => oracle.slug === slug);
 
@@ -32,7 +44,7 @@ export function MoveOracle({ children, oracles }) {
       oracle={oracle}
       rollOnCreate={false}
       initialResult={"Seek your fate..."}
-      className={"my-6"}  
+      className={"my-6"}
     />
   );
 }

@@ -50,6 +50,7 @@
 - [ ] improve site map (rearrange info arch)
 - [ ] build out api
 - [ ] create & edit custom oracle tables
+- [ ] don't load full oracle data in all moves unless needed
 - [ ] don't load all oracles on combined page until needed
 
 ## Future Scope

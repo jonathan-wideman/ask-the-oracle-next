@@ -7,7 +7,7 @@ export const DEFAULT_ORACLE_INITIAL_STATE = "consulting the oracle...";
 export const useOracleState = (
   oracle: OracleData,
   rollOnCreate = false,
-  initialResult = undefined,
+  initialResult: string | undefined = undefined,
   initialDelay = 50
 ) => {
   const [tableVisible, setTableVisible] = useState<boolean>(false);

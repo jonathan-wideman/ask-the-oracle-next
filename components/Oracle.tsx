@@ -2,12 +2,21 @@ import { useState } from "react";
 import { useOracleState } from "../hooks/useOracleState";
 import { classNames, toTitleCase } from "../lib/util";
 import { OracleTable } from "./OracleTable";
+import { OracleData, OracleListing } from "../data/oracles";
 
-export function OracleChooser({ oracleListings, onSelect, onCancel }) {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+export function OracleChooser({
+  oracleListings,
+  onSelect,
+  onCancel,
+}: {
+  oracleListings: OracleListing[];
+  onSelect: (oracle: string) => void;
+  onCancel: () => void;
+}) {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const oraclesByCategory = oracleListings.reduce(
-    (acc, oracle) => ({
+    (acc: Record<string, OracleListing[]>, oracle) => ({
       ...acc,
       [oracle.category]: [...(acc[oracle.category] || []), oracle],
     }),
@@ -111,6 +120,12 @@ export function Oracle({
   initialResult,
   onDelete,
   className,
+}: {
+  oracle: OracleData;
+  rollOnCreate?: boolean;
+  initialResult?: string;
+  onDelete?: () => void;
+  className?: string;
 }) {
   const { rollOracle, tableVisible, toggleTable, result, rolling } =
     useOracleState(oracle, rollOnCreate, initialResult);
@@ -148,15 +163,10 @@ export function Oracle({
               )}
               onClick={() => onDelete()}
             >
-              {/* 🗙 */}
-              X
+              {/* 🗙 */}X
             </div>
           )}
-          <OracleTable
-            oracle={oracle}
-            tableVisible={tableVisible}
-            className="mb-4"
-          />
+          <OracleTable oracle={oracle} className="mb-4" />
         </>
       )}
       <OracleTitlePill title={oracle.title} onClick={toggleTable} />
@@ -164,7 +174,13 @@ export function Oracle({
   );
 }
 
-export function OracleTitlePill({ title, onClick }) {
+export function OracleTitlePill({
+  title,
+  onClick,
+}: {
+  title: string;
+  onClick: () => void;
+}) {
   return (
     <div
       onClick={(event) => {

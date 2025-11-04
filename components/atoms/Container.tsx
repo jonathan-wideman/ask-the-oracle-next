@@ -5,6 +5,10 @@ export function Container({
   className,
   variant = "default",
   ...props
+}: {
+  children: React.ReactNode;
+  className?: string;
+  variant?: "default" | "center";
 }) {
   return (
     <div

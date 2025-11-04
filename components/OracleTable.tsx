@@ -1,7 +1,14 @@
 import { Fragment } from "react";
 import { classNames, styleAnimationDelay } from "../lib/util";
+import { OracleData } from "../data/oracles";
 
-export function OracleTable({ oracle, className }) {
+export function OracleTable({
+  oracle,
+  className,
+}: {
+  oracle: OracleData;
+  className?: string;
+}) {
   return (
     <div
       className={classNames(

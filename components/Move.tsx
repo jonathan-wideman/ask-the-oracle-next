@@ -6,8 +6,19 @@ import { MoveEmTagMoveLink } from "./markdown/MoveEmTagMoveLink";
 import { MoveStrongTagDefault } from "./markdown/MoveStrongTagDefault";
 import { classNames, styleAnimationDelay } from "../lib/util";
 import { customMarkdownComponentMatchers } from "../lib/customMarkdownComponentMatchers";
+import { OracleData } from "../data/oracles";
 
-export function Move({ move, index, allMoveNames, oracles }) {
+export function Move({
+  move,
+  index,
+  allMoveNames,
+  oracles,
+}: {
+  move: any;
+  index: number;
+  allMoveNames: string[];
+  oracles: OracleData[];
+}) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -29,7 +40,7 @@ export function Move({ move, index, allMoveNames, oracles }) {
           <Markdown
             components={{
               em: ({ node, ...rest }) => {
-                const isMoveName = allMoveNames.includes(rest.children);
+                const isMoveName = allMoveNames.includes(rest.children as string);
                 return isMoveName ? (
                   <MoveEmTagMoveLink {...rest} />
                 ) : (
@@ -38,7 +49,7 @@ export function Move({ move, index, allMoveNames, oracles }) {
               },
               strong: ({ node, ...rest }) => {
                 const matches = customMarkdownComponentMatchers.strong.filter(
-                  (rule) => rule.regex.test(rest.children)
+                  (rule) => rule.regex.test(rest.children as string)
                 );
                 const replacementComponent = matches[0]?.component;
                 if (replacementComponent) {
@@ -48,7 +59,7 @@ export function Move({ move, index, allMoveNames, oracles }) {
               },
               code({ node, ...rest }) {
                 const matches = customMarkdownComponentMatchers.code.filter(
-                  (rule) => rule.regex.test(rest.children)
+                  (rule) => rule.regex.test(rest.children as string)
                 );
                 const replacementComponent = matches[0]?.component;
                 if (replacementComponent) {

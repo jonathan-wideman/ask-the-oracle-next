@@ -1,4 +1,4 @@
-export function classNames(...items: string[]) {
+export function classNames(...items: Array<string | null | undefined | false>) {
   return items.filter((text) => text != null).join(" ");
 }
 
@@ -10,5 +10,5 @@ export function toTitleCase(str: string) {
 
 export const animationDelay = 500;
 export function styleAnimationDelay(factor: number) {
-  return { "--delay": `${Math.round(animationDelay * factor)}ms` };
+  return { animationDelay: `${Math.round(animationDelay * factor)}ms` };
 }
