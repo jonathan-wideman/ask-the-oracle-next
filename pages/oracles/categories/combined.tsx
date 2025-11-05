@@ -61,7 +61,6 @@ export default function Oracles({ oracles }) {
 }
 
 export async function getStaticProps(context) {
-  const { category } = "combined";
   return {
     props: {
       oracles: [

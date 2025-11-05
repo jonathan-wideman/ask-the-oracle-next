@@ -11,7 +11,7 @@ export function getOraclesBySlugs(slugs: string[]) {
   return store.oracles.filter((oracle) => slugs.includes(oracle.slug));
 }
 
-export function getOracles(categories: string[]) {
+export function getOracles(categories?: string[]) {
   // These could instead be fetched from an API, CMS, etc.
   // Since getStaticProps will only be run at build, we can directly import json
   return store.oracles.filter(
@@ -19,7 +19,7 @@ export function getOracles(categories: string[]) {
   );
 }
 
-export function getOraclesListings(categories: string[]) {
+export function getOraclesListings(categories?: string[]) {
   return store.oracles
     .filter((oracle) => !categories || categories.includes(oracle.category))
     .map((oracle) => getOracleListing(oracle));
@@ -31,7 +31,7 @@ export function getOraclesCategories() {
 
 // Moves
 
-export function getMoves(categories: string[]) {
+export function getMoves(categories?: string[]) {
   return store.moves.filter(
     (move) => !categories || categories.includes(move.category)
   );

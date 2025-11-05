@@ -37,7 +37,8 @@ export default function Oracles({ oracles, allOracleListings }) {
     // console.log({ currentQuery });
     const newQuery = {
       ...currentQuery,
-      oracles: currentQuery.oracles
+      // TODO: currentQuery.oracles might be string[] apparently
+      oracles: (currentQuery.oracles as string)
         .split(",")
         .filter((slug, i) => i !== index)
         .join(","),
@@ -100,7 +101,6 @@ export default function Oracles({ oracles, allOracleListings }) {
 
 export async function getStaticProps() {
   return {
-    // props: { oracles: getOracles(), allOracleListings: getOraclesListings() },
     props: { oracles: getOracles(), allOracleListings: getOraclesListings() },
   };
 }

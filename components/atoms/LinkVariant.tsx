@@ -1,18 +1,21 @@
 import Link from "next/link";
 import { classNames } from "../../lib/util";
+import { JSX } from "react";
 
-export function LinkVariant({
-  children,
-  className,
-  href,
-  variant = "default",
-  ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-  href: string;
-  variant?: "default";
-}) {
+export function LinkVariant(
+  {
+    children,
+    className,
+    href,
+    variant = "default",
+    ...props
+  }: {
+    children: React.ReactNode;
+    className?: string;
+    href: string;
+    variant?: "default";
+  } & Partial<JSX.IntrinsicElements["a"]> // TODO: add Next Link types
+) {
   return (
     <Link
       className={classNames(
