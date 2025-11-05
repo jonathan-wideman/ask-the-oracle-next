@@ -44,7 +44,7 @@
   - [ ] https://www.react-spring.dev/
   - [ ] https://motion.dev/
 - [x] yes/no oracles with likelihoods
-- [ ] typescript
+- [x] typescript
 - [ ] fix page titles
 - [ ] improve page heading content "ask..." etc
 - [ ] improve site map (rearrange info arch)
