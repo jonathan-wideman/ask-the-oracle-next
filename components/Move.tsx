@@ -63,6 +63,7 @@ export function Move({
                 );
                 const replacementComponent = matches[0]?.component;
                 if (replacementComponent) {
+                  // @ts-ignore TODO: find solution for type variations on replacements
                   return replacementComponent({ ...rest, oracles });
                 }
                 return <MoveCodeTagDefault {...rest} />;
